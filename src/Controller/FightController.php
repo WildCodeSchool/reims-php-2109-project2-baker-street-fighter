@@ -2,11 +2,13 @@
 
 namespace App\Controller;
 
-use App\Model\FightManager;
+use App\Model\Fighter;
 
-class FightController extends AbstractController
+class FightController extends Fighter
 {
-    public function arena(){
-        $player1->fightRound($player2)
+    public function fight(){
+        $playerOne->fightRound($playerTwo);
     }
+
+
 }
