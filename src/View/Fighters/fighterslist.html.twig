@@ -2,5 +2,10 @@
 
 {% block content %}
     <h1>Fighters' List</h1>
-    
+    <ul>
+        {% for fighter in fighters %}
+            <li>{{fighter.name}} | {{fighter.attack}} | {{fighter.defense}}</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
 {% endblock %}
