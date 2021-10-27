@@ -32,7 +32,9 @@ body {
 
 /* END FIGHT|HISTORY */
 /* PICK LIST|FIGHTER*/
-
+.fighterListTitle {
+    text-align: center;
+}
 .card-deck {
     text-align: center;
 }
