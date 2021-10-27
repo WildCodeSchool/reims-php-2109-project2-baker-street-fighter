@@ -29,9 +29,11 @@ body {
 
 /* END FIGHT|HISTORY */
 /* PICK LIST|FIGHTER*/
-figure {
-    width: 300px;
-    height: auto;
+.card-deck {
+    text-align: center;
+}
+.card-fighter {
+    border: 1px solid black
 }
 /* END IST|FIGHTER */
 @media (min-width: 576px) {
