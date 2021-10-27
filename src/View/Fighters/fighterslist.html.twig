@@ -4,7 +4,8 @@
     <h1>Fighters' List</h1>
     <ul>
         {% for fighter in fighters %}
-            <li>{{fighter.name}} | {{fighter.attack}} | {{fighter.defense}}</li>
+            <li>{{fighter.name}} | {{fighter.attack}}  | {{fighter.defense}}</li>
+            <img src="/assets/images/{{fighter.name|lower}}.png">
         {% endfor %}
     </ul>
 {% endblock %}

@@ -8,9 +8,9 @@ class FightersController extends AbstractController
 {
     public function index(): string
     {
-        $listFighters = new FighterManager();
-        $listFighters = $listFighters->selectAll('name');
+        $fighters = new FighterManager();
+        $fighters = $fighters->selectAll('name');
 
-        return $this->twig->render('Fighters/fighterslist.html.twig', ['listFighters' => $listFighters]);
+        return $this->twig->render('Fighters/fighterslist.html.twig', ['fighters' => $fighters]);
     }
 }
