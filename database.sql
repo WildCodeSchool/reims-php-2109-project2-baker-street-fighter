@@ -47,6 +47,12 @@ CREATE TABLE participation (
     PRIMARY KEY (id)
 );
 
+ALTER TABLE participation
+ADD CONSTRAINT fight_id
+FOREIGN KEY (fight_id) 
+REFERENCES fight(id);
 
-INSERT INTO fighter VALUES ('Sherlock', 20, 15, )
-INSERT INTO fighter VALUES ('Moriarty', 20, 15, )
+ALTER TABLE participation
+ADD CONSTRAINT fighter_id
+FOREIGN KEY (fighter_id) 
+REFERENCES fighter(id);
