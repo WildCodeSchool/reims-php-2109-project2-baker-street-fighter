@@ -7,7 +7,10 @@ body {
 }
 
 :root {
-
+    font-family: 'VT323', monospace;
+    --backgroundColor: #FFD93B;
+    --primaryColor: #FE3535;
+    --secondaryColor:#0056AF;
 }
 
 /* HOME */
@@ -25,7 +28,12 @@ body {
 /* PICK FIGHT|HISTORY*/
 
 /* END FIGHT|HISTORY */
-
+/* PICK LIST|FIGHTER*/
+figure {
+    width: 300px;
+    height: auto;
+}
+/* END IST|FIGHTER */
 @media (min-width: 576px) {
 /* HOME */
 
@@ -42,6 +50,10 @@ body {
 /* PICK FIGHT|HISTORY*/
 
 /* END FIGHT|HISTORY */
+
+/* PICK LIST|FIGHTER*/
+
+/* END IST|FIGHTER */
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -62,6 +74,9 @@ body {
 /* PICK FIGHT|HISTORY*/
 
 /* END FIGHT|HISTORY */
+/* PICK LIST|FIGHTER*/
+
+/* END IST|FIGHTER */
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -82,6 +97,9 @@ body {
 /* PICK FIGHT|HISTORY*/
 
 /* END FIGHT|HISTORY */
+/* PICK LIST|FIGHTER*/
+
+/* END IST|FIGHTER */
 }
 
 /* X-Large devices (large desktops, 1200px and up) */
@@ -102,6 +120,9 @@ body {
 /* PICK FIGHT|HISTORY*/
 
 /* END FIGHT|HISTORY */
+/* PICK LIST|FIGHTER*/
+
+/* END IST|FIGHTER */
 }
 /* XX-Large devices (larger desktops, 1400px and up) */
 
@@ -121,4 +142,7 @@ body {
 /* PICK FIGHT|HISTORY*/
 
 /* END FIGHT|HISTORY */
+/* PICK LIST|FIGHTER*/
+
+/* END IST|FIGHTER */
 }
