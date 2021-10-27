@@ -11,6 +11,8 @@ body {
     --backgroundColor: #FFD93B;
     --primaryColor: #FE3535;
     --secondaryColor:#0056AF;
+    background-color: var(--backgroundColor);
+    
 }
 
 /* HOME */
@@ -33,7 +35,13 @@ body {
     text-align: center;
 }
 .card-fighter {
-    border: 1px solid black
+    border: 5px solid black;
+}
+.card-fighter-name {
+    color: var(--primaryColor);
+}
+.card-fighter-skills {
+    color: var(--secondaryColor);
 }
 /* END IST|FIGHTER */
 @media (min-width: 576px) {
