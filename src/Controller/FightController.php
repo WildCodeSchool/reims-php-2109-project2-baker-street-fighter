@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Model\ItemManager;
+use App\Model\FightManager;
 
 class FightController extends AbstractController
 {
