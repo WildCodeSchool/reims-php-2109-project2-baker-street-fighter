@@ -1,0 +1,9 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+        <ul>
+            {% for fight in fights %}
+             <li> {{ fight.date}} => {{ fight.winner }}  </li>
+            {% endfor %}
+        </ul>
+{% endblock %}
