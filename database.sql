@@ -36,7 +36,7 @@ CREATE TABLE fighter (
 CREATE TABLE fight(
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
     date TIMESTAMP,
-    winner VARCHAR(80) NOT NULL,
+    winner INT UNSIGNED NOT NULL,
     PRIMARY KEY (id)
 );
 
