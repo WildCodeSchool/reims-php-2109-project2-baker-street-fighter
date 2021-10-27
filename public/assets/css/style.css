@@ -16,6 +16,15 @@ body {
     
 }
 /* NAVBAR */
+.navbar {
+    background-color:#0056AF;
+}
+.menu {
+    display: none;
+}
+#toggle {
+    display: none;
+}
 
 /* END NAVBAR */
 /* HOME */
@@ -82,7 +91,10 @@ body {
 
 @media (min-width: 768px) {
 /* NAVBAR */
-
+.menu {
+    display: flex;
+    justify-content: space-around;
+}
 /* END NAVBAR */
 /* HOME */
 
@@ -160,8 +172,7 @@ body {
 @media (min-width: 1400px) {
 /* NAVBAR */
 
-/* END NAVBAR */
-/* HOME */
+/* END NAVBAR *//* HOME */
 
 /* END HOME */
 /* PICK FIGHTER */
