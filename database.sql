@@ -42,17 +42,14 @@ CREATE TABLE fight(
 
 CREATE TABLE participation (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-    fight_id INT,
-    fighter_id INT,
-    PRIMARY KEY (id)
+    fight_id INT UNSIGNED,
+    CONSTRAINT fk_fight_id
+        FOREIGN KEY (fight_id) 
+        REFERENCES fight(id),
+    fighter_id INT UNSIGNED,
+    PRIMARY KEY (id),
+    CONSTRAINT fk_fighter_id
+        FOREIGN KEY (fighter_id) 
+        REFERENCES fighter(id)
 );
 
-ALTER TABLE participation
-ADD CONSTRAINT fight_id
-FOREIGN KEY (fight_id) 
-REFERENCES fight(id);
-
-ALTER TABLE participation
-ADD CONSTRAINT fighter_id
-FOREIGN KEY (fighter_id) 
-REFERENCES fighter(id);
