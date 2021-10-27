@@ -1,8 +1,6 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    {{ dump(fights) }}
-        <br>
         <ul>
             {% for fight in fights %}
              <li> {{ fight.date}} => {{ fight.winner }}  </li>
