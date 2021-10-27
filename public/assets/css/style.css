@@ -15,7 +15,9 @@ body {
     background-color: var(--backgroundColor);
     
 }
+/* NAVBAR */
 
+/* END NAVBAR */
 /* HOME */
 
 /* END HOME */
@@ -52,6 +54,9 @@ body {
 }
 /* END IST|FIGHTER */
 @media (min-width: 576px) {
+/* NAVBAR */
+
+/* END NAVBAR */
 /* HOME */
 
 /* END HOME */
@@ -76,6 +81,9 @@ body {
 /* Medium devices (tablets, 768px and up) */
 
 @media (min-width: 768px) {
+/* NAVBAR */
+
+/* END NAVBAR */
 /* HOME */
 
 /* END HOME */
@@ -99,6 +107,9 @@ body {
 /* Large devices (desktops, 992px and up) */
 
 @media (min-width: 992px) {
+/* NAVBAR */
+
+/* END NAVBAR */
 /* HOME */
 
 /* END HOME */
@@ -122,6 +133,9 @@ body {
 /* X-Large devices (large desktops, 1200px and up) */
 
 @media (min-width: 1200px) {
+/* NAVBAR */
+
+/* END NAVBAR */
 /* HOME */
 
 /* END HOME */
@@ -144,6 +158,9 @@ body {
 /* XX-Large devices (larger desktops, 1400px and up) */
 
 @media (min-width: 1400px) {
+/* NAVBAR */
+
+/* END NAVBAR */
 /* HOME */
 
 /* END HOME */
