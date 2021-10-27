@@ -87,4 +87,13 @@ class Fighter
     {
         return $this->getLife() > 0;
     }
+
+    public function fightRound(Fighter $adversary): void
+    {
+        $damage = rand(1, $this->getStrength()) - rand(1, $this->adversary->getDefense());
+        if ($damage < 0) {
+            $damage = 0;
+        }
+        $adversary->setLife($adversary->getLife() - $damage);
+    }
 }

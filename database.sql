@@ -24,6 +24,8 @@ SET time_zone = "+00:00";
 
 CREATE DATABASE baker_street_fighter;
 
+USE baker_street_fighter;
+
 CREATE TABLE fighter (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
     name VARCHAR(80) NOT NULL,
