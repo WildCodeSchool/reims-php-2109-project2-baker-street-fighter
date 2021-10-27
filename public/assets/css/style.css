@@ -11,6 +11,7 @@ body {
     --backgroundColor: #FFD93B;
     --primaryColor: #FE3535;
     --secondaryColor:#0056AF;
+
     background-color: var(--backgroundColor);
     
 }
@@ -31,14 +32,18 @@ body {
 
 /* END FIGHT|HISTORY */
 /* PICK LIST|FIGHTER*/
+
 .card-deck {
     text-align: center;
 }
 .card-fighter {
+    background-color: white;
     border: 5px solid black;
 }
-.card-fighter-name {
-    color: var(--primaryColor);
+.card-img {
+    background-color: #FF5757;
+    border: 3px solid black;
+    padding: 3rem;
 }
 .card-fighter-skills {
     color: var(--secondaryColor);
