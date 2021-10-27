@@ -1,0 +1,124 @@
+*, *:after, *:before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+:root {
+
+}
+
+/* HOME */
+
+/* END HOME */
+/* PICK FIGHTER */
+
+/* END PICK FIGHTER */
+/* PICK FIGHT|ARENA */
+
+/* END FIGHT|ARENA */
+/* WIN */
+
+/* END WIN */
+/* PICK FIGHT|HISTORY*/
+
+/* END FIGHT|HISTORY */
+
+@media (min-width: 576px) {
+/* HOME */
+
+/* END HOME */
+/* PICK FIGHTER */
+
+/* END PICK FIGHTER */
+/* PICK FIGHT|ARENA */
+
+/* END FIGHT|ARENA */
+/* WIN */
+
+/* END WIN */
+/* PICK FIGHT|HISTORY*/
+
+/* END FIGHT|HISTORY */
+}
+
+/* Medium devices (tablets, 768px and up) */
+
+@media (min-width: 768px) {
+/* HOME */
+
+/* END HOME */
+/* PICK FIGHTER */
+
+/* END PICK FIGHTER */
+/* PICK FIGHT|ARENA */
+
+/* END FIGHT|ARENA */
+/* WIN */
+
+/* END WIN */
+/* PICK FIGHT|HISTORY*/
+
+/* END FIGHT|HISTORY */
+}
+
+/* Large devices (desktops, 992px and up) */
+
+@media (min-width: 992px) {
+/* HOME */
+
+/* END HOME */
+/* PICK FIGHTER */
+
+/* END PICK FIGHTER */
+/* PICK FIGHT|ARENA */
+
+/* END FIGHT|ARENA */
+/* WIN */
+
+/* END WIN */
+/* PICK FIGHT|HISTORY*/
+
+/* END FIGHT|HISTORY */
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+
+@media (min-width: 1200px) {
+/* HOME */
+
+/* END HOME */
+/* PICK FIGHTER */
+
+/* END PICK FIGHTER */
+/* PICK FIGHT|ARENA */
+
+/* END FIGHT|ARENA */
+/* WIN */
+
+/* END WIN */
+/* PICK FIGHT|HISTORY*/
+
+/* END FIGHT|HISTORY */
+}
+/* XX-Large devices (larger desktops, 1400px and up) */
+
+@media (min-width: 1400px) {
+/* HOME */
+
+/* END HOME */
+/* PICK FIGHTER */
+
+/* END PICK FIGHTER */
+/* PICK FIGHT|ARENA */
+
+/* END FIGHT|ARENA */
+/* WIN */
+
+/* END WIN */
+/* PICK FIGHT|HISTORY*/
+
+/* END FIGHT|HISTORY */
+}
