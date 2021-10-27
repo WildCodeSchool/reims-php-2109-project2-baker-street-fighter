@@ -4,6 +4,8 @@ namespace App\Model;
 
 class FightManager extends AbstractManager
 {
+    public const TABLE = 'fight';
+    
     public function insert(array $fight): int
     {
         $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE . " (date, winner) VALUES (:date, :winner)");
