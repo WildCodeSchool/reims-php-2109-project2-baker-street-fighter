@@ -53,3 +53,9 @@ CREATE TABLE participation (
         REFERENCES fighter(id)
 );
 
+INSERT INTO fighter (name, attack, defense, image)
+VALUES ('Sherlock', 20, 15, "");
+
+INSERT INTO fighter (name, attack, defense, image)
+VALUES ('Moriarty', 20, 15, "");
+
