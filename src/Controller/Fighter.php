@@ -83,33 +83,6 @@ class Fighter
         return $this;
     }
 
-    /*public function getTotalDefense(): int
-    {
-        $totalDefense = $this->defense;
-        if($this->shield !== null){
-            $defense += $this->shield->getProtection();
-        }
-        return $totalDefense;
-    }
-
-    public function getDamage(): int
-    {
-        $damage = $this->strength;
-        if($this->shield !== null){
-            $damage += $this->weapon->getDamage();
-        }
-        return $damage;
-    }*/
-
-    /*public function fight(Fighter $adversary): void
-    {
-        $damage = rand(1, $this->getDamage()) - $adversary->getTotalDefense();
-        if ($damage < 0) {
-            $damage = 0;
-        }
-        $adversary->setLife($adversary->getLife() - $damage);
-    }*/
-
     public function isAlive(): bool
     {
         return $this->getLife() > 0;
