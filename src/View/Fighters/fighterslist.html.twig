@@ -1,0 +1,20 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <h1 class="fighterListTitle">Fighters List</h1>
+    <section class="card-deck">
+        {% for fighter in fighters %}
+            <figure class="card-fighter">
+                <h2 class="card-fighter-name">{{fighter.name}}</h2>
+                <img
+                class="card-img"
+                src="/assets/images/{{fighter.name|lower}}.png"
+                alt="{{fighter.name}} photo"
+                />
+                <figcaption class="card-caption">
+                    <p class="card-fighter-skills">Attack : {{fighter.attack}}<br>Defence : {{fighter.defense}}<br>Life : 100</p>
+                </figcaption>
+            </figure>
+        {% endfor %}
+    </section>
+{% endblock %}

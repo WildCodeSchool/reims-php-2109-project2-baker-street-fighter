@@ -22,4 +22,6 @@ class FightManager extends Fighter
         }
         return $winner;
     }
+    
+    public const TABLE = 'fight';
 }

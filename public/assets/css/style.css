@@ -1,0 +1,165 @@
+*, *:after, *:before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+:root {
+    font-family: 'VT323', monospace;
+    --backgroundColor: #FFD93B;
+    --primaryColor: #FE3535;
+    --secondaryColor:#0056AF;
+
+    background-color: var(--backgroundColor);
+    
+}
+
+/* HOME */
+
+/* END HOME */
+/* PICK FIGHTER */
+
+/* END PICK FIGHTER */
+/* PICK FIGHT|ARENA */
+
+/* END FIGHT|ARENA */
+/* WIN */
+
+/* END WIN */
+/* PICK FIGHT|HISTORY*/
+
+/* END FIGHT|HISTORY */
+/* PICK LIST|FIGHTER*/
+.fighterListTitle {
+    text-align: center;
+}
+.card-deck {
+    text-align: center;
+}
+.card-fighter {
+    background-color: white;
+    border: 5px solid black;
+}
+.card-img {
+    background-color: #FF5757;
+    border: 3px solid black;
+    padding: 3rem;
+}
+.card-fighter-skills {
+    color: var(--secondaryColor);
+}
+/* END IST|FIGHTER */
+@media (min-width: 576px) {
+/* HOME */
+
+/* END HOME */
+/* PICK FIGHTER */
+
+/* END PICK FIGHTER */
+/* PICK FIGHT|ARENA */
+
+/* END FIGHT|ARENA */
+/* WIN */
+
+/* END WIN */
+/* PICK FIGHT|HISTORY*/
+
+/* END FIGHT|HISTORY */
+
+/* PICK LIST|FIGHTER*/
+
+/* END IST|FIGHTER */
+}
+
+/* Medium devices (tablets, 768px and up) */
+
+@media (min-width: 768px) {
+/* HOME */
+
+/* END HOME */
+/* PICK FIGHTER */
+
+/* END PICK FIGHTER */
+/* PICK FIGHT|ARENA */
+
+/* END FIGHT|ARENA */
+/* WIN */
+
+/* END WIN */
+/* PICK FIGHT|HISTORY*/
+
+/* END FIGHT|HISTORY */
+/* PICK LIST|FIGHTER*/
+
+/* END IST|FIGHTER */
+}
+
+/* Large devices (desktops, 992px and up) */
+
+@media (min-width: 992px) {
+/* HOME */
+
+/* END HOME */
+/* PICK FIGHTER */
+
+/* END PICK FIGHTER */
+/* PICK FIGHT|ARENA */
+
+/* END FIGHT|ARENA */
+/* WIN */
+
+/* END WIN */
+/* PICK FIGHT|HISTORY*/
+
+/* END FIGHT|HISTORY */
+/* PICK LIST|FIGHTER*/
+
+/* END IST|FIGHTER */
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+
+@media (min-width: 1200px) {
+/* HOME */
+
+/* END HOME */
+/* PICK FIGHTER */
+
+/* END PICK FIGHTER */
+/* PICK FIGHT|ARENA */
+
+/* END FIGHT|ARENA */
+/* WIN */
+
+/* END WIN */
+/* PICK FIGHT|HISTORY*/
+
+/* END FIGHT|HISTORY */
+/* PICK LIST|FIGHTER*/
+
+/* END IST|FIGHTER */
+}
+/* XX-Large devices (larger desktops, 1400px and up) */
+
+@media (min-width: 1400px) {
+/* HOME */
+
+/* END HOME */
+/* PICK FIGHTER */
+
+/* END PICK FIGHTER */
+/* PICK FIGHT|ARENA */
+
+/* END FIGHT|ARENA */
+/* WIN */
+
+/* END WIN */
+/* PICK FIGHT|HISTORY*/
+
+/* END FIGHT|HISTORY */
+/* PICK LIST|FIGHTER*/
+
+/* END IST|FIGHTER */
+}
