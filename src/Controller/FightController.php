@@ -58,12 +58,12 @@ class FightController extends AbstractController
             $fighter2AsArray['image']
         );
 
-        $i = 1;
+        $nbRound = 1;
 
         while ($fighter1->isAlive() && $fighter2->isAlive()) {
              $fighter1->fightRound($fighter2);
              $fighter2->fightRound($fighter1);
-             $i++;
+             $nbRound++;
         }
 
         if ($fighter1->isAlive()) {
