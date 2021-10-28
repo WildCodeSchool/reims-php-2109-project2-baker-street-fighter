@@ -1,9 +1,23 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-        <ul>
+    <h1>Fights History</h1>
+    <section class="fightsTable">
+        <table class="fightHistory">
+            <thead class="tableHead">
+                <tr>
+                    <th>Fight Date</th>
+                    <th>Winner</th>
+                </tr>
+            </thead>
+            <tbody>
             {% for fight in fights %}
-             <li> {{ fight.date}} => {{ fight.winner }}  </li>
+             <tr>
+                <td class="dateWinner">{{ fight.date }}</td>
+                <td class="nameWinner">{{ fight.name }}</td>
+             </tr>
             {% endfor %}
-        </ul>
+            </tbody>
+        </table>
+    </section>    
 {% endblock %}
