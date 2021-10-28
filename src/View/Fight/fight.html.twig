@@ -17,6 +17,7 @@
     {% if playerOne.isAlive and playerTwo.isAlive %}
         <p>{{ roundA|}}</p>
         <p>{{ roundB|}}</p>
+        <p>{{playerOne.getLife .' '. playerTwo.getLife}}
     {% endif %}
     {{ isWinner|}}
 {% endfor %}
