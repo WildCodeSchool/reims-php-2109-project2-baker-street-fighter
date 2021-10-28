@@ -2,6 +2,9 @@
 
 namespace App\Controller;
 
-use App\Model\Fighter;
+use App\Model\FightManager;
 
-
+public function index()
+{
+    return $this->twig->render('View/Fight/fight.html.twig', ['']);
+}
