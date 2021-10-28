@@ -44,11 +44,17 @@ class FightController extends AbstractController
         $fighter2AsArray = $fighterManager->selectOneById(2);
         $fighter2 = null;
 
-        $fighter1 = new Fighter($fighter1AsArray['name'], $fighter1AsArray['attack'], $fighter1AsArray['defense'], $fighter1AsArray['image']);
+        $fighter1 = new Fighter($fighter1AsArray['name'],
+                                $fighter1AsArray['attack'],
+                                $fighter1AsArray['defense'],
+                                $fighter1AsArray['image']);
 
-        $fighter2 = new Fighter($fighter2AsArray['name'], $fighter2AsArray['attack'], $fighter2AsArray['defense'], $fighter2AsArray['image']);
+        $fighter2 = new Fighter($fighter2AsArray['name'],
+                                $fighter2AsArray['attack'],
+                                $fighter2AsArray['defense'],
+                                $fighter2AsArray['image']);
 
-        $i=1;
+        $i = 1;
 
         while ($fighter1->isAlive() && $fighter2->isAlive()) {
              $fighter1->fightRound($fighter2);
