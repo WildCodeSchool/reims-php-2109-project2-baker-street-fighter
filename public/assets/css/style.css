@@ -17,8 +17,22 @@ body {
 }
 /* NAVBAR */
 .navbar {
-    background-color:#0056AF;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+
 }
+
+.menu {
+    background-color:#0056AF;
+    list-style-type: none;
+    text-align: center;
+    padding: 5px 0px;
+    width: 30vw;
+}
+
+
+
 /* END NAVBAR */
 /* HOME */
 
