@@ -95,6 +95,22 @@ body {
     color: var(--secondaryColor);
 }
 /* END IST|FIGHTER */
+
+/*CREDIT*/
+.credit {
+    display: block;
+    font-size: 190%;
+    max-width: 30ch;
+    margin: auto;
+}
+
+.creditTitle {
+    display: block;
+    justify-content: center;
+    font-size: 240%;
+}
+/*END CREDIT*/
+
 @media (min-width: 576px) {
 /* NAVBAR */
 
@@ -184,22 +200,7 @@ body {
 /* HOME */
 
 /* END HOME */
-/* CREDITS */
 
-.credit {
-    display: block;
-    margin-left: 5%;
-    align-items: center;
-    font-size: 16px;
-}
-
-.creditTitle {
-    display: flex;
-    margin-left: 5%;
-    font-size: 22px;
-}
-
-/* END CREDITS*/
 /* PICK FIGHTER */
 
 /* END PICK FIGHTER */
@@ -225,19 +226,6 @@ body {
 
 /* END HOME */
 /* CREDITS */
-
-.credit {
-    display: block;
-    margin-left: 5%;
-    align-items: center;
-    font-size: 190%;
-}
-
-.creditTitle {
-    display: flex;
-    margin-left: 5%;
-    font-size: 220%;
-}
 
 /* END CREDITS*/
 /* PICK FIGHTER */
