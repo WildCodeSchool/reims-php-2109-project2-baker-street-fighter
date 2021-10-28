@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Entities;
+namespace App\Entity;
 
 class Fighter
 {
@@ -9,14 +9,14 @@ class Fighter
     private string $name;
     private int $strength;
     private int $defense;
-    private string $image;
+    private string $image = '/assets/images/placeholder.png';
     private int $life = self::MAX_LIFE;
 
     public function __construct(
         string $name,
-        int $strength = 20,
-        int $defense = 15,
-        string $image = '.png'
+        int $strength,
+        int $defense,
+        string $image
     ) {
         $this->name = $name;
         $this->strength = $strength;
@@ -86,5 +86,14 @@ class Fighter
     public function isAlive(): bool
     {
         return $this->getLife() > 0;
+    }
+
+    public function fightRound(Fighter $adversary): void
+    {
+        $damage = rand(1, $this->getStrength()) - rand(1, $adversary->getDefense());
+        if ($damage < 0) {
+            $damage = 0;
+        }
+        $adversary->setLife($adversary->getLife() - $damage);
     }
 }

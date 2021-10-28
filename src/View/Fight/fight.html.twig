@@ -1,0 +1,19 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+<section class='result'>
+    <div>
+        <img src="{{winner.image}}">
+        <p>Winner : {{winner.name}}</p>
+    </div>
+
+    <div>
+        <img src="{{loser.image}}">
+        <p> Loser : {{loser.name}}</p>
+    </div>
+    <div>
+    Won in {{round}} !! Elementary my dear !
+    </div>
+</section>
+
+{% endblock %}
