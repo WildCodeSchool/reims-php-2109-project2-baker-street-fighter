@@ -16,11 +16,11 @@ body {
     
 }
 /* NAVBAR */
+
 .navbar {
     display: flex;
     justify-content: center;
     text-decoration: none;
-
 }
 
 .menu {
@@ -28,19 +28,28 @@ body {
     list-style-type: none;
     text-align: center;
     padding: 5px 0px;
-    width: 30vw;
+    width: 40vw;
     box-shadow: 5px 5px black;
+    font-size: 1.5rem;
 }
 
 .menu-links {
     text-decoration: none;
-    color: black;
+    color: white;
 }
-
-
 /* END NAVBAR */
 /* HOME */
-
+.home {
+    display: flex;
+    justify-content: center;
+}
+.home-title {
+    font-size: 6rem;
+    color: white;
+    background-color: var(--primaryColor);
+    width: 35vh;
+    box-shadow: 5px 5px black;
+}
 /* END HOME */
 /* PICK FIGHTER */
 
