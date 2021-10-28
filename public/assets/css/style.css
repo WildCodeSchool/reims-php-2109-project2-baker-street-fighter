@@ -24,13 +24,16 @@ body {
 }
 
 .menu {
-    background-color:#0056AF;
+    background-color:var(--secondaryColor);
     list-style-type: none;
     text-align: center;
     padding: 5px 0px;
     width: 30vw;
 }
 
+.menu-links {
+    text-decoration: none;
+}
 
 
 /* END NAVBAR */
