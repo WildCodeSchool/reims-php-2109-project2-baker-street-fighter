@@ -23,7 +23,7 @@ class FightController extends AbstractController
             header('Location:/fights/show?id=' . $id);
         }
         return $this->twig->render('Fight/add.html.twig');
-     }
+    }
 
     public function index(): string
     {
