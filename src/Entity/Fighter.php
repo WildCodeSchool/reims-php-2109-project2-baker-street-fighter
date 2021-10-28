@@ -14,9 +14,9 @@ class Fighter
 
     public function __construct(
         string $name,
-        int $strength = 20,
-        int $defense = 15,
-        string $image = '.png'
+        int $strength,
+        int $defense,
+        string $image
     ) {
         $this->name = $name;
         $this->strength = $strength;
