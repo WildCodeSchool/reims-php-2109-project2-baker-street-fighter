@@ -2,9 +2,6 @@
 
 {% block content %}
     <h1>Fights History</h1>
-                <pre>
-                {{ dump(fights) }}
-            </pre>
     <section class="fightsTable">
         <table class="fightHistory">
             <thead>
@@ -17,7 +14,7 @@
             {% for fight in fights %}
              <tr>
                 <td>{{ fight.date }}</td>
-                <td>{{ fight.winner }}</td>
+                <td>{{ fight.name }}</td>
              </tr
             {% endfor %}
             </tbody>
