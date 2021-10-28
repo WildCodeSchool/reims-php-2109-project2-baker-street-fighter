@@ -2,7 +2,7 @@
 
 namespace App\Model;
 
-use App\Fighter;
+use App\Entities\Fighter;
 
 class FightManager extends Fighter
 {
