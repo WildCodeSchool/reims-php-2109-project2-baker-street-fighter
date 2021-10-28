@@ -22,7 +22,14 @@ class FightController extends AbstractController
             $id = $fightManager->insert($fight);
             header('Location:/fights/show?id=' . $id);
         }
-
         return $this->twig->render('Fight/add.html.twig');
+     }
+
+    public function index(): string
+    {
+        $fightManager = new FightManager();
+        $fights = $fightManager->selectAll('date');
+
+        return $this->twig->render('fight/index.html.twig', ['fights' => $fights]);
     }
 }
