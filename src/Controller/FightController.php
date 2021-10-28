@@ -21,30 +21,29 @@ class FightController extends AbstractController
         $fighterManager = new FighterManager();
 
         $fighter1AsArray = $fighterManager->selectOneById(1);
-        var_dump($fighter1AsArray);
         $fighter1 = null;
         $fighter2AsArray = $fighterManager->selectOneById(2);
-        var_dump($fighter2AsArray);
         $fighter2 = null;
 
         $fighter1 = new Fighter($fighter1AsArray['name'], $fighter1AsArray['attack'], $fighter1AsArray['defense'], $fighter1AsArray['image']);
-        var_dump($fighter1);
 
         $fighter2 = new Fighter($fighter2AsArray['name'], $fighter2AsArray['attack'], $fighter2AsArray['defense'], $fighter2AsArray['image']);
-        var_dump($fighter2);
 
-        // while ($fighter1->isAlive() && $fighter2->isAlive()) {
-        //     $fighter1->fight($fighter2);
-        //     $fighter2->fight($fighter1);
-        // }
+        $i=1;
 
-        // if ($fighter1->isAlive()) {
-        //     $winner = $fighter1;
-        //     $loser = $fighter2;
-        // } else {
-        //     $winner = $fighter2;
-        //     $loser = $fighter1;
-        // }
+        while ($fighter1->isAlive() && $fighter2->isAlive()) {
+             $fighter1->fightRound($fighter2);
+             $fighter2->fightRound($fighter1);
+             $i++;
+        }
+
+        if ($fighter1->isAlive()) {
+             $winner = $fighter1;
+             $loser = $fighter2;
+        } else {
+             $winner = $fighter2;
+             $loser = $fighter1;
+        }
 
         return $this->twig->render('fight/fight.html.twig', ['winner' => $winner, 'loser' => $loser]);
         return "let's fight";

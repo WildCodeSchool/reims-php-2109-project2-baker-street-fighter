@@ -90,7 +90,7 @@ class Fighter
 
     public function fightRound(Fighter $adversary): void
     {
-        $damage = rand(1, $this->getStrength()) - rand(1, $this->adversary->getDefense());
+        $damage = rand(1, $this->getStrength()) - rand(1, $adversary->getDefense());
         if ($damage < 0) {
             $damage = 0;
         }
