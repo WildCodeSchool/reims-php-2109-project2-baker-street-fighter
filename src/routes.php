@@ -16,5 +16,4 @@ return [
     'fights' => ['FightController', 'index',],
     'fighters/index' => ['FightersController', 'index',],
     'fight/add' => ['FightController', 'add',],
-    
 ];
