@@ -90,7 +90,6 @@ class ItemController extends AbstractController
     }
     public function credit(): string
     {
-      return $this->twig->render('credits/credit.html.twig');
+        return $this->twig->render('credits/credit.html.twig');
     }
-
 }
