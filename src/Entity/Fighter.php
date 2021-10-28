@@ -9,7 +9,7 @@ class Fighter
     private string $name;
     private int $strength;
     private int $defense;
-    private string $image;
+    private string $image = '../public/assets/images/placeholder.png';
     private int $life = self::MAX_LIFE;
 
     public function __construct(
