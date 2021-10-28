@@ -10,13 +10,25 @@ body {
     font-family: 'VT323', monospace;
     --backgroundColor: #FFD93B;
     --primaryColor: #FE3535;
+    --primaryColorAlter: #FF5757;
     --secondaryColor:#0056AF;
 
     background-color: var(--backgroundColor);
     
 }
-/* NAVBAR */
 
+.returnButton {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    top: 10px;
+    left: 10px;
+    border: 2px solid black;
+    box-shadow: 3px 3px black;
+}
+
+/* NAVBAR */
+  
 .navbar {
     display: flex;
     align-items: flex-start;    
@@ -39,6 +51,21 @@ body {
     text-decoration: none;
     color: white;
 }
+
+@-webkit-keyframes blinker {
+    from {opacity: 1.0;}
+    to {opacity: 0.0;}
+  }
+
+.menu-links:hover {
+	text-decoration: blink;
+	-webkit-animation-name: blinker;
+	-webkit-animation-duration: 0.6s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-timing-function:ease-in-out;
+	-webkit-animation-direction: alternate;
+}
+
 /* END NAVBAR */
 /* HOME */
 .home {
@@ -73,6 +100,31 @@ body {
 
 /* END WIN */
 /* PICK FIGHT|HISTORY*/
+.fightsTable {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.fightHistory {
+    border-collapse: collapse;
+    border: 5px solid black;
+    background-color: var(--primaryColor);
+}
+
+tr, td {
+    padding: 1rem;
+    border: 2px solid black;
+}
+
+thead,
+tfoot {
+    background-color: var(--secondaryColor);
+    color:white;
+}
+
+
+
 
 /* END FIGHT|HISTORY */
 /* PICK LIST|FIGHTER*/
@@ -87,7 +139,7 @@ body {
     border: 5px solid black;
 }
 .card-img {
-    background-color: #FF5757;
+    background-color:var(--primaryColorAlter);
     border: 3px solid black;
     padding: 3rem;
 }
