@@ -184,6 +184,22 @@ body {
 /* HOME */
 
 /* END HOME */
+/* CREDITS */
+
+.credit {
+    display: block;
+    margin-left: 5%;
+    align-items: center;
+    font-size: 16px;
+}
+
+.creditTitle {
+    display: flex;
+    margin-left: 5%;
+    font-size: 22px;
+}
+
+/* END CREDITS*/
 /* PICK FIGHTER */
 
 /* END PICK FIGHTER */
@@ -202,12 +218,28 @@ body {
 }
 /* XX-Large devices (larger desktops, 1400px and up) */
 
-@media (min-width: 1400px) {
+@media (min-width: 200px) {
 /* NAVBAR */
 
 /* END NAVBAR *//* HOME */
 
 /* END HOME */
+/* CREDITS */
+
+.credit {
+    display: block;
+    margin-left: 5%;
+    align-items: center;
+    font-size: 190%;
+}
+
+.creditTitle {
+    display: flex;
+    margin-left: 5%;
+    font-size: 220%;
+}
+
+/* END CREDITS*/
 /* PICK FIGHTER */
 
 /* END PICK FIGHTER */
