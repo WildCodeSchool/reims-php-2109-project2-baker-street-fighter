@@ -73,6 +73,14 @@ body {
 
 /* END WIN */
 /* PICK FIGHT|HISTORY*/
+.fightsTable {
+    display: flex;
+    justify-content: center;
+}
+
+.fightHistory {
+    border: 5px solid black;
+}
 
 /* END FIGHT|HISTORY */
 /* PICK LIST|FIGHTER*/
