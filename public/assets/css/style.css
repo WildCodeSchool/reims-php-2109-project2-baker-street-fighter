@@ -29,7 +29,7 @@ body {
     list-style-type: none;
     text-align: center;
     padding: 5px 0px;
-    width: 40vw;
+    min-width: 40vw;
     box-shadow: 5px 5px black;
     font-size: 1.5rem;
     line-height: 2rem;
