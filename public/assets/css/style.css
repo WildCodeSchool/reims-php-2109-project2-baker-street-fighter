@@ -191,10 +191,51 @@ body {
 /* PICK FIGHTER */
 
 /* END PICK FIGHTER */
-/* PICK FIGHT|ARENA */
+/* FIGHT|ARENA */
 
 /* END FIGHT|ARENA */
 /* WIN */
+.result {
+  display: flex;
+  flex-direction: row;
+  align-content: flex-start;
+  width: auto;
+  padding: 2rem;
+}
+
+.winner {
+  padding: 1rem;
+  font-size: 1.7rem;
+  justify-content: center;
+}
+
+.winnerImage{
+  height: 30vh;
+}
+
+.loser {
+  padding: 1rem;
+  font-size: 1.3rem;
+}
+
+.loserImage {
+  height: 20vh;
+}
+
+.fightDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.announce {
+  font-size: 2rem;
+  color: white;
+  padding: 0.5rem;
+  background-color:#FE3535;
+  box-shadow: 5px 5px black;
+}
 
 /* END WIN */
 /* PICK FIGHT|HISTORY*/
