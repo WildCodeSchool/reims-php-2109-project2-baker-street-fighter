@@ -76,11 +76,28 @@ body {
 .fightsTable {
     display: flex;
     justify-content: center;
+    
 }
 
 .fightHistory {
+    border-collapse: collapse;
     border: 5px solid black;
+    background-color: var(--primaryColor);
 }
+
+tr, td {
+    padding: 1rem;
+    border: 2px solid black;
+}
+
+thead,
+tfoot {
+    background-color: var(--secondaryColor);
+    color:white;
+}
+
+
+
 
 /* END FIGHT|HISTORY */
 /* PICK LIST|FIGHTER*/

@@ -4,7 +4,7 @@
     <h1>Fights History</h1>
     <section class="fightsTable">
         <table class="fightHistory">
-            <thead>
+            <thead class="tableHead">
                 <tr>
                     <th>Fight Date</th>
                     <th>Winner</th>
@@ -15,7 +15,7 @@
              <tr>
                 <td>{{ fight.date }}</td>
                 <td>{{ fight.name }}</td>
-             </tr
+             </tr>
             {% endfor %}
             </tbody>
         </table>
