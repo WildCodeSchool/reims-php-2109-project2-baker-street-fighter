@@ -10,11 +10,23 @@ body {
     font-family: 'VT323', monospace;
     --backgroundColor: #FFD93B;
     --primaryColor: #FE3535;
+    --primaryColorAlter: #FF5757;
     --secondaryColor:#0056AF;
 
     background-color: var(--backgroundColor);
     
 }
+
+.returnButton {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    top: 10px;
+    left: 10px;
+    border: 2px solid black;
+    box-shadow: 3px 3px black;
+}
+
 /* NAVBAR */
   
 .navbar {
@@ -127,7 +139,7 @@ tfoot {
     border: 5px solid black;
 }
 .card-img {
-    background-color: #FF5757;
+    background-color:var(--primaryColorAlter);
     border: 3px solid black;
     padding: 3rem;
 }
