@@ -15,8 +15,52 @@ body {
     background-color: var(--backgroundColor);
     
 }
+/* NAVBAR */
 
+.navbar {
+    display: flex;
+    align-items: flex-start;    
+    text-decoration: none;
+    height: auto;
+}
+
+.menu {
+    background-color:var(--secondaryColor);
+    list-style-type: none;
+    text-align: center;
+    padding: 5px 0px;
+    min-width: 40vw;
+    box-shadow: 5px 5px black;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.menu-links {
+    text-decoration: none;
+    color: white;
+}
+/* END NAVBAR */
 /* HOME */
+.home {
+    display: flex;
+    justify-content: center;
+}
+.home-title {
+    display: flex;
+    justify-content: center;
+    font-size: 6rem;
+    color: white;
+    background-color: var(--primaryColor);
+    padding: 1rem 2rem;
+    box-shadow: 5px 5px black;
+}
+.navbarfighter {
+    display: flex;
+    justify-content: center;
+}
+.img-home {
+    padding: 10px;
+}
 
 /* END HOME */
 /* PICK FIGHTER */
@@ -52,6 +96,9 @@ body {
 }
 /* END IST|FIGHTER */
 @media (min-width: 576px) {
+/* NAVBAR */
+
+/* END NAVBAR */
 /* HOME */
 
 /* END HOME */
@@ -76,6 +123,12 @@ body {
 /* Medium devices (tablets, 768px and up) */
 
 @media (min-width: 768px) {
+/* NAVBAR */
+.menu {
+    display: flex;
+    justify-content: space-around;
+}
+/* END NAVBAR */
 /* HOME */
 
 /* END HOME */
@@ -99,6 +152,9 @@ body {
 /* Large devices (desktops, 992px and up) */
 
 @media (min-width: 992px) {
+/* NAVBAR */
+
+/* END NAVBAR */
 /* HOME */
 
 /* END HOME */
@@ -122,6 +178,9 @@ body {
 /* X-Large devices (large desktops, 1200px and up) */
 
 @media (min-width: 1200px) {
+/* NAVBAR */
+
+/* END NAVBAR */
 /* HOME */
 
 /* END HOME */
@@ -144,7 +203,9 @@ body {
 /* XX-Large devices (larger desktops, 1400px and up) */
 
 @media (min-width: 1400px) {
-/* HOME */
+/* NAVBAR */
+
+/* END NAVBAR *//* HOME */
 
 /* END HOME */
 /* PICK FIGHTER */
