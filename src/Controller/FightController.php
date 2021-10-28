@@ -75,7 +75,8 @@ class FightController extends AbstractController
         }
 
         return $this->twig->render(
-            'fight/fight.html.twig', ['winner' => $winner, 'loser' => $loser, 'round' => $nbRound]
+            'fight/fight.html.twig',
+            ['winner' => $winner, 'loser' => $loser, 'round' => $nbRound]
         );
     }
 }
