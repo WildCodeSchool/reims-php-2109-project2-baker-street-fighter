@@ -2,17 +2,21 @@
 
 {% block content %}
 <section class='result'>
-    <div>
+    <div class='winner'>
         <img src="{{winner.image}}">
-        <p>Winner : {{winner.name}}</p>
+        <p>Winner : {{winner.name}} {{winner.getLife}} ❤</p>
     </div>
 
-    <div>
+    <div class='loser'>
         <img src="{{loser.image}}">
-        <p> Loser : {{loser.name}}</p>
+        <p>Loser : {{loser.name}} {{loser.getLife}} ❤</p>
     </div>
-    <div>
-    Won in {{round}} !! Elementary my dear !
+    <div class='announce'>
+    <p>Won in {{round}} !! Elementary my dear !</p>
+    </div>
+
+    <div class='fightReview'>
+    <p>
     </div>
 </section>
 
