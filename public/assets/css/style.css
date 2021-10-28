@@ -29,10 +29,12 @@ body {
     text-align: center;
     padding: 5px 0px;
     width: 30vw;
+    box-shadow: 5px 5px black;
 }
 
 .menu-links {
     text-decoration: none;
+    color: black;
 }
 
 
