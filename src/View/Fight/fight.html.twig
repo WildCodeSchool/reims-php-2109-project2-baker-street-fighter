@@ -3,20 +3,24 @@
 {% block content %}
 <section class='result'>
     <div class='winner'>
-        <img src="{{winner.image}}">
-        <p>Winner : {{winner.name}} {{winner.getLife}} ❤</p>
+        <img src="/assets/images/{{winner.name|lower}}.png">
+        <p>Winner : {{winner.name}} {{winner.getLife}} ❤
+        Atk: {{winner.getStrength}} Def: {{winner.getDefense}}</p>
     </div>
 
     <div class='loser'>
-        <img src="{{loser.image}}">
-        <p>Loser : {{loser.name}} {{loser.getLife}} ❤</p>
+        <img src="/assets/images/{{loser.name|lower}}.png">
+        <p>Loser : {{loser.name}} {{loser.getLife}} ❤
+        Atk: {{loser.getStrength}} Def: {{loser.getDefense}}</p>
     </div>
+</section>
+<section class='fightDetails'>
     <div class='announce'>
-    <p>Won in {{round}} !! Elementary my dear !</p>
+    <p>Won in {{round}} rounds !! Elementary my dear ! 🧐</p>
     </div>
 
     <div class='fightReview'>
-    <p>
+    <p></p>
     </div>
 </section>
 
