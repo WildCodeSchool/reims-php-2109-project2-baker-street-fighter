@@ -1,7 +1,6 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    {% include '/Item/return.html.twig'%}
     <h1 class="fighterListTitle">Fighters List</h1>
     <section class="card-deck">
         {% for fighter in fighters %}
@@ -18,4 +17,5 @@
             </figure>
         {% endfor %}
     </section>
+    {% include '/Item/return.html.twig'%}
 {% endblock %}
