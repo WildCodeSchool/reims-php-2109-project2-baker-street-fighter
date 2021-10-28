@@ -39,6 +39,9 @@ body {
     text-decoration: none;
     color: white;
 }
+ .menu-links:hover {
+     color: var(--primaryColor);
+ }
 /* END NAVBAR */
 /* HOME */
 .home {
