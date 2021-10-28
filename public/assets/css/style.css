@@ -50,6 +50,12 @@ body {
     width: 35vh;
     box-shadow: 5px 5px black;
 }
+.navbarfighter {
+    display: flex;
+    justify-content: center;
+}
+
+
 /* END HOME */
 /* PICK FIGHTER */
 
