@@ -15,4 +15,5 @@ return [
     'items/delete' => ['ItemController', 'delete',],
     'fights' => ['FightController', 'index',],
     'fighters/index' => ['FightersController', 'index',],
+    'fights/add' => ['FightController', 'add',],
 ];
