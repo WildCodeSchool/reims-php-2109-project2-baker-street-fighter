@@ -9,11 +9,10 @@ class FightManager extends AbstractManager
     public const TABLE = 'fight';
     public const JOINTABLE = 'fighter';
 
-    public function insert(array $fight): int
+    public function insert(string $currentWinner): int
     {
-        $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE . " (date, winner) VALUES (:date, :winner)");
-        $statement->bindValue('date', $fight['date'], \PDO::PARAM_STR);
-        $statement->bindValue('winner', $fight['winner'], \PDO::PARAM_INT);
+        $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE . " (winner) VALUES (:winner)");
+        $statement->bindValue('winner', $currentWinner, \PDO::PARAM_INT);
 
         $statement->execute();
         return (int)$this->pdo->lastInsertId();
