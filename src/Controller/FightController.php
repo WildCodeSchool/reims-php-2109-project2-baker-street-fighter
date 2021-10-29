@@ -32,7 +32,7 @@ class FightController extends AbstractController
         $fightManager = new FightManager();
         $fights = $fightManager->selectAll('date');
 
-        return $this->twig->render('fight/index.html.twig', ['fights' => $fights]);
+        return $this->twig->render('Fight/index.html.twig', ['fights' => $fights]);
     }
 
     public function fight(): string
@@ -75,7 +75,7 @@ class FightController extends AbstractController
         }
 
         return $this->twig->render(
-            'fight/fight.html.twig',
+            'Fight/fight.html.twig',
             ['winner' => $winner, 'loser' => $loser, 'round' => $nbRound]
         );
     }
