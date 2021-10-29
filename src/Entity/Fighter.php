@@ -42,7 +42,7 @@ class Fighter
      */
     public function setLife($life)
     {
-        if($life < 0) {
+        if ($life < 0) {
             $life = 0;
         }
         $this->life = $life;
