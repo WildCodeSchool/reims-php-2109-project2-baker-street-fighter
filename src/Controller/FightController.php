@@ -11,20 +11,11 @@ class FightController extends AbstractController
     /**
      * Add a new fight
      */
-    public function add(): string
+    static function add(): void
     {
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            // clean $_POST data
-            $fight = array_map('trim', $_POST);
-
-            // TODO validations (length, format...)
-
-            // if validation is ok, insert and redirection
-            $fightManager = new FightManager();
-            $id = $fightManager->insert($fight);
-            header('Location:/fights/show?id=' . $id);
-        }
-        return $this->twig->render('Fight/add.html.twig');
+        $currentWinner = '$winner';
+        $fightManager = new FightManager();
+        $fightManager->insert($currentWinner);
     }
 
     public function index(): string
@@ -69,9 +60,12 @@ class FightController extends AbstractController
         if ($fighter1->isAlive()) {
              $winner = $fighter1;
              $loser = $fighter2;
+             self::add();
+
         } else {
              $winner = $fighter2;
              $loser = $fighter1;
+             self::add();
         }
 
         return $this->twig->render(
