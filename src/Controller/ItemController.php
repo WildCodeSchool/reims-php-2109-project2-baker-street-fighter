@@ -88,4 +88,8 @@ class ItemController extends AbstractController
             header('Location:/items');
         }
     }
+    public function credit(): string
+    {
+        return $this->twig->render('credits/credit.html.twig');
+    }
 }

@@ -193,6 +193,22 @@ tfoot {
     color: var(--secondaryColor);
 }
 /* END IST|FIGHTER */
+
+/*CREDIT*/
+.credit {
+    display: block;
+    font-size: 190%;
+    max-width: 30ch;
+    margin: auto;
+}
+
+.creditTitle {
+    display: block;
+    justify-content: center;
+    font-size: 240%;
+}
+/*END CREDIT*/
+
 @media (min-width: 576px) {
 /* NAVBAR */
 
@@ -282,6 +298,7 @@ tfoot {
 /* HOME */
 
 /* END HOME */
+
 /* PICK FIGHTER */
 
 /* END PICK FIGHTER */
@@ -306,6 +323,9 @@ tfoot {
 /* END NAVBAR *//* HOME */
 
 /* END HOME */
+/* CREDITS */
+
+/* END CREDITS*/
 /* PICK FIGHTER */
 
 /* END PICK FIGHTER */
