@@ -11,7 +11,7 @@ class FightController extends AbstractController
     /**
      * Add a new fight
      */
-    static function add(): void
+    private static function add(): void
     {
         $currentWinner = '$winner';
         $fightManager = new FightManager();
@@ -61,7 +61,6 @@ class FightController extends AbstractController
              $winner = $fighter1;
              $loser = $fighter2;
              self::add();
-
         } else {
              $winner = $fighter2;
              $loser = $fighter1;
