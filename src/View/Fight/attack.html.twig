@@ -1,0 +1,21 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+<section class='players'>
+    <div class='player1'>
+        <img src="/assets/images/{{player1.name|lower}}.png" class ="player1Image">
+        <p> {{player1.name}} <br>❤ {{player1.life}}  <br>Atk: {{player1.strength}}<br>Def: {{player1.defense}}
+        </p>
+    </div>
+    <div class='player2'>
+        <img src="/assets/images/{{player2.name|lower}}.png" class ="player2Image">
+        <p> {{player2.name}} <br>❤ {{player2.life}}  <br>Atk: {{player2.strength}}<br>Def: {{player2.defense}}
+        </p>
+    </div>
+</section>
+<section class='fightDetails'>
+</section>
+<div class='attackButton'>
+    <a href='fight.html.twig'>ATTACK !</a>
+</div>
+{% endblock %}
