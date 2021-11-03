@@ -34,6 +34,17 @@ class FightController extends AbstractController
 
         $_SESSION['currentAttacker'] = $_SESSION['player1'];
     }
+    public function attack()
+    {
+        if ($_SESSION['currentAttacker'] === $_SESSION['player1']) {
+            $adversary = $_SESSION['player2'];
+            $_SESSION['currentAttacker']->fightRound($adversary);
+        } elseif ($_SESSION['currentAttacker'] === $_SESSION['player2']) {
+            $adversary = $_SESSION['player1'];
+            $_SESSION['currentAttacker']->fightRound($adversary);
+        }
+    }
+
     public function fight(): string
     {
         $fighterManager = new FighterManager();
