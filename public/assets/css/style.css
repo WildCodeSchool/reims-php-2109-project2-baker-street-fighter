@@ -29,25 +29,24 @@ body {
 
 /* NAVBAR */
   
-.navbar {
-    display: flex;
-    align-items: flex-start;    
-    text-decoration: none;
-    height: auto;
-}
-
 .menu {
-    background-color:var(--secondaryColor);
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
     list-style-type: none;
     text-align: center;
-    padding: 5px 0px;
     min-width: 40vw;
-    box-shadow: 5px 5px black;
     font-size: 1.5rem;
     line-height: 2rem;
 }
 
 .menu-links {
+    padding: 0.4rem;
+    background-color:var(--secondaryColor);
+    box-shadow: 5px 5px black;
     text-decoration: none;
     color: white;
 }
