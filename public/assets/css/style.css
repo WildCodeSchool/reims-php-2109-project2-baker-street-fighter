@@ -19,10 +19,10 @@ body {
 
 .returnButton {
     position: fixed;
-    width: 50px;
-    height: 50px;
-    top: 10px;
-    left: 10px;
+    width: 70px;
+    height: 70px;
+    bottom: 2rem;
+    right: 1rem;
     border: 2px solid black;
     box-shadow: 3px 3px black;
 }
@@ -56,7 +56,8 @@ body {
     to {opacity: 0.0;}
   }
 
-.menu-links:hover {
+.menu-links:hover,
+.menu-links:focus {
 	text-decoration: blink;
 	-webkit-animation-name: blinker;
 	-webkit-animation-duration: 0.6s;
@@ -74,6 +75,7 @@ body {
 .home-title {
     display: flex;
     justify-content: center;
+    text-transform: uppercase;
     font-size: 6rem;
     color: white;
     background-color: var(--primaryColor);
@@ -133,7 +135,7 @@ body {
 .announce {
   font-size: 2rem;
   color: white;
-  padding: 0.5rem;
+  padding: 0;
   background-color:#FE3535;
   box-shadow: 5px 5px black;
 }
@@ -196,15 +198,25 @@ tfoot {
 /*CREDIT*/
 .credit {
     display: block;
-    font-size: 190%;
+    font-size: 2rem;
     max-width: 30ch;
     margin: auto;
+    text-align: center;
+    text-decoration: none;
+}
+
+.creditList {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
 }
 
 .creditTitle {
     display: block;
     justify-content: center;
-    font-size: 240%;
+    font-size: 6rem;
+    text-align: center;
+    margin-top: 15vh;
 }
 /*END CREDIT*/
 
@@ -341,3 +353,18 @@ tfoot {
 
 /* END IST|FIGHTER */
 }
+
+/*MEDIAQUERY FOR RESPECT USER RADIUS FOR ANIMATIONS*/
+@media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+      animation-delay: -1ms !important;
+      animation-duration: 1ms !important;
+      animation-iteration-count: 1 !important;
+      background-attachment: initial !important;
+      scroll-behavior: auto !important;
+      transition-duration: 0s !important;
+      transition-delay: 0s !important;
+    }
+  }
