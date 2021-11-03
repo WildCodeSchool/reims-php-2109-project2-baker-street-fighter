@@ -26,6 +26,31 @@ class FightController extends AbstractController
         return $this->twig->render('Fight/index.html.twig', ['fights' => $fights]);
     }
 
+    public function initiateFighter()
+    {
+        $fighterManager = new FighterManager();
+
+        $fighter1AsArray = $fighterManager->selectOneById(1);
+        $fighter1 = null;
+        $fighter2AsArray = $fighterManager->selectOneById(2);
+        $fighter2 = null;
+
+        $_SESSION['player1'] = new Fighter(
+            $fighter1AsArray['name'],
+            $fighter1AsArray['attack'],
+            $fighter1AsArray['defense'],
+            $fighter1AsArray['image']
+        );
+
+        $_SESSION['player2'] = new Fighter(
+            $fighter2AsArray['name'],
+            $fighter2AsArray['attack'],
+            $fighter2AsArray['defense'],
+            $fighter2AsArray['image']
+        );
+
+    }
+
     public function fight(): string
     {
         $fighterManager = new FighterManager();
