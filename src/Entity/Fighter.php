@@ -94,9 +94,11 @@ class Fighter
     public function fightRound(Fighter $adversary): void
     {
         $damage = rand(1, $this->getAttack()) - rand(1, $adversary->getDefense());
+        $_SESSION['currentDamage'] = $damage;
         if ($damage < 0) {
             $damage = 0;
         }
         $adversary->setLife($adversary->getLife() - $damage);
+        statusFight($_SESSION['currentAttacker']);
     }
 }
