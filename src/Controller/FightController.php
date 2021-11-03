@@ -31,9 +31,7 @@ class FightController extends AbstractController
         $fighterManager = new FighterManager();
 
         $fighter1AsArray = $fighterManager->selectOneById(1);
-        $fighter1 = null;
         $fighter2AsArray = $fighterManager->selectOneById(2);
-        $fighter2 = null;
 
         $_SESSION['player1'] = new Fighter(
             $fighter1AsArray['name'],
