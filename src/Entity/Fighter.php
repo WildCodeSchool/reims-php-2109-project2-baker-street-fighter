@@ -7,22 +7,22 @@ class Fighter
     public const MAX_LIFE = 100;
 
     private string $name;
-    private int $strength;
+    private int $attack;
     private int $defense;
     private string $image = '/assets/images/placeholder.png';
     private int $life = self::MAX_LIFE;
 
-    public function __construct(
+    /*public function __construct(
         string $name,
-        int $strength,
+        int $attack,
         int $defense,
         string $image
     ) {
         $this->name = $name;
-        $this->strength = $strength;
+        $this->attack = $attack;
         $this->defense = $defense;
         $this->image = $image;
-    }
+    }*/
 
     public function getName()
     {
@@ -50,14 +50,14 @@ class Fighter
         return $this;
     }
 
-    public function getStrength()
+    public function getAttack()
     {
-        return $this->strength;
+        return $this->attack;
     }
 
-    public function setStrength($strength)
+    public function setAttack($attack)
     {
-        $this->strength = $strength;
+        $this->attack = $attack;
 
         return $this;
     }
@@ -93,7 +93,7 @@ class Fighter
 
     public function fightRound(Fighter $adversary): void
     {
-        $damage = rand(1, $this->getStrength()) - rand(1, $adversary->getDefense());
+        $damage = rand(1, $this->getAttack()) - rand(1, $adversary->getDefense());
         if ($damage < 0) {
             $damage = 0;
         }

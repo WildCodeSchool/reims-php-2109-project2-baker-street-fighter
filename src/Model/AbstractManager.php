@@ -21,6 +21,7 @@ abstract class AbstractManager
     protected PDO $pdo;
 
     public const TABLE = '';
+    public const ENTITY = '';
 
     public function __construct()
     {
@@ -38,7 +39,12 @@ abstract class AbstractManager
             $query .= ' ORDER BY ' . $orderBy . ' ' . $direction;
         }
 
-        return $this->pdo->query($query)->fetchAll();
+        $statement = $this->pdo->query($query);
+        if (!empty(static::ENTITY)) {
+            $statement->setFetchMode(PDO::FETCH_CLASS, static::ENTITY);
+        }
+
+        return $statement->fetchAll();
     }
 
     /**
@@ -49,8 +55,13 @@ abstract class AbstractManager
     {
         // prepared request
         $statement = $this->pdo->prepare("SELECT * FROM " . static::TABLE . " WHERE id=:id");
+        if (!empty(static::ENTITY)) {
+            $statement->setFetchMode(PDO::FETCH_CLASS, static::ENTITY);
+        }
+
         $statement->bindValue('id', $id, \PDO::PARAM_INT);
         $statement->execute();
+
 
         return $statement->fetch();
     }
