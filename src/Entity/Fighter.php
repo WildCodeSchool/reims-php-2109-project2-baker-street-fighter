@@ -12,7 +12,7 @@ class Fighter
     private string $image = '/assets/images/placeholder.png';
     private int $life = self::MAX_LIFE;
 
-    public function __construct(
+    /*public function __construct(
         string $name,
         int $strength,
         int $defense,
@@ -22,7 +22,7 @@ class Fighter
         $this->strength = $strength;
         $this->defense = $defense;
         $this->image = $image;
-    }
+    }*/
 
     public function getName()
     {
