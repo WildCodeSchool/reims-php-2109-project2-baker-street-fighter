@@ -51,7 +51,7 @@ class FightController extends AbstractController
                     ['round' => $nbRound]
                 );
             } else {
-                # code...
+                header('Location:/');
             }
         } elseif ((!$_SESSION['player1']->isAlive()) || (!$_SESSION['player2']->isAlive())) {
             $winner = '';
@@ -65,14 +65,14 @@ class FightController extends AbstractController
                 $loser = $_SESSION['player1'];
                 self::add();
             } else {
-               # code...
+                header('Location:/');
             }
             return $this->twig->render(
                 'Fight/fight.html.twig',
                 ['winner' => $winner, 'loser' => $loser, 'round' => $nbRound]
             );
         } else {
-            # code...
+            header('Location:/');
         }
     }
     public function fight(): string
