@@ -48,7 +48,6 @@ class FightController extends AbstractController
             $fighter2AsArray['defense'],
             $fighter2AsArray['image']
         );
-
     }
 
     public function fight(): string
