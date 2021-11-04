@@ -15,6 +15,7 @@ return [
     'items/delete' => ['ItemController', 'delete',],
     'fight/history' => ['FightController', 'index',],
     'fight/attack' => ['FightController', 'statusFight',],
+    'fight/damage' => ['FightController', 'attack',],
     'fight/add' => ['FightController', 'add',],
     'fighters' => ['FightersController', 'index',],
     'credits/credit' => ['ItemController', 'credit',],
