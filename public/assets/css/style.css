@@ -143,8 +143,18 @@ body {
 /* END WIN */
 /* PICK FIGHT|HISTORY*/
 .fightsHistoryTitle {
-    display: flex;
+    color: white;
+    display: block;
     justify-content: center;
+    font-size: 45px;
+    text-align: center;
+    margin-top: 15vh;
+    background-color:var(--secondaryColor);
+    border: 2px solid black;
+    box-shadow: 5px 5px black;
+    text-transform: uppercase;
+    padding: 1.5rem;
+    margin: 2rem;
 }
 
 .fightsTable {
@@ -155,11 +165,14 @@ body {
 
 .fightHistory {
     border-collapse: collapse;
-    border: 5px solid black;
+    border: 2px solid black;
     background-color: var(--primaryColor);
+    margin-top: 3rem;
+    box-shadow: 5px 5px black;
 }
 
 tr, td {
+    font-size: 22px;
     padding: 1rem;
     border: 2px solid black;
 }
@@ -168,6 +181,8 @@ thead,
 tfoot {
     background-color: var(--secondaryColor);
     color:white;
+    font-size: 22px;
+
 }
 
 
@@ -196,14 +211,6 @@ tfoot {
 /* END IST|FIGHTER */
 
 /*CREDIT*/
-.credit {
-    display: block;
-    font-size: 2rem;
-    max-width: 30ch;
-    margin: auto;
-    text-align: center;
-    text-decoration: none;
-}
 
 .creditList {
     list-style: none;
@@ -211,6 +218,12 @@ tfoot {
     margin-left: 0;
     padding-left: 0;
     padding-top: 2rem;
+    display: block;
+    font-size: 2rem;
+    max-width: 30ch;
+    margin: auto;
+    text-align: center;
+    text-decoration: none;
 }
 
 .creditTitle {
