@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use App\Controller\FightController;
+
 class Fighter
 {
     public const MAX_LIFE = 100;
@@ -94,6 +96,7 @@ class Fighter
     public function fightRound(Fighter $adversary): void
     {
         $damage = rand(1, $this->getAttack()) - rand(1, $adversary->getDefense());
+        $_SESSION['currentDamage'] = $damage;
         if ($damage < 0) {
             $damage = 0;
         }

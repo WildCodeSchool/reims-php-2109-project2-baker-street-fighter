@@ -14,7 +14,7 @@ return [
     'items/add' => ['ItemController', 'add',],
     'items/delete' => ['ItemController', 'delete',],
     'fight/history' => ['FightController', 'index',],
-    'fight' => ['FightController', 'fight',],
+    'fight/attack' => ['FightController', 'statusFight',],
     'fight/add' => ['FightController', 'add',],
     'fighters' => ['FightersController', 'index',],
     'credits/credit' => ['ItemController', 'credit',],
