@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Model\FighterManager;
 use App\Model\FightManager;
 use App\Entity\Fighter;
+use Exception;
 
 class FightController extends AbstractController
 {
@@ -25,54 +26,60 @@ class FightController extends AbstractController
 
         return $this->twig->render('Fight/index.html.twig', ['fights' => $fights]);
     }
-    public function initiateFighters()
-    {
-        $fighterManager = new FighterManager();
-
-        $_SESSION['player1'] = $fighterManager->selectOneById(1);
-        $_SESSION['player2'] = $fighterManager->selectOneById(2);
-
-        $_SESSION['currentAttacker'] = $_SESSION['player1'];
-    }
     public function statusFight()
     {
+        // initiateFighters
+        $player1 = unserialize($_SESSION['player1'] ?? null);
+        $player2 = unserialize($_SESSION['player2'] ?? null);
+        if (!$player1 && !$player2) {
+            $fighterManager = new FighterManager();
+
+            $player1 = $fighterManager->selectOneById(1);
+            $player2 = $fighterManager->selectOneById(2);
+
+            $_SESSION['player1'] = serialize($player1);
+            $_SESSION['player2'] = serialize($player2);
+        }
+
+        $currentAttacker = $player1;
+        $_SESSION['currentAttacker'] = $currentAttacker;
+
+        // statusFight
         $nbRound = 1;
-        if (($_SESSION['player1']->isAlive) && ($_SESSION['player2']->isAlive)) {
-            if ($_SESSION['currentAttacker'] === $_SESSION['player1']) {
+        if ($player1->isAlive() && $player2->isAlive()) {
+            if ($currentAttacker === $player1) {
                 $nbRound++;
                 return $this->twig->render(
                     'Fight/attack.html.twig',
                     ['round' => $nbRound]
                 );
-            } elseif ($_SESSION['currentAttacker'] === $_SESSION['player2']) {
+            } elseif ($currentAttacker === $player2) {
                 $nbRound++;
                 return $this->twig->render(
                     'Fight/attack.html.twig',
                     ['round' => $nbRound]
                 );
             } else {
-                header('Location:/');
+                throw new Exception();
             }
-        } elseif ((!$_SESSION['player1']->isAlive()) || (!$_SESSION['player2']->isAlive())) {
+        } else {
             $winner = '';
             $loser = '';
-            if ($_SESSION['player1']->isAlive()) {
-                $winner = $_SESSION['player1'];
-                $loser = $_SESSION['player2'];
+            if ($player1->isAlive()) {
+                $winner = $player1;
+                $loser = $player2;
                 self::add();
-            } elseif ($_SESSION['player1']->isAlive()) {
-                $winner = $_SESSION['player2'];
-                $loser = $_SESSION['player1'];
+            } elseif ($player1->isAlive()) {
+                $winner = $player2;
+                $loser = $player1;
                 self::add();
             } else {
-                header('Location:/');
+                throw new Exception();
             }
             return $this->twig->render(
                 'Fight/fight.html.twig',
                 ['winner' => $winner, 'loser' => $loser, 'round' => $nbRound]
             );
-        } else {
-            header('Location:/');
         }
     }
     public function attack()
