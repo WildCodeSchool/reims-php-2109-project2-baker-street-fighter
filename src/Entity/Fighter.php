@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use App\Controller\FightController;
+
 class Fighter
 {
     public const MAX_LIFE = 100;
