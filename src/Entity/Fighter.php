@@ -101,6 +101,5 @@ class Fighter
             $damage = 0;
         }
         $adversary->setLife($adversary->getLife() - $damage);
-        statusFight($_SESSION['currentAttacker']);
     }
 }
