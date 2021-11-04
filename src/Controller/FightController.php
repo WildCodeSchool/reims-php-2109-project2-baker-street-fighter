@@ -29,35 +29,34 @@ class FightController extends AbstractController
     public function statusFight()
     {
         // initiateFighters
-        $player1 = unserialize($_SESSION['player1'] ?? null);
-        $player2 = unserialize($_SESSION['player2'] ?? null);
+        $player1 = $_SESSION['player1'] ?? null;
+        $player2 = $_SESSION['player2'] ?? null;
         if (!$player1 && !$player2) {
             $fighterManager = new FighterManager();
 
             $player1 = $fighterManager->selectOneById(1);
             $player2 = $fighterManager->selectOneById(2);
 
-            $_SESSION['player1'] = serialize($player1);
-            $_SESSION['player2'] = serialize($player2);
+            $_SESSION['player1'] = $player1;
+            $_SESSION['player2'] = $player2;
+            $currentAttacker = $player1;
+            $_SESSION['currentAttacker'] = $currentAttacker;
         }
-
-        $currentAttacker = $player1;
-        $_SESSION['currentAttacker'] = $currentAttacker;
-
+        $currentAttacker = $_SESSION['currentAttacker'];
         // statusFight
         $nbRound = 1;
         if ($player1->isAlive() && $player2->isAlive()) {
-            if ($currentAttacker === $player1) {
+            if ($currentAttacker === $_SESSION['player1']) {
                 $nbRound++;
                 return $this->twig->render(
                     'Fight/attack.html.twig',
-                    ['round' => $nbRound]
+                    ['round' => $nbRound, 'player1' => $player1, 'player2' => $player2]
                 );
-            } elseif ($currentAttacker === $player2) {
+            } elseif ($currentAttacker === $_SESSION['player2']) {
                 $nbRound++;
                 return $this->twig->render(
                     'Fight/attack.html.twig',
-                    ['round' => $nbRound]
+                    ['round' => $nbRound, 'player1' => $player1, 'player2' => $player2]
                 );
             } else {
                 throw new Exception();
@@ -84,44 +83,18 @@ class FightController extends AbstractController
     }
     public function attack()
     {
+        var_dump($_SESSION['currentAttacker']);
+        var_dump($_SESSION['player1']);
+        var_dump($_SESSION['player2']);
         if ($_SESSION['currentAttacker'] === $_SESSION['player1']) {
             $adversary = $_SESSION['player2'];
             $_SESSION['currentAttacker']->fightRound($adversary);
             $this->statusFight();
+            header('Location: /fight/attack');
         } elseif ($_SESSION['currentAttacker'] === $_SESSION['player2']) {
             $adversary = $_SESSION['player1'];
             $_SESSION['currentAttacker']->fightRound($adversary);
             $this->statusFight();
         }
-    }
-    public function fight(): string
-    {
-        $fighterManager = new FighterManager();
-
-        $fighter1 = $fighterManager->selectOneById(1);
-        $fighter2 = $fighterManager->selectOneById(2);
-
-        $nbRound = 1;
-
-        while ($fighter1->isAlive() && $fighter2->isAlive()) {
-             $fighter1->fightRound($fighter2);
-             $fighter2->fightRound($fighter1);
-             $nbRound++;
-        }
-
-        if ($fighter1->isAlive()) {
-             $winner = $fighter1;
-             $loser = $fighter2;
-             self::add();
-        } else {
-             $winner = $fighter2;
-             $loser = $fighter1;
-             self::add();
-        }
-
-        return $this->twig->render(
-            'Fight/fight.html.twig',
-            ['winner' => $winner, 'loser' => $loser, 'round' => $nbRound]
-        );
     }
 }
