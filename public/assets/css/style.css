@@ -19,10 +19,10 @@ body {
 
 .returnButton {
     position: fixed;
-    width: 50px;
-    height: 50px;
-    top: 10px;
-    left: 10px;
+    width: 3rem;
+    height: 3rem;
+    bottom: 2rem;
+    right: 1rem;
     border: 2px solid black;
     box-shadow: 3px 3px black;
 }
@@ -56,7 +56,8 @@ body {
     to {opacity: 0.0;}
   }
 
-.menu-links:hover {
+.menu-links:hover,
+.menu-links:focus {
 	text-decoration: blink;
 	-webkit-animation-name: blinker;
 	-webkit-animation-duration: 0.6s;
@@ -74,6 +75,7 @@ body {
 .home-title {
     display: flex;
     justify-content: center;
+    text-transform: uppercase;
     font-size: 6rem;
     color: white;
     background-color: var(--primaryColor);
@@ -133,7 +135,7 @@ body {
 .announce {
   font-size: 2rem;
   color: white;
-  padding: 0.5rem;
+  padding: 0;
   background-color:#FE3535;
   box-shadow: 5px 5px black;
 }
@@ -141,8 +143,18 @@ body {
 /* END WIN */
 /* PICK FIGHT|HISTORY*/
 .fightsHistoryTitle {
-    display: flex;
+    color: white;
+    display: block;
     justify-content: center;
+    font-size: 45px;
+    text-align: center;
+    margin-top: 15vh;
+    background-color:var(--secondaryColor);
+    border: 2px solid black;
+    box-shadow: 5px 5px black;
+    text-transform: uppercase;
+    padding: 1.5rem;
+    margin: 2rem;
 }
 
 .fightsTable {
@@ -153,11 +165,14 @@ body {
 
 .fightHistory {
     border-collapse: collapse;
-    border: 5px solid black;
+    border: 2px solid black;
     background-color: var(--primaryColor);
+    margin-top: 3rem;
+    box-shadow: 5px 5px black;
 }
 
 tr, td {
+    font-size: 22px;
     padding: 1rem;
     border: 2px solid black;
 }
@@ -166,6 +181,8 @@ thead,
 tfoot {
     background-color: var(--secondaryColor);
     color:white;
+    font-size: 22px;
+
 }
 
 
@@ -194,17 +211,34 @@ tfoot {
 /* END IST|FIGHTER */
 
 /*CREDIT*/
-.credit {
+
+.creditList {
+    list-style: none;
+    line-height: 1.5em;
+    margin-left: 0;
+    padding-left: 0;
+    padding-top: 2rem;
     display: block;
-    font-size: 190%;
+    font-size: 2rem;
     max-width: 30ch;
     margin: auto;
+    text-align: center;
+    text-decoration: none;
 }
 
 .creditTitle {
+    color: white;
     display: block;
     justify-content: center;
-    font-size: 240%;
+    font-size: 5rem;
+    text-align: center;
+    margin-top: 15vh;
+    background-color:var(--secondaryColor);
+    border: 3px solid black;
+    box-shadow: 5px 5px black;
+    text-transform: uppercase;
+    padding: 1.5rem;
+    margin: 2rem;
 }
 /*END CREDIT*/
 
@@ -341,3 +375,18 @@ tfoot {
 
 /* END IST|FIGHTER */
 }
+
+/*MEDIAQUERY FOR RESPECT USER RADIUS FOR ANIMATIONS*/
+@media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+      animation-delay: -1ms !important;
+      animation-duration: 1ms !important;
+      animation-iteration-count: 1 !important;
+      background-attachment: initial !important;
+      scroll-behavior: auto !important;
+      transition-duration: 0s !important;
+      transition-delay: 0s !important;
+    }
+  }
