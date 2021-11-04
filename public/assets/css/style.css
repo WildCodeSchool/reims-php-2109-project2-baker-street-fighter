@@ -19,8 +19,8 @@ body {
 
 .returnButton {
     position: fixed;
-    width: 70px;
-    height: 70px;
+    width: 3rem;
+    height: 3rem;
     bottom: 2rem;
     right: 1rem;
     border: 2px solid black;
@@ -207,16 +207,25 @@ tfoot {
 
 .creditList {
     list-style: none;
+    line-height: 1.5em;
     margin-left: 0;
     padding-left: 0;
+    padding-top: 2rem;
 }
 
 .creditTitle {
+    color: white;
     display: block;
     justify-content: center;
-    font-size: 6rem;
+    font-size: 5rem;
     text-align: center;
     margin-top: 15vh;
+    background-color:var(--secondaryColor);
+    border: 3px solid black;
+    box-shadow: 5px 5px black;
+    text-transform: uppercase;
+    padding: 1.5rem;
+    margin: 2rem;
 }
 /*END CREDIT*/
 
