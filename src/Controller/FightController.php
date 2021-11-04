@@ -35,7 +35,57 @@ class FightController extends AbstractController
 
         $_SESSION['currentAttacker'] = $_SESSION['player1'];
     }
-
+    public function statusFight()
+    {
+        $nbRound = 1;
+        if (($_SESSION['player1']->isAlive) && ($_SESSION['player2']->isAlive)) {
+            if ($_SESSION['currentAttacker'] === $_SESSION['player1']) {
+                $nbRound++;
+                return $this->twig->render(
+                    'Fight/attack.html.twig',
+                    ['round' => $nbRound]
+                );
+            } elseif ($_SESSION['currentAttacker'] === $_SESSION['player2']) {
+                $nbRound++;
+                return $this->twig->render(
+                    'Fight/attack.html.twig',
+                    ['round' => $nbRound]
+                );
+            } else {
+                header('Location:/');
+            }
+        } elseif ((!$_SESSION['player1']->isAlive()) || (!$_SESSION['player2']->isAlive())) {
+            $winner = '';
+            $loser = '';
+            if ($_SESSION['player1']->isAlive()) {
+                $winner = $_SESSION['player1'];
+                $loser = $_SESSION['player2'];
+                self::add();
+            } elseif ($_SESSION['player1']->isAlive()) {
+                $winner = $_SESSION['player2'];
+                $loser = $_SESSION['player1'];
+                self::add();
+            } else {
+                header('Location:/');
+            }
+            return $this->twig->render(
+                'Fight/fight.html.twig',
+                ['winner' => $winner, 'loser' => $loser, 'round' => $nbRound]
+            );
+        } else {
+            header('Location:/');
+        }
+    }
+    public function attack()
+    {
+        if ($_SESSION['currentAttacker'] === $_SESSION['player1']) {
+            $adversary = $_SESSION['player2'];
+            $_SESSION['currentAttacker']->fightRound($adversary);
+        } elseif ($_SESSION['currentAttacker'] === $_SESSION['player2']) {
+            $adversary = $_SESSION['player1'];
+            $_SESSION['currentAttacker']->fightRound($adversary);
+        }
+    }
     public function fight(): string
     {
         $fighterManager = new FighterManager();
