@@ -75,6 +75,18 @@ class FightController extends AbstractController
             header('Location:/');
         }
     }
+    public function attack()
+    {
+        if ($_SESSION['currentAttacker'] === $_SESSION['player1']) {
+            $adversary = $_SESSION['player2'];
+            $_SESSION['currentAttacker']->fightRound($adversary);
+            $this->statusFight();
+        } elseif ($_SESSION['currentAttacker'] === $_SESSION['player2']) {
+            $adversary = $_SESSION['player1'];
+            $_SESSION['currentAttacker']->fightRound($adversary);
+            $this->statusFight();
+        }
+    }
     public function fight(): string
     {
         $fighterManager = new FighterManager();
