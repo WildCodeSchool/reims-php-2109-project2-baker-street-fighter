@@ -96,10 +96,6 @@ body {
 /* END PICK FIGHTER */
 /* FIGHT|ARENA */
 .players {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    /* align-content: center; */
     width: auto;
     padding: 2rem;
   }
@@ -116,7 +112,7 @@ body {
     justify-content: center;
     align-items: center;
     width: auto;
-    height: 10rem;
+    padding: 5rem;
     background-color:#FE3535;
     box-shadow: 5px 5px black;
     margin: 4rem;
