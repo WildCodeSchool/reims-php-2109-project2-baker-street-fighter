@@ -95,7 +95,35 @@ body {
 
 /* END PICK FIGHTER */
 /* FIGHT|ARENA */
+.players {
+    width: auto;
+    padding: 2rem;
+  }
+  .player {
+    padding: 1rem;
+    font-size: 1.7rem;
+    justify-content: center;
+  }
+  .playerImage{
+    height: 30vh;
+  }
+  .attackButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    padding: 5rem;
+    background-color:#FE3535;
+    box-shadow: 5px 5px black;
+    margin: 4rem;
+  }
+  .attackButton a {
+    font-size: 4rem;
+    color: white;
+    padding: 0;
+    text-decoration: none;
 
+  }
 /* END FIGHT|ARENA */
 /* WIN */
 .result {
