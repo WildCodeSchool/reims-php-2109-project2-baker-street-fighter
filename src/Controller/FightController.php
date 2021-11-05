@@ -96,11 +96,14 @@ class FightController extends AbstractController
             $adversary = $_SESSION['player2'];
             $_SESSION['currentAttacker']->fightRound($adversary);
             $this->statusFight();
+            $_SESSION['currentAttacker'] = $_SESSION['player2'];
             header('Location: /fight/attack');
         } elseif ($_SESSION['currentAttacker'] === $_SESSION['player2']) {
             $adversary = $_SESSION['player1'];
             $_SESSION['currentAttacker']->fightRound($adversary);
             $this->statusFight();
+            $_SESSION['currentAttacker'] = $_SESSION['player1'];
+            header('Location: /fight/attack');
         }
     }
 }
