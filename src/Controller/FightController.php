@@ -42,9 +42,15 @@ class FightController extends AbstractController
             $currentAttacker = $player1;
             $_SESSION['currentAttacker'] = $currentAttacker;
         }
+        // initiateFight
         $currentAttacker = $_SESSION['currentAttacker'];
+
+        $nbRound = $_SESSION['nbRound'] ?? null;
+        if (!isset($nbRound)) {
+            $nbRound = 1;
+            $_SESSION['nbRound'] = $nbRound;
+        }
         // statusFight
-        $nbRound = 1;
         if ($player1->isAlive() && $player2->isAlive()) {
             if ($currentAttacker === $_SESSION['player1']) {
                 $nbRound++;
