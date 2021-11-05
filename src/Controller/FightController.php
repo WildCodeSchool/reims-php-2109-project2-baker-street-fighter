@@ -42,18 +42,24 @@ class FightController extends AbstractController
             $currentAttacker = $player1;
             $_SESSION['currentAttacker'] = $currentAttacker;
         }
+        // initiateFight
         $currentAttacker = $_SESSION['currentAttacker'];
+
+        $nbRound = $_SESSION['nbRound'] ?? null;
+        if (!isset($nbRound)) {
+            $nbRound = 1;
+            $_SESSION['nbRound'] = $nbRound;
+        }
+        $nbRound = $_SESSION['nbRound'];
         // statusFight
-        $nbRound = 1;
         if ($player1->isAlive() && $player2->isAlive()) {
             if ($currentAttacker === $_SESSION['player1']) {
-                $nbRound++;
                 return $this->twig->render(
                     'Fight/attack.html.twig',
                     ['round' => $nbRound, 'player1' => $player1, 'player2' => $player2]
                 );
             } elseif ($currentAttacker === $_SESSION['player2']) {
-                $nbRound++;
+                $_SESSION['nbRound'] = $nbRound + 0.5;
                 return $this->twig->render(
                     'Fight/attack.html.twig',
                     ['round' => $nbRound, 'player1' => $player1, 'player2' => $player2]
@@ -62,24 +68,28 @@ class FightController extends AbstractController
                 throw new Exception();
             }
         } else {
-            $winner = '';
-            $loser = '';
-            if ($player1->isAlive()) {
-                $winner = $player1;
-                $loser = $player2;
-                self::add();
-            } elseif ($player1->isAlive()) {
-                $winner = $player2;
-                $loser = $player1;
-                self::add();
-            } else {
-                throw new Exception();
-            }
+            self::winner();
             return $this->twig->render(
                 'Fight/fight.html.twig',
-                ['winner' => $winner, 'loser' => $loser, 'round' => $nbRound]
+                ['winner' => $_SESSION['winner'], 'loser' => $_SESSION['loser'], 'round' => $nbRound]
             );
         }
+    }
+    public static function winner()
+    {
+        if ($_SESSION['player1']->isAlive()) {
+            $winner = $_SESSION['player1'];
+            $loser = $_SESSION['player2'];
+            self::add();
+        } elseif ($_SESSION['player2']->isAlive()) {
+            $winner = $_SESSION['player2'];
+            $loser = $_SESSION['player1'];
+            self::add();
+        } else {
+            throw new Exception();
+        }
+        $_SESSION['winner'] = $winner;
+        $_SESSION['loser'] = $loser;
     }
     public function attack()
     {
@@ -90,11 +100,14 @@ class FightController extends AbstractController
             $adversary = $_SESSION['player2'];
             $_SESSION['currentAttacker']->fightRound($adversary);
             $this->statusFight();
+            $_SESSION['currentAttacker'] = $_SESSION['player2'];
             header('Location: /fight/attack');
         } elseif ($_SESSION['currentAttacker'] === $_SESSION['player2']) {
             $adversary = $_SESSION['player1'];
             $_SESSION['currentAttacker']->fightRound($adversary);
             $this->statusFight();
+            $_SESSION['currentAttacker'] = $_SESSION['player1'];
+            header('Location: /fight/attack');
         }
     }
 }
