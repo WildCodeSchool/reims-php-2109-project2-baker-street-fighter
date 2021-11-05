@@ -74,7 +74,7 @@ class FightController extends AbstractController
                 $winner = $player1;
                 $loser = $player2;
                 self::add();
-            } elseif ($player1->isAlive()) {
+            } elseif ($player2->isAlive()) {
                 $winner = $player2;
                 $loser = $player1;
                 self::add();
