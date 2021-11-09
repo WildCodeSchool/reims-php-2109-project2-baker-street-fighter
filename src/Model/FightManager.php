@@ -23,10 +23,11 @@ class FightManager extends AbstractManager
         $query =
         'SELECT * FROM ' . static::TABLE .
         ' JOIN ' . static::JOINTABLE . ' ON ' . static::JOINTABLE .
-        '.id=' . static::TABLE . ".id;";
+        '.id=' . static::TABLE . '.winner';
         if ($orderBy) {
             $query .= ' ORDER BY ' . $orderBy . ' ' . $direction;
         }
+        $query .= ' LIMIT 8;';
 
         return $this->pdo->query($query)->fetchAll();
     }

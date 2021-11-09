@@ -15,7 +15,7 @@ class FightController extends AbstractController
     public function index(): string
     {
         $fightManager = new FightManager();
-        $fights = $fightManager->selectAll('date');
+        $fights = $fightManager->selectAll('date', 'DESC');
 
         return $this->twig->render('Fight/index.html.twig', ['fights' => $fights]);
     }
