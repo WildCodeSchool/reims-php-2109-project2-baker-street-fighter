@@ -95,22 +95,56 @@ body {
 
 /* END PICK FIGHTER */
 /* FIGHT|ARENA */
+.attackPage {
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.roundTitle {
+    font-size: 2rem;
+    padding-bottom: 1rem;
+    color: white;
+    background-color: var(--secondaryColor);
+    box-shadow: 5px 5px black;
+    margin-right: 3rem;
+    margin-left: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 0.2rem;
+}
 .players {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: auto;
-    padding: 4rem;
     padding-bottom: 0;
+    align-items: center;
+    padding: 0rem;
   }
   .player {
     padding: 1rem;
-    font-size: 1.7rem;
     justify-content: center;
-    text-align: center;
+    padding: 0rem;
   }
   .playerImage{
-    height: 30vh;
+    height: 20vh;
+  }
+
+  .statsPlayer {
+    padding: 0;
+  }
+
+  .display {
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    background-color:rgba(255, 255, 255);
+    box-shadow: 5px 5px black;
+    margin-right: 3rem;
+    margin-left: 3rem;
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+    padding: 0.2rem;
   }
   .attackButton {
     display: flex;
@@ -123,13 +157,11 @@ body {
     margin-right: 3rem;
     margin-left: 3rem;
     margin-top: 0rem;
-  }
-  .attackButton a {
     font-size: 3rem;
     color: white;
-    padding: 0;
     text-decoration: none;
   }
+  
 /* END FIGHT|ARENA */
 /* WIN */
 .result {

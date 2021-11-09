@@ -2,28 +2,25 @@
 
 {% block content %}
 <main class='attackPage'>
+    <p class='roundTitle'>Round {{round}}</p>
 <section class='players'>
     <div class='player'>
         <img src="/assets/images/{{player1.name|lower}}.png" class ="playerImage">
-        <p> {{player1.name}} <br>❤ {{player1.life}}  <br>Atk: {{player1.attack}}<br>Def: {{player1.defense}}
+        <p class='statsPlayer'> {{player1.name}} <br>❤ {{player1.life}}  <br>Atk: {{player1.attack}}<br>Def: {{player1.defense}}
         </p>
     </div>
     <div class='player'>VS</div>
     <div class='player'>
         <img src="/assets/images/{{player2.name|lower}}.png" class ="playerImage">
-        <p> {{player2.name}} <br>❤ {{player2.life}}  <br>Atk: {{player2.attack}}<br>Def: {{player2.defense}}
+        <p class='statsPlayer'> {{player2.name}} <br>❤ {{player2.life}}  <br>Atk: {{player2.attack}}<br>Def: {{player2.defense}}
         </p>
     </div>
 </section>
 <div class="display">
-    <p>Round {{round}}</p>
     <p>{{currentAttacker.name}} attacks {{adversary.name}}</p>
     <p>{{currentAttacker.name}} does {{damage}} damage</p>
-    <p>LOL MDR DES BARRES</p>
     <p>{{adversary.name}} has {{adversary.life}} life left</p>
 </div>
-<div class='attackButton'>
-    <a href='/fight/damage'>ATTACK !</a>
-</div>
+    <a class='attackButton' href='/fight/damage'>ATTACK !</a>
 </main>
 {% endblock %}
