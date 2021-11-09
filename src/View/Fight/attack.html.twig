@@ -17,6 +17,15 @@
     <p>Round {{round}}</p>
     <p>{{currentAttacker.name}} attacks {{adversary.name}}</p>
     <p>{{currentAttacker.name}} does {{damage}} damage</p>
+    {% if damage == 20 %}
+       <p>TEST 20</p>
+    {% elseif damage > 10 %}
+    <p>TEST 19 TO 11</p>
+    {% elseif damage > 0 %}
+    <p>TEST 10 TO 1</p>
+    {% else %}
+     <p>TEST 0</p>
+    {% endif %}
     <p>{{adversary.name}} has {{adversary.life}} life left</p>
 </div>
 </div>
