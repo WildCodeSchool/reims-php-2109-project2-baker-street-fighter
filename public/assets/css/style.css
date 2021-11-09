@@ -51,10 +51,15 @@ body {
     color: white;
 }
 
+@keyframes blinker {
+  from {opacity: 1.0;}
+  to {opacity: 0.0;}
+}
+
 @-webkit-keyframes blinker {
     from {opacity: 1.0;}
     to {opacity: 0.0;}
-  }
+}
 
 .menu-links:hover,
 .menu-links:focus {
@@ -92,6 +97,43 @@ body {
 
 /* END HOME */
 /* PICK FIGHTER */
+
+    /* Kept the same style as fighter list */
+
+.fighterChoiceTitle {
+    align-self: center;
+    width: 90vw;
+    padding: 0rem 1rem 0rem 1rem;
+    background: var(--secondaryColor);
+    box-shadow: 5px 5px black;  
+    color: white;
+    font-size: 2rem;
+}
+
+.selectFighterInput:checked+.card-fighter { 
+    border-color:rgb(255, 0, 0);
+    text-decoration: blink;
+	-webkit-animation-name: blinker;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-timing-function:ease-in-out;
+	-webkit-animation-direction: alternate;
+}
+
+.submitSelectedCharacter {
+    position: relative;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    background:var(--secondaryColor);
+    box-shadow: 3px 3px black;
+    font-family: 'VT323', monospace;
+    font-size: 1.3rem;
+    color: white;
+    text-decoration: none;
+}
+
+.submitSelectedCharacter:hover {
+    background-color: var(--primaryColor);
+}
 
 /* END PICK FIGHTER */
 /* FIGHT|ARENA */
@@ -226,6 +268,8 @@ tfoot {
 }
 .card-deck {
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 .card-fighter {
     background-color: white;
