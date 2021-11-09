@@ -98,14 +98,16 @@ body {
 .players {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     width: auto;
-    padding: 2rem;
+    padding: 4rem;
+    padding-bottom: 0;
   }
   .player {
     padding: 1rem;
     font-size: 1.7rem;
     justify-content: center;
+    text-align: center;
   }
   .playerImage{
     height: 30vh;
@@ -118,7 +120,9 @@ body {
     padding: 2rem;
     background-color:#FE3535;
     box-shadow: 5px 5px black;
-    margin: 4rem;
+    margin-right: 3rem;
+    margin-left: 3rem;
+    margin-top: 0rem;
   }
   .attackButton a {
     font-size: 3rem;
