@@ -190,7 +190,7 @@ body {
 
 .fightsTable {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     
 }
 
@@ -273,6 +273,9 @@ tfoot {
 }
 /*END CREDIT*/
 
+.fighterImage{
+  display : none;
+}
 @media (min-width: 576px) {
 /* NAVBAR */
 
@@ -305,6 +308,10 @@ tfoot {
 .menu {
     display: flex;
     justify-content: space-around;
+}
+
+.fighterImage{
+  display : flex;
 }
 /* END NAVBAR */
 /* HOME */
