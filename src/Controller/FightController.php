@@ -19,23 +19,12 @@ class FightController extends AbstractController
 
         return $this->twig->render('Fight/index.html.twig', ['fights' => $fights]);
     }
+
     public function statusFight()
     {
-        // initiateFighters
-        $player1 = $_SESSION['player1'] ?? null;
-        $player2 = $_SESSION['player2'] ?? null;
-        if (!$player1 && !$player2) {
-            $fighterManager = new FighterManager();
-
-            $player1 = $fighterManager->selectOneById(1);
-            $player2 = $fighterManager->selectOneById(2);
-
-            $_SESSION['player1'] = $player1;
-            $_SESSION['player2'] = $player2;
-            $currentAttacker = $player1;
-            $_SESSION['currentAttacker'] = $currentAttacker;
-        }
         // initiateFight
+        $player1 = $_SESSION['player1'];
+        $player2 = $_SESSION['player2'];
         $currentAttacker = $_SESSION['currentAttacker'];
 
         $nbRound = $_SESSION['nbRound'] ?? null;
