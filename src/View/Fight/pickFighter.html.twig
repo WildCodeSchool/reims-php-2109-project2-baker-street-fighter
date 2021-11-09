@@ -5,8 +5,7 @@
     <section class="card-deck">
         <form class="pick" action="" method="POST">
             {% for fighter in fighters %}
-                <label for="picker">Pick {{fighter.name}}</label>
-                <input type="radio" value="{{fighter.id}}" name="selected_fighter">
+                <label for="{{fighter.id}}">
                     <figure class="card-fighter">
                         <h2 class="card-fighter-name">{{fighter.name}}</h2>
                         <img
@@ -18,7 +17,8 @@
                             <p class="card-fighter-skills">Attack : {{fighter.attack}}<br>Defence : {{fighter.defense}}<br>Life : 100</p>
                         </figcaption>
                     </figure>
-                </input>
+                </label>
+                <input type="radio" value="{{fighter.id}}" name="selected_fighter" id="{{fighter.id}}">
             {% endfor %}
             <button class="submitSelectedCharacter" type='submit'> Choose player 2</button>
         </form>
