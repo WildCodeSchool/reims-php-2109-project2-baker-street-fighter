@@ -56,13 +56,23 @@ class FightController extends AbstractController
             if ($currentAttacker === $_SESSION['player1']) {
                 return $this->twig->render(
                     'Fight/attack.html.twig',
-                    ['round' => $nbRound, 'player1' => $player1, 'player2' => $player2]
+                    ['round' => $nbRound,
+                    'player1' => $player1,
+                    'player2' => $player2,
+                    'adversary' => $currentAttacker,
+                    'currentAttacker' => $player2,
+                    'damage' => $_SESSION['currentDamage']]
                 );
             } elseif ($currentAttacker === $_SESSION['player2']) {
                 $_SESSION['nbRound'] = $nbRound + 0.5;
                 return $this->twig->render(
                     'Fight/attack.html.twig',
-                    ['round' => $nbRound, 'player1' => $player1, 'player2' => $player2]
+                    ['round' => $nbRound,
+                    'player1' => $player1,
+                    'player2' => $player2,
+                    'adversary' => $currentAttacker,
+                    'currentAttacker' => $player1,
+                    'damage' => $_SESSION['currentDamage']]
                 );
             } else {
                 throw new Exception();
