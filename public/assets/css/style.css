@@ -137,6 +137,22 @@ body {
   padding: 2rem;
 }
 
+.resultTitle {
+    color: white;
+    display: block;
+    justify-content: center;
+    font-size: 45px;
+    text-align: center;
+    margin-top: 15vh;
+    background-color:var(--secondaryColor);
+    border: 2px solid black;
+    box-shadow: 5px 5px black;
+    text-transform: uppercase;
+    padding: 1.5rem;
+    margin: 2rem;
+
+}
+
 .winner {
   padding: 0.5rem;
   font-size: 1.7rem;
@@ -144,8 +160,7 @@ body {
 }
 
 .result p{
-  text-align: center;
-  padding: 0.3rem;
+  padding: 0.5rem;
   background-color : rgb(255, 255, 255);
   box-shadow: 5px 5px black;
 }
