@@ -138,17 +138,25 @@ body {
 }
 
 .winner {
-  padding: 1rem;
+  padding: 0.5rem;
   font-size: 1.7rem;
   justify-content: center;
 }
+
+.result p{
+  text-align: center;
+  padding: 0.3rem;
+  background-color : rgb(255, 255, 255);
+  box-shadow: 5px 5px black;
+}
+
 
 .winnerImage{
   height: 30vh;
 }
 
 .loser {
-  padding: 1rem;
+  padding: 0.5rem;
   font-size: 1.3rem;
 }
 
@@ -166,7 +174,7 @@ body {
 .announce {
   font-size: 2rem;
   color: white;
-  padding: 0;
+  padding: 0.8rem;
   background-color:#FE3535;
   box-shadow: 5px 5px black;
 }
