@@ -14,11 +14,27 @@ class FightersController extends AbstractController
         return $this->twig->render('Fighters/fighterslist.html.twig', ['fighters' => $fighters]);
     }
 
-    public function pick(int $id): string
+    public function pick(): string
     {
-        $fighterManager = new FighterManager();
-        $fighter = $fighterManager->selectOneById($id);
+        // set fighters
 
-        return $this->twig->render('Fighters/fighter.html.twig', ['fighter' => $fighter]);
+        $fighterManager = new FighterManager();
+        $fighters = $fighterManager->selectAll('id');
+
+        if (isset($_SESSION['player1']) && isset($_SESSION['player2'])) {
+            header('Location: /fight/attack');
+        }
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            if (!isset($_SESSION['player1'])) {
+                $_SESSION['player1'] = $fighterManager->selectOneById($_POST['selected_fighter']);
+                header('Location: /fight/pick');
+            } elseif (!isset($_SESSION['player2'])) {
+                $_SESSION['player2'] = $fighterManager->selectOneById($_POST['selected_fighter']);
+                $_SESSION['currentAttacker'] = $_SESSION['player1'];
+                header('Location: /fight/attack');
+            }
+        }
+        return $this->twig->render('Fight/pickFighter.html.twig', ['fighters' => $fighters]);
     }
 }
