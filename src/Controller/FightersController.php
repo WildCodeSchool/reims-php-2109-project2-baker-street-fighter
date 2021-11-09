@@ -35,6 +35,6 @@ class FightersController extends AbstractController
                 header('Location: /fight/attack');
             }
         }
-        return $this->twig->render('fight/pickFighter.html.twig', ['fighters' => $fighters]);
+        return $this->twig->render('Fight/pickFighter.html.twig', ['fighters' => $fighters]);
     }
 }
