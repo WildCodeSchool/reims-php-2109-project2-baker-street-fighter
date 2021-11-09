@@ -1,6 +1,7 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
+<main class='attackPage'>
 <section class='players'>
     <div class='player'>
         <img src="/assets/images/{{player1.name|lower}}.png" class ="playerImage">
@@ -18,10 +19,11 @@
     <p>Round {{round}}</p>
     <p>{{currentAttacker.name}} attacks {{adversary.name}}</p>
     <p>{{currentAttacker.name}} does {{damage}} damage</p>
+    <p>LOL MDR DES BARRES</p>
     <p>{{adversary.name}} has {{adversary.life}} life left</p>
-</div>
 </div>
 <div class='attackButton'>
     <a href='/fight/damage'>ATTACK !</a>
 </div>
+</main>
 {% endblock %}
