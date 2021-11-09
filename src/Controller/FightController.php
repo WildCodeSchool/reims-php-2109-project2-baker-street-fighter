@@ -12,13 +12,6 @@ class FightController extends AbstractController
     /**
      * Add a new fight
      */
-    private static function add(): void
-    {
-        $currentWinner = '$winner';
-        $fightManager = new FightManager();
-        $fightManager->insert($currentWinner);
-    }
-
     public function index(): string
     {
         $fightManager = new FightManager();
@@ -68,28 +61,22 @@ class FightController extends AbstractController
                 throw new Exception();
             }
         } else {
-            self::winner();
+            if ($_SESSION['player1']->isAlive()) {
+                $winner = $_SESSION['player1'];
+                $loser = $_SESSION['player2'];
+            } else {
+                $winner = $_SESSION['player2'];
+                $loser = $_SESSION['player1'];
+            }
+
+            $fightManager = new FightManager();
+            $fightManager->insert($winner);
+
             return $this->twig->render(
                 'Fight/fight.html.twig',
-                ['winner' => $_SESSION['winner'], 'loser' => $_SESSION['loser'], 'round' => $nbRound]
+                ['winner' => $winner, 'loser' => $loser, 'round' => $nbRound]
             );
         }
-    }
-    public static function winner()
-    {
-        if ($_SESSION['player1']->isAlive()) {
-            $winner = $_SESSION['player1'];
-            $loser = $_SESSION['player2'];
-            self::add();
-        } elseif ($_SESSION['player2']->isAlive()) {
-            $winner = $_SESSION['player2'];
-            $loser = $_SESSION['player1'];
-            self::add();
-        } else {
-            throw new Exception();
-        }
-        $_SESSION['winner'] = $winner;
-        $_SESSION['loser'] = $loser;
     }
     public function attack()
     {
