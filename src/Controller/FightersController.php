@@ -21,7 +21,7 @@ class FightersController extends AbstractController
         $fighterManager = new FighterManager();
         $fighters = $fighterManager->selectAll('id');
 
-        if (isset($_SESSION['player1'])&& isset($_SESSION['player2'])) {
+        if (isset($_SESSION['player1']) && isset($_SESSION['player2'])) {
             header('Location: /fight/attack');
         }
 
