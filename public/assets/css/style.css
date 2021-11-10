@@ -313,6 +313,12 @@ tfoot {
 /* PICK LIST|FIGHTER*/
 .fighterListTitle {
     text-align: center;
+    margin: 1rem 2rem;
+    padding: 0rem 1rem;
+    background: var(--secondaryColor);
+    box-shadow: var(--primaryBoxShadow);  
+    color: var(--white);
+    font-size: 2rem;
 }
 .card-deck {
     text-align: center;
