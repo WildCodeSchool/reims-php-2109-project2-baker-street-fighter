@@ -22,11 +22,11 @@
     {% if damage == 20 %}
        <p>{{ random(['Perfect !', 'It\'s a 10/10', 'It\'s amazing !', 'Discombobulated !'])}}</p>
     {% elseif damage > 10 %}
-    <p> {{ random(['A real punch in the face !', 'It\'s a real damage !', 'Wow ! You\'ve improved a lot, fighter !'])}} </p>
+    <p> {{ random(['A real punch in the face !', 'Now that\'s a lot of damage !', 'Wow ! You\'ve improved a lot, fighter !', 'AH! Didn\'t see that one coming huh ?'])}} </p>
     {% elseif damage > 0 %}
-    <p> {{ random(['You could have made an effort !', 'You can do better !', 'Do you have paper gloves or something ?', 'Come On !']) }} </p>
+    <p> {{ random(['You could have tried harder !', 'You can do better !', 'Are you wearing paper gloves or something ?', "Come on !",'Pss, nothing but a light bruise !'])}} </p>
     {% else %}
-     <p> {{ random(['He would never hurt anyone with this punch !', 'Great defense !', 'Strike faster if you want to hit me !', 'Wake up, you look like a child !', 'Nice dodge !']) }} </p>
+     <p> {{ random(['You would never hurt anyone with this punch !', 'Great defense !', 'Strike faster if you want to hit me !', 'Wake up, you look like a child !', 'Nice dodge !', 'Can you really call this a punch ?', 'My grandma punches harder !', 'Just like the wind, nothing can hit you !']) }} </p>
     {% endif %}
     <p>{{adversary.name}} has {{adversary.life}} life left</p>
 </div>
