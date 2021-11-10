@@ -38,4 +38,3 @@ class FightersController extends AbstractController
         return $this->twig->render('Fight/pickFighter.html.twig', ['fighters' => $fighters]);
     }
 }
-    
