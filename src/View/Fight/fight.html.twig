@@ -2,16 +2,17 @@
 
 {% block content %}
 {% include '/Item/returnHome.html.twig'%}
+<h1 class='resultTitle'> RESULT </h1>
 <section class='result'>
     <div class='winner'>
         <img src="/assets/images/{{winner.name|lower}}.png" class ="winnerImage">
-        <p>🏆: {{winner.name}} <br>❤ {{winner.life}}  <br>Atk: {{winner.attack}}<br>Def: {{winner.defense}}
+        <p>WINNER 🏆{{winner.name}} <br>❤ {{winner.life}}  
         </p>
     </div>
 
     <div class='loser'>
         <img src="/assets/images/{{loser.name|lower}}.png" class ="loserImage">
-        <p>💀: {{loser.name}} <br>❤ {{loser.life}} <br>Atk: {{loser.attack}} <br>Def: {{loser.defense}}
+        <p> LOOSER 💀{{loser.name}} <br>❤ {{loser.life}} 
         </p>
     </div>
 </section>

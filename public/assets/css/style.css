@@ -214,18 +214,38 @@ body {
   padding: 2rem;
 }
 
+.resultTitle {
+    color: white;
+    font-size: 45px;
+    text-align: center;
+    background-color:var(--secondaryColor);
+    border: 2px solid black;
+    box-shadow: 5px 5px black;
+    text-transform: uppercase;
+    padding: 1.5rem;
+    margin: 2rem;
+
+}
+
 .winner {
-  padding: 1rem;
+  padding: 0.5rem;
   font-size: 1.7rem;
   justify-content: center;
 }
+
+.result p{
+  padding: 0.5rem;
+  background-color : rgb(255, 255, 255);
+  box-shadow: 5px 5px black;
+}
+
 
 .winnerImage{
   height: 30vh;
 }
 
 .loser {
-  padding: 1rem;
+  padding: 0.5rem;
   font-size: 1.3rem;
 }
 
@@ -243,7 +263,7 @@ body {
 .announce {
   font-size: 2rem;
   color: white;
-  padding: 0;
+  padding: 0.8rem;
   background-color:#FE3535;
   box-shadow: 5px 5px black;
 }
