@@ -142,7 +142,7 @@ body {
 
 .roundTitle {
   font-size: 1.7rem;
-    padding-bottom: 1rem;
+    /* padding-bottom: 1rem; */
     color: white;
     background-color: var(--secondaryColor);
     box-shadow: 5px 5px black;
