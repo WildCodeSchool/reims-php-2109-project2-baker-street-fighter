@@ -171,6 +171,7 @@ body {
     box-shadow: 5px 5px black;
     margin: 0 3rem 1rem 3rem; 
     padding: 0.2rem;
+    line-height: 1rem;
   }
   .attackButton {
     display: flex;
