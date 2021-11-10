@@ -127,6 +127,7 @@ body {
     font-size: 1.3rem;
     color: white;
     text-decoration: none;
+    margin-bottom: 1rem;
 }
 
 .submitSelectedCharacter:hover {
