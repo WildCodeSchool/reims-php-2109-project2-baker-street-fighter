@@ -209,9 +209,9 @@ body {
 .result {
   display: flex;
   flex-direction: row;
-  align-content: flex-start;
+  justify-content: center;
   width: auto;
-  padding: 2rem;
+  padding: 0.5rem;
 }
 
 .resultTitle {
@@ -223,20 +223,23 @@ body {
     box-shadow: 5px 5px black;
     text-transform: uppercase;
     padding: 1.5rem;
-    margin: 2rem;
+    margin: 1rem;
 
 }
 
 .winner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 0.5rem;
   font-size: 1.7rem;
-  justify-content: center;
 }
 
 .result p{
   padding: 0.5rem;
   background-color : rgb(255, 255, 255);
   box-shadow: 5px 5px black;
+  text-align: center;
 }
 
 
@@ -245,6 +248,9 @@ body {
 }
 
 .loser {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 0.5rem;
   font-size: 1.3rem;
 }
@@ -254,9 +260,6 @@ body {
 }
 
 .fightDetails {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   padding: 1rem;
 }
 
