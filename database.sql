@@ -6,12 +6,11 @@ SET time_zone = "+00:00";
 --
 
 -- --------------------------------------------------------
+DROP DATABASE IF EXISTS baker_street_fighter;
 
 CREATE DATABASE baker_street_fighter;
-
 USE baker_street_fighter;
 
-DROP TABLE IF EXISTS `fighter`, `fight`, `participation`;
 CREATE TABLE fighter (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
     name VARCHAR(80) NOT NULL,
