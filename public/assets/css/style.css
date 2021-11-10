@@ -153,9 +153,8 @@ body {
     flex-direction: row;
     justify-content: space-evenly;
     width: auto;
-    padding-bottom: 0;
     align-items: center;
-    padding: 0rem;
+    /* padding: 0rem; */
   }
   .player {
     padding: 1rem;
