@@ -142,14 +142,10 @@ body {
 
 .roundTitle {
   font-size: 1.7rem;
-    /* padding-bottom: 1rem; */
     color: white;
     background-color: var(--secondaryColor);
     box-shadow: 5px 5px black;
-    margin-right: 3rem;
-    margin-left: 3rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin: 2rem 3rem;
     padding: 0.2rem;
 }
 .players {
