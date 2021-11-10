@@ -25,7 +25,7 @@ class FightersController extends AbstractController
             header('Location: /fight/attack');
         }
 
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['selected_fighter'])) {
             if (!isset($_SESSION['player1'])) {
                 $_SESSION['player1'] = $fighterManager->selectOneById($_POST['selected_fighter']);
                 header('Location: /fight/pick');
@@ -38,3 +38,4 @@ class FightersController extends AbstractController
         return $this->twig->render('Fight/pickFighter.html.twig', ['fighters' => $fighters]);
     }
 }
+    
