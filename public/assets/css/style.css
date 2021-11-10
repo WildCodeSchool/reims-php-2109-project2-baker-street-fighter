@@ -13,6 +13,7 @@ body {
     --primaryColor: #FE3535;
     --primaryColorAlter: #FF5757;
     --secondaryColor:#0056AF;
+    --white: #fefee2;
     --primaryBoxShadow: 5px 5px black;
 
     background-color: var(--backgroundColor);
@@ -181,7 +182,7 @@ body {
     align-items: center;
     width: auto;
     padding: 2rem;
-    background-color:#FE3535;
+    background-color:var(--primaryColor);
     box-shadow: var(--primaryBoxShadow);
     margin: 0 3rem;
     font-size: 3rem;
@@ -252,7 +253,7 @@ body {
   font-size: 2rem;
   color: white;
   padding: 0.8rem;
-  background-color:#FE3535;
+  background-color:var(--primaryColor);
   box-shadow: var(--primaryBoxShadow);
 }
 
