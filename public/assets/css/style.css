@@ -159,7 +159,7 @@ body {
   .player {
     padding: 1rem;
     justify-content: center;
-    padding: 0rem;
+    /* padding: 0rem; */
   }
   .playerImage{
     height: 20vh;
