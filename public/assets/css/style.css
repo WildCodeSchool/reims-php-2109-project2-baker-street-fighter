@@ -154,19 +154,13 @@ body {
     justify-content: space-evenly;
     width: auto;
     align-items: center;
-    /* padding: 0rem; */
   }
   .player {
     padding: 1rem;
     justify-content: center;
-    /* padding: 0rem; */
   }
   .playerImage{
     height: 20vh;
-  }
-
-  .statsPlayer {
-    padding: 0;
   }
 
   .display {
