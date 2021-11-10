@@ -62,4 +62,4 @@ INSERT INTO fighter (name, attack, defense, image)
 VALUES ('Moriarty', 35, 5, "");
 
 INSERT INTO fighter (name, attack, defense, image)
-VALUES ('Elona', 30, 10, "");
+VALUES ('Enola', 30, 10, "");
