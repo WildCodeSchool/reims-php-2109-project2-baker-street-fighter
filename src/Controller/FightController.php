@@ -78,12 +78,13 @@ class FightController extends AbstractController
         } elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 session_destroy();
                 header('Location: /');
-        } 
+        }
         else {
             return $this->winner();
         }
     }
-    public function winner() {
+    public function winner() 
+    {
         if ($_SESSION['player1']->isAlive()) {
             $winner = $_SESSION['player1'];
             $loser = $_SESSION['player2'];
