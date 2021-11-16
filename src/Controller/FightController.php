@@ -23,10 +23,13 @@ class FightController extends AbstractController
 
     public function statusFight()
     {
-        if (!isset($player1) && !isset($player2)) {
+        
+        // choose fighters
+        if (!isset($_SESSION['player1']) || !isset($_SESSION['player2'])) {
             $fightersController = new FightersController();
-            $fightersController->pick();
+            return $fightersController->pick();
         }
+        
         // initiateFight
         $player1 = $_SESSION['player1'];
         $player2 = $_SESSION['player2'];
@@ -98,12 +101,12 @@ class FightController extends AbstractController
             $adversary = $_SESSION['player2'];
             $_SESSION['currentAttacker']->fightRound($adversary);
             $_SESSION['currentAttacker'] = $_SESSION['player2'];
-            header('Location: /fight/attack');
+            header('Location: /fight');
         } elseif ($_SESSION['currentAttacker'] === $_SESSION['player2']) {
             $adversary = $_SESSION['player1'];
             $_SESSION['currentAttacker']->fightRound($adversary);
             $_SESSION['currentAttacker'] = $_SESSION['player1'];
-            header('Location: /fight/attack');
+            header('Location: /fight');
         }
     }
 }
