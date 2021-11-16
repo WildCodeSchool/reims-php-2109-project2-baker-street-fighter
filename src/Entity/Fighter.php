@@ -104,6 +104,46 @@ class Fighter
         $_SESSION['currentDamage'] = $damage;
     }
 
+    public function fightPunch(Fighter $adversary): void
+    {
+        $damage = rand(($this->getAttack()/2), $this->getAttack()) - rand(1, $adversary->getDefense());
+        if ($damage < 0) {
+            $damage = 0;
+        }
+        $adversary->setLife($adversary->getLife() - $damage);
+        $_SESSION['currentDamage'] = $damage;
+    }
+
+    public function fightKick(Fighter $adversary): void
+    {
+        $damage = rand(0, ($this->getAttack()*1.5)) - rand(1, $adversary->getDefense());
+        if ($damage < 0) {
+            $damage = 0;
+        }
+        $adversary->setLife($adversary->getLife() - $damage);
+        $_SESSION['currentDamage'] = $damage;
+    }
+
+    public function fightHeadbutt(Fighter $adversary): void
+    {
+        $damage = rand(($this->getAttack()/2), ($this->getAttack()*1.5)) - rand(1, $adversary->getDefense());
+        $recoil = $damage/2;
+        if ($damage < 0) {
+            $damage = 0;
+        }
+        $adversary->setLife($adversary->getLife() - $damage);
+        $this->setLife($this->getLife() - $recoil);
+        $_SESSION['currentDamage'] = $damage;
+        $_SESSION['currentRecoil'] = $recoil;
+    }
+
+    public function teaTime(): void
+    {
+        $heal = 15;
+        $this->setLife($this->getLife + $heal);
+        $_SESSION['currentHeal'] = $heal;
+    }
+
     /**
      * Get the value of id
      *
