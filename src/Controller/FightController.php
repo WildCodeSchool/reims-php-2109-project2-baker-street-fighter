@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Model\FighterManager;
 use App\Model\FightManager;
 use App\Entity\Fighter;
+use App\Controller\FightersController;
 use Exception;
 
 class FightController extends AbstractController
@@ -22,6 +23,10 @@ class FightController extends AbstractController
 
     public function statusFight()
     {
+        if (!isset($player1) && !isset($player2)) {
+            $fightersController = new FightersController();
+            $fightersController->pick();
+        }
         // initiateFight
         $player1 = $_SESSION['player1'];
         $player2 = $_SESSION['player2'];

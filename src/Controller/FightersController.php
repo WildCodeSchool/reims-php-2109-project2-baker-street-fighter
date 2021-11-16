@@ -18,21 +18,21 @@ class FightersController extends AbstractController
     {
         // set fighters
 
-        $fighterManager = new FighterManager();
-        $fighters = $fighterManager->selectAll('id');
+        $fighters = new FighterManager();
+        $fighters->selectAll('id');
 
         if (isset($_SESSION['player1']) && isset($_SESSION['player2'])) {
-            header('Location: /fight/attack');
+            header('Location: /fight');
         }
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['selected_fighter'])) {
             if (!isset($_SESSION['player1'])) {
                 $_SESSION['player1'] = $fighterManager->selectOneById($_POST['selected_fighter']);
-                header('Location: /fight/pick');
+                header('Location: /fight');
             } elseif (!isset($_SESSION['player2'])) {
                 $_SESSION['player2'] = $fighterManager->selectOneById($_POST['selected_fighter']);
                 $_SESSION['currentAttacker'] = $_SESSION['player1'];
-                header('Location: /fight/attack');
+                header('Location: /fight');
             }
         }
         return $this->twig->render('Fight/pickFighter.html.twig', ['fighters' => $fighters]);
