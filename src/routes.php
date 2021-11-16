@@ -17,7 +17,7 @@ return [
     'fight/attack' => ['FightController', 'statusFight',],
     'fight/punch' => ['FightController', 'punch',],
     'fight/kick' => ['FightController', 'kick',],
-    'fight/headbutter' => ['FightController', 'headbutter',],
+    'fight/headbutt' => ['FightController', 'headbutt',],
     'fight/teatime' => ['FightController', 'teatime',],
     'fight/add' => ['FightController', 'add',],
     'fight/pick' => ['FightersController', 'pick',],
