@@ -78,7 +78,7 @@ class FightController extends AbstractController
         } elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 session_destroy();
                 header('Location: /');
-        } 
+            }
         else {
             return $this->winner();
         }
