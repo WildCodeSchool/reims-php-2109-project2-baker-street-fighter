@@ -13,7 +13,7 @@ return [
     'items/show' => ['ItemController', 'show', ['id']],
     'items/add' => ['ItemController', 'add',],
     'items/delete' => ['ItemController', 'delete',],
-    'fight/history' => ['FightController', 'index',],
+    'history' => ['FightController', 'index',],
     'fight/attack' => ['FightController', 'statusFight',],
     'fight/damage' => ['FightController', 'attack',],
     'fight/add' => ['FightController', 'add',],
