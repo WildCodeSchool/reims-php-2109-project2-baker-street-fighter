@@ -125,12 +125,15 @@ body {
 }
 
 .submitSelectedCharacter {
-    position: relative;
-    padding: 0.5rem 2rem 0.5rem 2rem;
+    position: fixed;
+    bottom: 0.7rem;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 1rem 2rem 1rem 2rem;
     background:var(--secondaryColor);
     box-shadow: 3px 3px var(--black);
     font-family: 'VT323', monospace;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color: var(--white);
     text-decoration: none;
     margin-bottom: 1rem;
@@ -139,7 +142,9 @@ body {
 .submitSelectedCharacter:hover {
     background-color: var(--primaryColor);
 }
-
+.marge {
+  height: 5rem;
+}
 /* END PICK FIGHTER */
 /* FIGHT|ARENA */
 .attackPage {
@@ -373,9 +378,15 @@ tfoot {
     padding: 3rem;
 }
 .card-fighter-skills {
-    color: var(--secondaryColor);
+  font-size: 1.5rem;
+  padding: 0 2rem 0 2rem;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  color: var(--black);
 }
-/* END IST|FIGHTER */
+
+/* END LIST|FIGHTER */
 
 /*CREDIT*/
 

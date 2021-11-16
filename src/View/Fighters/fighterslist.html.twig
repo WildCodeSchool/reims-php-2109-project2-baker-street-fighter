@@ -2,7 +2,7 @@
 
 {% block content %}
     <h1 class="fighterListTitle">Fighters List</h1>
-    <section class="card-deck">
+    <main class="card-deck">
         {% for fighter in fighters %}
             <figure class="card-fighter">
                 <h2 class="card-fighter-name">{{fighter.name}}</h2>
@@ -12,10 +12,14 @@
                 alt="{{fighter.name}} photo"
                 />
                 <figcaption class="card-caption">
-                    <p class="card-fighter-skills">Attack : {{fighter.attack}}<br>Defence : {{fighter.defense}}<br>Life : 100</p>
+                    <ul class="card-fighter-skills">
+                        <li>🥊{{fighter.attack}}</li>
+                        <li>🛡️{{fighter.defense}}</li>
+                        <li>❤️100</li>
+                    </ul>
                 </figcaption>
             </figure>
         {% endfor %}
-    </section>
+    </main>
     {% include '/Item/return.html.twig'%}
 {% endblock %}
