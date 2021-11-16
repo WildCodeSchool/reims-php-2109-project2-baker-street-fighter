@@ -12,7 +12,11 @@
                 alt="{{fighter.name}} photo"
                 />
                 <figcaption class="card-caption">
-                    <p class="card-fighter-skills">Attack : {{fighter.attack}}<br>Defence : {{fighter.defense}}<br>Life : 100</p>
+                    <ul class="card-fighter-skills">
+                        <li>🥊{{fighter.attack}}</li>
+                        <li>🛡️{{fighter.defense}}</li>
+                        <li>❤️100</li>
+                    </ul>
                 </figcaption>
             </figure>
         {% endfor %}

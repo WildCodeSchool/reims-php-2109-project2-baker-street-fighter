@@ -373,9 +373,15 @@ tfoot {
     padding: 3rem;
 }
 .card-fighter-skills {
-    color: var(--secondaryColor);
+  font-size: 1.5rem;
+  padding: 0 2rem 0 2rem;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  color: var(--black);
 }
-/* END IST|FIGHTER */
+
+/* END LIST|FIGHTER */
 
 /*CREDIT*/
 
