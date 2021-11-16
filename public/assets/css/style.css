@@ -4,6 +4,7 @@
 
 body {
     margin: 0;
+    min-height: 96vh;
 }
 
 :root {
@@ -12,6 +13,10 @@ body {
     --primaryColor: #FE3535;
     --primaryColorAlter: #FF5757;
     --secondaryColor:#0056AF;
+    --white: #fefee2;
+    --black: #010101;
+    --primaryBoxShadow: 5px 5px var(--black);
+    --primaryBorder: 2px solid var(--black);
 
     background-color: var(--backgroundColor);
     
@@ -23,8 +28,8 @@ body {
     height: 3rem;
     bottom: 2rem;
     right: 1rem;
-    border: 2px solid black;
-    box-shadow: 3px 3px black;
+    border: var(--primaryBorder);
+    box-shadow: 3px 3px var(--black);
 }
 
 /* NAVBAR */
@@ -46,9 +51,9 @@ body {
 .menu-links {
     padding: 0.4rem;
     background-color:var(--secondaryColor);
-    box-shadow: 5px 5px black;
+    box-shadow: var(--primaryBoxShadow);
     text-decoration: none;
-    color: white;
+    color: var(--white);
 }
 
 @keyframes blinker {
@@ -82,19 +87,18 @@ body {
     justify-content: center;
     text-transform: uppercase;
     font-size: 6rem;
-    color: white;
+    color: var(--white);
     background-color: var(--primaryColor);
     padding: 1rem 2rem;
-    box-shadow: 5px 5px black;
+    box-shadow: var(--primaryBoxShadow);
 }
 .navbarfighter {
     display: flex;
     justify-content: center;
 }
 .img-home {
-    padding: 10px;
+  z-index: -1;
 }
-
 /* END HOME */
 /* PICK FIGHTER */
 
@@ -105,8 +109,8 @@ body {
     width: 90vw;
     padding: 0rem 1rem 0rem 1rem;
     background: var(--secondaryColor);
-    box-shadow: 5px 5px black;  
-    color: white;
+    box-shadow: var(--primaryBoxShadow);  
+    color: var(--white);
     font-size: 2rem;
 }
 
@@ -124,11 +128,12 @@ body {
     position: relative;
     padding: 0.5rem 2rem 0.5rem 2rem;
     background:var(--secondaryColor);
-    box-shadow: 3px 3px black;
+    box-shadow: 3px 3px var(--black);
     font-family: 'VT323', monospace;
     font-size: 1.3rem;
-    color: white;
+    color: var(--white);
     text-decoration: none;
+    margin-bottom: 1rem;
 }
 
 .submitSelectedCharacter:hover {
@@ -143,15 +148,11 @@ body {
 }
 
 .roundTitle {
-    font-size: 2rem;
-    padding-bottom: 1rem;
-    color: white;
+  font-size: 1.7rem;
+    color: var(--white);
     background-color: var(--secondaryColor);
-    box-shadow: 5px 5px black;
-    margin-right: 3rem;
-    margin-left: 3rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    box-shadow: var(--primaryBoxShadow);
+    margin: 2rem 3rem;
     padding: 0.2rem;
 }
 .players {
@@ -159,21 +160,14 @@ body {
     flex-direction: row;
     justify-content: space-evenly;
     width: auto;
-    padding-bottom: 0;
     align-items: center;
-    padding: 0rem;
   }
   .player {
     padding: 1rem;
     justify-content: center;
-    padding: 0rem;
   }
   .playerImage{
     height: 20vh;
-  }
-
-  .statsPlayer {
-    padding: 0;
   }
 
   .display {
@@ -181,12 +175,10 @@ body {
     align-items: center;
     width: auto;
     background-color:rgba(255, 255, 255);
-    box-shadow: 5px 5px black;
-    margin-right: 3rem;
-    margin-left: 3rem;
-    margin-top: 0rem;
-    margin-bottom: 1rem;
+    box-shadow: var(--primaryBoxShadow);
+    margin: 0 3rem 1rem 3rem; 
     padding: 0.2rem;
+    line-height: 1rem;
   }
   .attackButton {
     display: flex;
@@ -194,13 +186,11 @@ body {
     align-items: center;
     width: auto;
     padding: 2rem;
-    background-color:#FE3535;
-    box-shadow: 5px 5px black;
-    margin-right: 3rem;
-    margin-left: 3rem;
-    margin-top: 0rem;
+    background-color:var(--primaryColor);
+    box-shadow: var(--primaryBoxShadow);
+    margin: 0 3rem;
     font-size: 3rem;
-    color: white;
+    color:#fefee2;
     text-decoration: none;
   }
   
@@ -215,12 +205,12 @@ body {
 }
 
 .resultTitle {
-    color: white;
+    color: var(--white);
     font-size: 45px;
     text-align: center;
     background-color:var(--secondaryColor);
-    border: 2px solid black;
-    box-shadow: 5px 5px black;
+    border: var(--primaryBorder);
+    box-shadow: var(--primaryBoxShadow);
     text-transform: uppercase;
     padding: 1.5rem;
     margin: 1rem;
@@ -238,7 +228,7 @@ body {
 .result p{
   padding: 0.5rem;
   background-color : rgb(255, 255, 255);
-  box-shadow: 5px 5px black;
+  box-shadow: var(--primaryBoxShadow);
   text-align: center;
 }
 
@@ -265,10 +255,10 @@ body {
 
 .announce {
   font-size: 2rem;
-  color: white;
+  color: var(--white);
   padding: 0.8rem;
-  background-color:#FE3535;
-  box-shadow: 5px 5px black;
+  background-color:var(--primaryColor);
+  box-shadow: var(--primaryBoxShadow);
 }
 
 /* END WIN */
@@ -281,8 +271,8 @@ body {
     text-align: center;
     margin-top: 15vh;
     background-color:var(--secondaryColor);
-    border: 2px solid black;
-    box-shadow: 5px 5px black;
+    border: var(--primaryBorder);
+    box-shadow: var(--primaryBoxShadow);
     text-transform: uppercase;
     padding: 1.5rem;
     margin: 2rem;
@@ -296,22 +286,22 @@ body {
 
 .fightHistory {
     border-collapse: collapse;
-    border: 2px solid black;
+    border: var(--primaryBorder);
     background-color: var(--primaryColor);
     margin-top: 3rem;
-    box-shadow: 5px 5px black;
+    box-shadow: var(--primaryBoxShadow);
 }
 
 tr, td {
     font-size: 22px;
     padding: 1rem;
-    border: 2px solid black;
+    border: var(--primaryBorder);
 }
 
 thead,
 tfoot {
     background-color: var(--secondaryColor);
-    color:white;
+    color:var(--white);
     font-size: 22px;
 
 }
@@ -323,6 +313,12 @@ tfoot {
 /* PICK LIST|FIGHTER*/
 .fighterListTitle {
     text-align: center;
+    margin: 1rem 2rem;
+    padding: 0rem 1rem;
+    background: var(--secondaryColor);
+    box-shadow: var(--primaryBoxShadow);  
+    color: var(--white);
+    font-size: 2rem;
 }
 .card-deck {
     text-align: center;
@@ -330,12 +326,12 @@ tfoot {
     flex-direction: column;
 }
 .card-fighter {
-    background-color: white;
-    border: 5px solid black;
+    background-color: var(--white);
+    border: 2px solid var(--black);
 }
 .card-img {
     background-color:var(--primaryColorAlter);
-    border: 3px solid black;
+    border: 3px solid var(--black);
     padding: 3rem;
 }
 .card-fighter-skills {
@@ -360,15 +356,15 @@ tfoot {
 }
 
 .creditTitle {
-    color: white;
+    color: var(--white);
     display: block;
     justify-content: center;
     font-size: 5rem;
     text-align: center;
     margin-top: 15vh;
     background-color:var(--secondaryColor);
-    border: 3px solid black;
-    box-shadow: 5px 5px black;
+    border: 3px solid var(--black);
+    box-shadow: var(--primaryBoxShadow);
     text-transform: uppercase;
     padding: 1.5rem;
     margin: 2rem;
