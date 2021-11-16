@@ -1,5 +1,5 @@
 {% extends 'layout.html.twig' %}
-
+{% block title %}{{player1.name|upper}} VS {{player2.name|upper}}{% endblock %}
 {% block content %}
 <main class='attackPage'>
     <p class='roundTitle'>Round {{round}} | {{adversary.name}} turn</p>
