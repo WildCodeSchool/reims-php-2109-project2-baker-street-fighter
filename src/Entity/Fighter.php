@@ -145,7 +145,7 @@ class Fighter
     public function teaTime(): void
     {
         $heal = 15;
-        $this->setLife($this->getLife + $heal);
+        $this->setLife($this->getLife() + $heal);
         $_SESSION['currentHeal'] = $heal;
     }
 
