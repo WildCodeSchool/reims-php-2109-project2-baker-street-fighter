@@ -163,14 +163,41 @@ body {
     justify-content: space-between;
     width: auto;
     align-items: center;
+    margin-bottom: 1rem;
 }
 
 .statsPlayer {
   margin: 0;
+  color: var(--white);
 }
+
+progress {
+  -webkit-appearance: none;
+  border: 1px solid black;
+  height: 0.9rem;
+}
+::-webkit-progress-value{
+  background-color:green;
+
+}
+::-webkit-progress-bar
+{
+  background-color:var(--white);
+}
+
+  .namePlayer {
+    color: var(--primaryColor);
+  }
+  .lifeBar {
+    width: 100%
+  }
   .player {
     padding: 1rem;
-    justify-content: center;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-bottom: 5rem;
   }
   .playerImage{
     height: 20vh;
