@@ -101,4 +101,21 @@ class FightController extends AbstractController
             header('Location: /fight/punch');
         }
     }
+    public function kick()
+    {
+        var_dump($_SESSION['currentAttacker']);
+        var_dump($_SESSION['player1']);
+        var_dump($_SESSION['player2']);
+        if ($_SESSION['currentAttacker'] === $_SESSION['player1']) {
+            $adversary = $_SESSION['player2'];
+            $_SESSION['currentAttacker']->fightKick($adversary);
+            $_SESSION['currentAttacker'] = $_SESSION['player2'];
+            header('Location: /fight/kick');
+        } elseif ($_SESSION['currentAttacker'] === $_SESSION['player2']) {
+            $adversary = $_SESSION['player1'];
+            $_SESSION['currentAttacker']->fightKick($adversary);
+            $_SESSION['currentAttacker'] = $_SESSION['player1'];
+            header('Location: /fight/kick');
+        }
+    }
 }
