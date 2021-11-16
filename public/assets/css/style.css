@@ -371,6 +371,7 @@ tfoot {
 .card-fighter {
     background-color: var(--white);
     border: 2px solid var(--black);
+    padding: 2rem;
 }
 .card-img {
     background-color:var(--primaryColorAlter);
@@ -477,7 +478,12 @@ tfoot {
 
 /* END FIGHT|HISTORY */
 /* PICK LIST|FIGHTER*/
-
+.card-deck {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 /* END IST|FIGHTER */
 }
 
