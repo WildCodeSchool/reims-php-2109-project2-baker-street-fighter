@@ -19,5 +19,5 @@ return [
     'fight/add' => ['FightController', 'add',],
     'fight/pick' => ['FightersController', 'pick',],
     'fighters' => ['FightersController', 'index',],
-    'credits/credit' => ['ItemController', 'credit',],
+    'credits' => ['ItemController', 'credit',],
 ];
