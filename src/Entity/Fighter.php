@@ -142,10 +142,13 @@ class Fighter
         $_SESSION['currentRecoil'] = $recoil;
     }
 
-    public function teaTime(): void
+    public function fightTeatime(): void
     {
         $heal = 15;
         $this->setLife($this->getLife() + $heal);
+        if ($this->getLife() > 100){
+            $this->setLife(100);
+        }
         $_SESSION['currentHeal'] = $heal;
     }
 
