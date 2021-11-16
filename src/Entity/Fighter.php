@@ -106,7 +106,7 @@ class Fighter
 
     public function fightPunch(Fighter $adversary): void
     {
-        $damage = rand(($this->getAttack() / 2), $this->getAttack()) - rand(1, $adversary->getDefense());
+        $damage = rand(round(($this->getAttack() / 2)), $this->getAttack()) - rand(1, $adversary->getDefense());
         if ($damage < 0) {
             $damage = 0;
         }
@@ -116,7 +116,7 @@ class Fighter
 
     public function fightKick(Fighter $adversary): void
     {
-        $damage = rand(0, ($this->getAttack() * 1.5)) - rand(1, $adversary->getDefense());
+        $damage = rand(0, round(($this->getAttack() * 1.5))) - rand(1, $adversary->getDefense());
         if ($damage < 0) {
             $damage = 0;
         }
@@ -126,8 +126,8 @@ class Fighter
 
     public function fightHeadbutt(Fighter $adversary): void
     {
-        $damage = rand(($this->getAttack() / 2), ($this->getAttack() * 1.5)) - rand(1, $adversary->getDefense());
-        $recoil = $damage / 2;
+        $damage = rand(round(($this->getAttack() / 2)), round(($this->getAttack() * 1.5))) - rand(1, $adversary->getDefense());
+        $recoil = round($damage / 2);
         if ($damage < 0) {
             $damage = 0;
         }
