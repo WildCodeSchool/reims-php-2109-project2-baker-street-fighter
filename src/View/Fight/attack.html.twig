@@ -29,12 +29,12 @@
     {% endif %}
     {% if currentAttack == 'teatime' %}
         <p>{{ random(['Perfect !', 'Delicious !', 'English tea at its finest !', 'Quite soothing !'])}}</p>
+    {% elseif currentAttack == 'headbutt' %}
+        <p>{{ random(['Violent !', 'What a bash !', 'Concussion in coming !', 'Big damage !'])}}</p>
     {% elseif damage == 20 %}
         <p>{{ random(['Perfect !', 'It\'s a 10/10', 'It\'s amazing !', 'Discombobulated !'])}}</p>
     {% elseif damage > 10 %}
         <p> {{ random(['A real punch in the face !', 'Now that\'s a lot of damage !', 'Wow ! You\'ve improved a lot, fighter !', 'AH! Didn\'t see that one coming huh ?'])}} </p>
-    {% elseif currentAttack == 'teatime' %}
-    <p>{{ random(['Perfect !', 'Delicious !', 'English tea at its finest !', 'Quite soothing !'])}}</p>
     {% elseif damage > 0 %}
         <p> {{ random(['You could have tried harder !', 'You can do better !', 'Are you wearing paper gloves or something ?', "Come on !",'Pss, nothing but a light bruise !'])}} </p>
     {% else %}
