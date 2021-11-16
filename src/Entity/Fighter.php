@@ -113,6 +113,7 @@ class Fighter
         }
         $adversary->setLife($adversary->getLife() - $damage);
         $_SESSION['currentDamage'] = $damage;
+        $_SESSION['currentAttack'] = 'punch';
     }
 
     public function fightKick(Fighter $adversary): void
@@ -124,6 +125,7 @@ class Fighter
         }
         $adversary->setLife($adversary->getLife() - $damage);
         $_SESSION['currentDamage'] = $damage;
+        $_SESSION['currentAttack'] = 'kick';
     }
 
     public function fightHeadbutt(Fighter $adversary): void
@@ -140,6 +142,7 @@ class Fighter
         $this->setLife($this->getLife() - $recoil);
         $_SESSION['currentDamage'] = $damage;
         $_SESSION['currentRecoil'] = $recoil;
+        $_SESSION['currentAttack'] = 'headbutt';
     }
 
     public function fightTeatime(): void
@@ -150,6 +153,7 @@ class Fighter
             $this->setLife(100);
         }
         $_SESSION['currentHeal'] = $heal;
+        $_SESSION['currentAttack'] = 'teatime';
     }
 
     /**
