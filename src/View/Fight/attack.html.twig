@@ -5,31 +5,55 @@
     <p class='roundTitle'>Round {{round}} | {{adversary.name}} turn</p>
 <section class='players'>
     <div class='player'>
-        <img src="/assets/images/{{player1.name|lower}}.png" class ="playerImage">
-        <p class='statsPlayer'> {{player1.name}} <br>❤ {{player1.life}}  <br>Atk: {{player1.attack}}<br>Def: {{player1.defense}}
-        </p>
+        <div class="playerHeader">
+            <p class='statsPlayer'> {{player1.name}}</p>
+            <progress class='lifeBar' max="100" value="{{player1.life}}"></progress>
+        </div>
+            <img src="/assets/images/{{player1.name|lower}}.png" class ="playerImage">
     </div>
-    <div class='player'>VS</div>
     <div class='player'>
-        <img src="/assets/images/{{player2.name|lower}}.png" class ="playerImage">
-        <p class='statsPlayer'> {{player2.name}} <br>❤ {{player2.life}}  <br>Atk: {{player2.attack}}<br>Def: {{player2.defense}}
-        </p>
+        <div class="playerHeader">
+            <p class='statsPlayer'> {{player2.name}}</p>
+            <progress class='lifeBar' max="100" value="{{player2.life}}"></progress>
+        </div>
+            <img src="/assets/images/{{player2.name|lower}}.png" class ="playerImage">
     </div>
 </section>
 <div class="display">
-    <p>{{currentAttacker.name}} attacks {{adversary.name}}</p>
-    <p>{{currentAttacker.name}} does {{damage}} damage</p>
-    {% if damage == 20 %}
-       <p>{{ random(['Perfect !', 'It\'s a 10/10', 'It\'s amazing !', 'Discombobulated !'])}}</p>
-    {% elseif damage > 10 %}
-    <p> {{ random(['A real punch in the face !', 'Now that\'s a lot of damage !', 'Wow ! You\'ve improved a lot, fighter !', 'AH! Didn\'t see that one coming huh ?'])}} </p>
-    {% elseif damage > 0 %}
-    <p> {{ random(['You could have tried harder !', 'You can do better !', 'Are you wearing paper gloves or something ?', "Come on !",'Pss, nothing but a light bruise !'])}} </p>
+    {% if currentAttack == 'teatime' %}
+        <p>{{currentAttacker.name}} drinks a cup of tea</p>
+        <p>{{currentAttacker.name}} heals for 15 HP</p>
+    {% elseif currentAttack == 'headbutt' %}
+        <p>{{currentAttacker.name}} headbutts {{adversary.name}}</p>
+        <p>{{currentAttacker.name}} deals {{damage}} damage but receives {{recoil}} damage as recoil</p>
     {% else %}
-     <p> {{ random(['You would never hurt anyone with this punch !', 'Great defense !', 'Strike faster if you want to hit me !', 'Wake up, you look like a child !', 'Nice dodge !', 'Can you really call this a punch ?', 'My grandma punches harder !', 'Just like the wind, nothing can hit you !']) }} </p>
+        <p>{{currentAttacker.name}} attacks {{adversary.name}}</p>
+        <p>{{currentAttacker.name}} deals {{damage}} damage</p>
     {% endif %}
-    <p>{{adversary.name}} has {{adversary.life}} life left</p>
+    {% if currentAttack == 'teatime' %}
+        <p>{{ random(['Perfect !', 'Delicious !', 'English tea at its finest !', 'Quite soothing !'])}}</p>
+    {% elseif currentAttack == 'headbutt' %}
+        <p>{{ random(['Skull Breaker !', 'WHAT A BASH', 'Didn\'t see that one coming !', 'Just a nosebleed !'])}}</p>
+    {% elseif damage == 20 %}
+        <p>{{ random(['Perfect !', 'It\'s a 10/10', 'It\'s amazing !', 'Discombobulated !'])}}</p>
+    {% elseif damage > 10 %}
+        <p>{{ random(['A real punch in the face !', 'Now that\'s a lot of damage !', 'Wow ! You\'ve improved a lot, fighter !', 'AH! Didn\'t see that one coming huh ?'])}}</p>
+    {% elseif damage > 0 %}
+        <p>{{ random(['You could have tried harder !', 'You can do better !', 'Are you wearing paper gloves or something ?', "Come on !",'Pss, nothing but a light bruise !'])}}</p>
+    {% else %}
+        <p>{{ random(['You would never hurt anyone with this punch !', 'Great defense !', 'Strike faster if you want to hit me !', 'Wake up, you look like a child !', 'Nice dodge !', 'Can you really call this a punch ?', 'My grandma punches harder !', 'Just like the wind, nothing can hit you !']) }}</p>
+    {% endif %}
+    {% if currentAttack == 'teatime' %}
+        <p>{{currentAttacker.name}} has {{currentAttacker.life}} HP left</p>
+    {% else %}
+        <p>{{adversary.name}} has {{adversary.life}} HP left</p>
+    {% endif %}
 </div>
-    <a class='attackButton' href='/fight/damage'>ATTACK !</a>
+<div id="grid">
+    <a class='attackButton' href='/fight/punch'>PUNCH !</a>
+    <a class='attackButton' href='/fight/kick'>KICK !</a>
+    <a class='attackButton' href='/fight/headbutt'>HEADBUTT!</a>
+    <a class='attackButton' href='/fight/teatime'>TEATIME !</a>
+</div>
 </main>
 {% endblock %}

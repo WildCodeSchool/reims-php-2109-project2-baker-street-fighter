@@ -104,6 +104,58 @@ class Fighter
         $_SESSION['currentDamage'] = $damage;
     }
 
+    public function fightPunch(Fighter $adversary): void
+    {
+        $minAttack = intval($this->getAttack() / 2);
+        $damage = rand($minAttack, $this->getAttack()) - rand(1, $adversary->getDefense());
+        if ($damage < 0) {
+            $damage = 0;
+        }
+        $adversary->setLife($adversary->getLife() - $damage);
+        $_SESSION['currentDamage'] = $damage;
+        $_SESSION['currentAttack'] = 'punch';
+    }
+
+    public function fightKick(Fighter $adversary): void
+    {
+        $maxAttack = intval($this->getAttack() * 1.5);
+        $damage = rand(0, $maxAttack) - rand(1, $adversary->getDefense());
+        if ($damage < 0) {
+            $damage = 0;
+        }
+        $adversary->setLife($adversary->getLife() - $damage);
+        $_SESSION['currentDamage'] = $damage;
+        $_SESSION['currentAttack'] = 'kick';
+    }
+
+    public function fightHeadbutt(Fighter $adversary): void
+    {
+        $minAttack = intval($this->getAttack() / 2);
+        $maxAttack = intval($this->getAttack() * 1.5);
+        $attackPower = rand($minAttack, $maxAttack);
+        $damage =  $attackPower - rand(1, $adversary->getDefense());
+        $recoil = intval($damage / 2);
+        if ($damage < 0) {
+            $damage = 0;
+        }
+        $adversary->setLife($adversary->getLife() - $damage);
+        $this->setLife($this->getLife() - $recoil);
+        $_SESSION['currentDamage'] = $damage;
+        $_SESSION['currentRecoil'] = $recoil;
+        $_SESSION['currentAttack'] = 'headbutt';
+    }
+
+    public function fightTeatime(): void
+    {
+        $heal = 15;
+        $this->setLife($this->getLife() + $heal);
+        if ($this->getLife() > 100) {
+            $this->setLife(100);
+        }
+        $_SESSION['currentHeal'] = $heal;
+        $_SESSION['currentAttack'] = 'teatime';
+    }
+
     /**
      * Get the value of id
      *

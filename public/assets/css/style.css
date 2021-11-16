@@ -125,12 +125,15 @@ body {
 }
 
 .submitSelectedCharacter {
-    position: relative;
-    padding: 0.5rem 2rem 0.5rem 2rem;
+    position: fixed;
+    bottom: 0.7rem;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 1rem 2rem 1rem 2rem;
     background:var(--secondaryColor);
     box-shadow: 3px 3px var(--black);
     font-family: 'VT323', monospace;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color: var(--white);
     text-decoration: none;
     margin-bottom: 1rem;
@@ -139,7 +142,9 @@ body {
 .submitSelectedCharacter:hover {
     background-color: var(--primaryColor);
 }
-
+.marge {
+  height: 5rem;
+}
 /* END PICK FIGHTER */
 /* FIGHT|ARENA */
 .attackPage {
@@ -156,15 +161,48 @@ body {
     padding: 0.2rem;
 }
 .players {
+    height: 425px;
+    background-image: url("../images/background_fight.png");
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     width: auto;
     align-items: center;
+    margin-bottom: 1rem;
+}
+
+.statsPlayer {
+  margin: 0;
+  color: var(--white);
+}
+
+progress {
+  -webkit-appearance: none;
+  border: 1px solid black;
+  height: 0.9rem;
+}
+::-webkit-progress-value{
+  background-color:green;
+
+}
+::-webkit-progress-bar
+{
+  background-color:var(--white);
+}
+
+  .namePlayer {
+    color: var(--primaryColor);
+  }
+  .lifeBar {
+    width: 100%
   }
   .player {
     padding: 1rem;
-    justify-content: center;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-bottom: 5rem;
   }
   .playerImage{
     height: 20vh;
@@ -180,16 +218,21 @@ body {
     padding: 0.2rem;
     line-height: 1rem;
   }
+
+  #grid {
+    display: grid;
+    grid-template-columns: 50% auto;
+    grid-row-gap: 1rem;
+  }
+
   .attackButton {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: auto;
-    padding: 2rem;
     background-color:var(--primaryColor);
     box-shadow: var(--primaryBoxShadow);
-    margin: 0 3rem;
-    font-size: 3rem;
+    margin: 0 1rem;
+    font-size: 2.5rem;
     color:#fefee2;
     text-decoration: none;
   }
@@ -328,6 +371,7 @@ tfoot {
 .card-fighter {
     background-color: var(--white);
     border: 2px solid var(--black);
+    padding: 1rem;
 }
 .card-img {
     background-color:var(--primaryColorAlter);
@@ -335,9 +379,15 @@ tfoot {
     padding: 3rem;
 }
 .card-fighter-skills {
-    color: var(--secondaryColor);
+  font-size: 1.5rem;
+  padding: 0 2rem 0 2rem;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  color: var(--black);
 }
-/* END IST|FIGHTER */
+
+/* END LIST|FIGHTER */
 
 /*CREDIT*/
 
@@ -428,7 +478,12 @@ tfoot {
 
 /* END FIGHT|HISTORY */
 /* PICK LIST|FIGHTER*/
-
+.card-deck, .pick {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 /* END IST|FIGHTER */
 }
 
