@@ -156,13 +156,18 @@ body {
     padding: 0.2rem;
 }
 .players {
+    height: 425px;
     background-image: url("../images/background_fight.png");
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     width: auto;
     align-items: center;
-  }
+}
+
+.statsPlayer {
+  margin: 0;
+}
   .player {
     padding: 1rem;
     justify-content: center;
