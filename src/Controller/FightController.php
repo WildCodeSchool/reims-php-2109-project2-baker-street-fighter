@@ -19,7 +19,21 @@ class FightController extends AbstractController
 
         return $this->twig->render('Fight/index.html.twig', ['fights' => $fights]);
     }
-
+    public function initiate()
+    {
+        // initiatecurrentDamage
+        if (!isset($_SESSION['currentDamage'])) {
+            $_SESSION['currentDamage'] = 0;
+        }
+        // initiatecurrentAttack
+        if (!isset($_SESSION['currentAttack'])) {
+            $_SESSION['currentAttack'] = 'default';
+        }
+        // initiatecurrentRecoil
+        if (!isset($_SESSION['currentRecoil'])) {
+            $_SESSION['currentRecoil'] = 0;
+        }
+    }
     public function statusFight()
     {
         // initiateFight
@@ -33,18 +47,7 @@ class FightController extends AbstractController
             $_SESSION['nbRound'] = $nbRound;
         }
         $nbRound = $_SESSION['nbRound'];
-        // initiatecurrentDamage
-        if (!isset($_SESSION['currentDamage'])) {
-            $_SESSION['currentDamage'] = 0;
-        }
-        // initiatecurrentAttack
-        if (!isset($_SESSION['currentAttack'])) {
-            $_SESSION['currentAttack'] = 'default';
-        }
-        // initiatecurrentRecoil
-        if (!isset($_SESSION['currentRecoil'])) {
-            $_SESSION['currentRecoil'] = 0;
-        }
+        $this->initiate();
         // statusFight
         if ($player1->isAlive() && $player2->isAlive()) {
             if ($currentAttacker === $_SESSION['player1']) {
@@ -72,6 +75,8 @@ class FightController extends AbstractController
                     'damage' => $_SESSION['currentDamage'],
                     'recoil' => $_SESSION['currentRecoil']]
                 );
+            } else {
+                throw new Exception();
             }
         } elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 session_destroy();
