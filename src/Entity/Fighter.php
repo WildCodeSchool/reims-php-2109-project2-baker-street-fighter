@@ -126,7 +126,8 @@ class Fighter
 
     public function fightHeadbutt(Fighter $adversary): void
     {
-        $damage = rand(round(($this->getAttack() / 2)), round(($this->getAttack() * 1.5))) - rand(1, $adversary->getDefense());
+        $attackPower = rand(round(($this->getAttack() / 2)), round(($this->getAttack() * 1.5)));
+        $damage =  $attackPower - rand(1, $adversary->getDefense());
         $recoil = round($damage / 2);
         if ($damage < 0) {
             $damage = 0;
