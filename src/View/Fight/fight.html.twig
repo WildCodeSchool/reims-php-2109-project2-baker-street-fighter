@@ -1,6 +1,7 @@
 {% extends 'layout.html.twig' %}
-
+{% block title %}RESULT | {{winner.name|upper}} WINS{% endblock %}
 {% block content %}
+
 {% include '/Item/returnHome.html.twig'%}
 <h1 class='resultTitle'> RESULT </h1>
 <section class='result'>
