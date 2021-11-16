@@ -32,6 +32,7 @@ class FightController extends AbstractController
             $nbRound = 1;
             $_SESSION['nbRound'] = $nbRound;
         }
+        $nbRound = $_SESSION['nbRound'];
         // initiatecurrentDamage
         if (!isset($_SESSION['currentDamage'])) {
             $_SESSION['currentDamage'] = 0;
@@ -71,8 +72,6 @@ class FightController extends AbstractController
                     'damage' => $_SESSION['currentDamage'],
                     'recoil' => $_SESSION['currentRecoil']]
                 );
-            } else {
-                throw new Exception();
             }
         } elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 session_destroy();
