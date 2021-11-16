@@ -156,6 +156,7 @@ body {
     padding: 0.2rem;
 }
 .players {
+    background-image: url("../images/background_fight.png");
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
