@@ -100,9 +100,6 @@ class FightController extends AbstractController
     }
     public function kick()
     {
-        var_dump($_SESSION['currentAttacker']);
-        var_dump($_SESSION['player1']);
-        var_dump($_SESSION['player2']);
         if ($_SESSION['currentAttacker'] === $_SESSION['player1']) {
             $adversary = $_SESSION['player2'];
             $_SESSION['currentAttacker']->fightKick($adversary);
@@ -117,9 +114,6 @@ class FightController extends AbstractController
     }
     public function headbutt()
     {
-        var_dump($_SESSION['currentAttacker']);
-        var_dump($_SESSION['player1']);
-        var_dump($_SESSION['player2']);
         if ($_SESSION['currentAttacker'] === $_SESSION['player1']) {
             $adversary = $_SESSION['player2'];
             $_SESSION['currentAttacker']->fightHeadbutt($adversary);
@@ -134,9 +128,6 @@ class FightController extends AbstractController
     }
     public function teatime()
     {
-        var_dump($_SESSION['currentAttacker']);
-        var_dump($_SESSION['player1']);
-        var_dump($_SESSION['player2']);
         if ($_SESSION['currentAttacker'] === $_SESSION['player1']) {
             $_SESSION['currentAttacker']->fightTeatime();
             $_SESSION['currentAttacker'] = $_SESSION['player2'];
