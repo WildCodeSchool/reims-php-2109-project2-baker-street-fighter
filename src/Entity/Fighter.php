@@ -146,7 +146,7 @@ class Fighter
     {
         $heal = 15;
         $this->setLife($this->getLife() + $heal);
-        if ($this->getLife() > 100){
+        if ($this->getLife() > 100) {
             $this->setLife(100);
         }
         $_SESSION['currentHeal'] = $heal;
