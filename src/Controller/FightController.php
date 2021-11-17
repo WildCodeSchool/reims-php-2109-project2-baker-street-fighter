@@ -81,8 +81,8 @@ class FightController extends AbstractController
                     ['round' => $nbRound,
                     'player1' => $player1,
                     'player2' => $player2,
-                    'adversary' => $currentAttacker,
-                    'currentAttacker' => $player2,
+                    'adversary' => $player2,
+                    'currentAttacker' => $currentAttacker,
                     'damage' => $_SESSION['currentDamage'],
                     'currentAttack' => $_SESSION['currentAttack'],
                     'recoil' => $_SESSION['currentRecoil']]
@@ -95,8 +95,8 @@ class FightController extends AbstractController
                     ['round' => $nbRound,
                     'player1' => $player1,
                     'player2' => $player2,
-                    'adversary' => $currentAttacker,
-                    'currentAttacker' => $player1,
+                    'adversary' => $player1,
+                    'currentAttacker' => $currentAttacker,
                     'currentAttack' => $_SESSION['currentAttack'],
                     'damage' => $_SESSION['currentDamage'],
                     'recoil' => $_SESSION['currentRecoil']]
