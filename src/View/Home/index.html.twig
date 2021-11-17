@@ -2,12 +2,19 @@
 {% block title %}BAKER STREET FIGHTER{% endblock %}
 
 {% block content %}
+
+<main class="index">
+
     <div class="home">
         <h1 class="home-title">Baker<br> Street<br> Fighter<br></h1>
     </div>
+
     <div class="navbarfighter">
         <img class="img-home" src="/assets/images/sherlock.png" alt="sherlock image">
         {% include 'Item/navbar.html.twig' %}
         <img class="img-home" src="/assets/images/moriarty.png" alt="moriarty image">
     </div>
+
+</main>
+
 {% endblock %}
