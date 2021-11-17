@@ -74,8 +74,8 @@ class FightController extends AbstractController
         $this->initiate();
         // statusFight
         if ($player1->isAlive() && $player2->isAlive()) {
+            $this->attack();
             if ($currentAttacker === $_SESSION['player1']) {
-                $this->attack();
                 return $this->twig->render(
                     'Fight/attack.html.twig',
                     ['round' => $nbRound,
@@ -89,7 +89,6 @@ class FightController extends AbstractController
                 );
             } elseif ($currentAttacker === $_SESSION['player2']) {
                 $_SESSION['nbRound']++;
-                $this->attack();
                 return $this->twig->render(
                     'Fight/attack.html.twig',
                     ['round' => $nbRound,
