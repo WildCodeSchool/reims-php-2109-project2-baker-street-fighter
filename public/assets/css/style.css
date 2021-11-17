@@ -335,9 +335,10 @@ progress {
 }
 
 .fightHistory {
+    color: var(--white);
     border-collapse: collapse;
     border: var(--primaryBorder);
-    background-color: var(--primaryColor);
+    background-image: url(../images/wall.svg);
     margin-top: 3rem;
     box-shadow: var(--primaryBoxShadow);
 }
