@@ -49,11 +49,11 @@
         <p>{{adversary.name}} has {{adversary.life}} HP left</p>
     {% endif %}
 </div>
-<div id="grid">
-    <a class='attackButton' href='/fight/punch'>PUNCH !</a>
-    <a class='attackButton' href='/fight/kick'>KICK !</a>
-    <a class='attackButton' href='/fight/headbutt'>HEADBUTT!</a>
-    <a class='attackButton' href='/fight/teatime'>TEATIME !</a>
-</div>
+<form id="grid" action="/fight" method="GET">
+    <button class='attackButton' type="submit" name="attack" value="punch" >PUNCH !</button>
+    <button class='attackButton' type="submit" name="attack" value="kick" >KICK !</button>
+    <button class='attackButton' type="submit" name="attack" value="headbutt" >HEADBUTT!</button>
+    <button class='attackButton' type="submit" name="attack" value="teatime" >TEATIME !</button>
+</form>
 </main>
 {% endblock %}
