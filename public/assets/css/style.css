@@ -383,12 +383,14 @@ tfoot {
 .card-fighter {
     background-color: var(--white);
     border: 2px solid var(--black);
-    padding: 1rem;
+    padding: 0 2rem;
 }
 .card-img {
     background-color:var(--primaryColorAlter);
     border: 3px solid var(--black);
-    padding: 3rem;
+    height: 30vh;
+
+    padding: 2rem;
 }
 .card-fighter-skills {
   font-size: 1.5rem;
