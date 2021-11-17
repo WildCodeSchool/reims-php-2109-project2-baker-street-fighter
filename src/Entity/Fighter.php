@@ -134,7 +134,7 @@ class Fighter
         $maxAttack = intval($this->getAttack() * 1.5);
         $attackPower = rand($minAttack, $maxAttack);
         $damage =  $attackPower - rand(1, $adversary->getDefense());
-        $recoil = intval($damage / 2);
+        $recoil = intval($damage / 2.5);
         if ($damage < 0) {
             $damage = 0;
         }
