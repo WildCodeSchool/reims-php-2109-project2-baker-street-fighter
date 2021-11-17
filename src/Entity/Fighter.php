@@ -107,7 +107,7 @@ class Fighter
     public function fightPunch(Fighter $adversary): void
     {
         $minAttack = intval($this->getAttack() / 2);
-        $damage = rand($minAttack, $this->getAttack() /1.4) - rand(1, $adversary->getDefense());
+        $damage = rand($minAttack, $this->getAttack() / 1.4) - rand(1, $adversary->getDefense());
         if ($damage < 0) {
             $damage = 0;
         }
