@@ -150,7 +150,7 @@ class Fighter
 
     public function fightTeatime(): void
     {
-        $heal = 15;
+        $heal = rand(5, 15);
         $this->setLife($this->getLife() + $heal);
         if ($this->getLife() > 100) {
             $this->setLife(100);

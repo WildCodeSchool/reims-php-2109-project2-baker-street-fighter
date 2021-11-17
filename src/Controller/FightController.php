@@ -33,6 +33,9 @@ class FightController extends AbstractController
         if (!isset($_SESSION['currentRecoil'])) {
             $_SESSION['currentRecoil'] = 0;
         }
+        if (!isset($_SESSION['currentHeal'])) {
+            $_SESSION['currentHeal'] = 'default';
+        }
     }
     public function statusFight()
     {
@@ -60,7 +63,8 @@ class FightController extends AbstractController
                     'currentAttacker' => $player2,
                     'damage' => $_SESSION['currentDamage'],
                     'currentAttack' => $_SESSION['currentAttack'],
-                    'recoil' => $_SESSION['currentRecoil']]
+                    'recoil' => $_SESSION['currentRecoil'],
+                    'heal' => $_SESSION['currentHeal']]
                 );
             } elseif ($currentAttacker === $_SESSION['player2']) {
                 $_SESSION['nbRound']++;
@@ -73,7 +77,8 @@ class FightController extends AbstractController
                     'currentAttacker' => $player1,
                     'currentAttack' => $_SESSION['currentAttack'],
                     'damage' => $_SESSION['currentDamage'],
-                    'recoil' => $_SESSION['currentRecoil']]
+                    'recoil' => $_SESSION['currentRecoil'],
+                    'heal' => $_SESSION['currentHeal']]
                 );
             } else {
                 throw new Exception();

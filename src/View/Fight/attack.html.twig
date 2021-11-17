@@ -22,7 +22,7 @@
 <div class="display">
     {% if currentAttack == 'teatime' %}
         <p>{{currentAttacker.name}} drinks a cup of tea</p>
-        <p>{{currentAttacker.name}} heals for 15 HP</p>
+        <p>{{currentAttacker.name}} heals for {{heal}} HP</p>
     {% elseif currentAttack == 'headbutt' %}
         <p>{{currentAttacker.name}} headbutts {{adversary.name}}</p>
         <p>{{currentAttacker.name}} deals {{damage}} damage but receives {{recoil}} damage as recoil</p>
