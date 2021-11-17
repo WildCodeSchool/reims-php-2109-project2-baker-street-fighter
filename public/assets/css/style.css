@@ -107,11 +107,14 @@ body {
 .fighterChoiceTitle {
     align-self: center;
     width: 90vw;
-    padding: 0rem 1rem 0rem 1rem;
-    background: var(--secondaryColor);
+    padding: 1.5rem;
+    margin: 2rem;
+    background-color: var(--primaryColor);
     box-shadow: var(--primaryBoxShadow);  
     color: var(--white);
-    font-size: 2rem;
+    font-size: 3rem;
+    text-transform: uppercase;
+    border: 3px solid var(--black);
 }
 
 .selectFighterInput:checked+.card-fighter { 
@@ -155,10 +158,11 @@ body {
 .roundTitle {
   font-size: 1.7rem;
     color: var(--white);
-    background-color: var(--secondaryColor);
+    background-color: var(--primaryColor);
     box-shadow: var(--primaryBoxShadow);
-    margin: 2rem 3rem;
-    padding: 0.2rem;
+    border: 2px solid var(--black);
+    margin: 2rem;
+    padding: 0rem;
 }
 .players {
     height: 425px;
@@ -249,14 +253,14 @@ progress {
 
 .resultTitle {
     color: var(--white);
-    font-size: 45px;
+    font-size: 3rem;
     text-align: center;
-    background-color:var(--secondaryColor);
-    border: var(--primaryBorder);
+    background-color:var(--primaryColor);
+    border: 3px solid var(--black);
     box-shadow: var(--primaryBoxShadow);
     text-transform: uppercase;
     padding: 1.5rem;
-    margin: 1rem;
+    margin: 2rem;
 
 }
 
@@ -310,11 +314,11 @@ progress {
     color: white;
     display: block;
     justify-content: center;
-    font-size: 45px;
+    font-size: 3rem;
     text-align: center;
     margin-top: 15vh;
-    background-color:var(--secondaryColor);
-    border: var(--primaryBorder);
+    background-color:var(--primaryColor);
+    border: 3px solid var(--black);
     box-shadow: var(--primaryBoxShadow);
     text-transform: uppercase;
     padding: 1.5rem;
@@ -356,12 +360,14 @@ tfoot {
 /* PICK LIST|FIGHTER*/
 .fighterListTitle {
     text-align: center;
-    margin: 1rem 2rem;
-    padding: 0rem 1rem;
-    background: var(--secondaryColor);
+    margin: 2rem;
+    padding: 1.5rem;
+    background-color: var(--primaryColor);
     box-shadow: var(--primaryBoxShadow);  
     color: var(--white);
-    font-size: 2rem;
+    font-size: 3rem;
+    text-transform: uppercase;
+    border: 3px solid var(--black);
 }
 .card-deck {
     text-align: center;
@@ -409,10 +415,10 @@ tfoot {
     color: var(--white);
     display: block;
     justify-content: center;
-    font-size: 5rem;
+    font-size: 3rem;
     text-align: center;
     margin-top: 15vh;
-    background-color:var(--secondaryColor);
+    background-color:var(--primaryColor);
     border: 3px solid var(--black);
     box-shadow: var(--primaryBoxShadow);
     text-transform: uppercase;
