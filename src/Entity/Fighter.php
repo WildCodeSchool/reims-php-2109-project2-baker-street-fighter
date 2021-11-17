@@ -138,6 +138,9 @@ class Fighter
         if ($damage < 0) {
             $damage = 0;
         }
+        if ($recoil < 0) {
+            $recoil = 0;
+        }
         $adversary->setLife($adversary->getLife() - $damage);
         $this->setLife($this->getLife() - $recoil);
         $_SESSION['currentDamage'] = $damage;
