@@ -275,7 +275,7 @@ progress {
   font-size: 1.7rem;
 }
 
-.result p{
+.result figcaption{
   padding: 0.5rem;
   background-color : rgb(255, 255, 255);
   box-shadow: var(--primaryBoxShadow);

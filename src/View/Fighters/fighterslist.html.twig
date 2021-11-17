@@ -2,8 +2,11 @@
 {% block title %}FIGHTERS LIST{% endblock %}
 
 {% block content %}
+
     <h1 class="fighterListTitle">Fighters List</h1>
+
     <main class="card-deck">
+
         {% for fighter in fighters %}
             <figure class="card-fighter">
                 <h2 class="card-fighter-name">{{fighter.name}}</h2>
@@ -21,6 +24,9 @@
                 </figcaption>
             </figure>
         {% endfor %}
+
     </main>
+
     {% include '/Item/return.html.twig'%}
+
 {% endblock %}
