@@ -1,5 +1,6 @@
 *, *:after, *:before {
     box-sizing: border-box;
+
 }
 
 body {
@@ -95,9 +96,11 @@ body {
 .navbarfighter {
     display: flex;
     justify-content: center;
+    background-image: url(../images/wall.svg);
+    padding: 3rem;
 }
-.img-home {
-  z-index: -1;
+#marjorie, #hudson, #romain, #enola {
+  display: none;
 }
 /* END HOME */
 /* PICK FIGHTER */
@@ -463,7 +466,9 @@ tfoot {
 }
 /* END NAVBAR */
 /* HOME */
-
+#hudson, #enola {
+  display: initial;
+}
 /* END HOME */
 /* PICK FIGHTER */
 
@@ -520,7 +525,9 @@ tfoot {
 
 /* END NAVBAR */
 /* HOME */
-
+#marjorie, #romain {
+  display: initial;
+}
 /* END HOME */
 
 /* PICK FIGHTER */
