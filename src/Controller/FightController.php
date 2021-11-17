@@ -35,12 +35,29 @@ class FightController extends AbstractController
             $_SESSION['currentRecoil'] = 0;
         }
     }
+    public function pick()
+    {
+        // set fighters
+        $fighterManager = new FighterManager();
+        $fighters = $fighterManager->selectAll('id');
+        if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['selected_fighter'])) {
+            if (!isset($_SESSION['player1'])) {
+                $_SESSION['player1'] = $fighterManager->selectOneById($_POST['selected_fighter']);
+            } elseif (!isset($_SESSION['player2'])) {
+                $_SESSION['player2'] = $fighterManager->selectOneById($_POST['selected_fighter']);
+                $_SESSION['currentAttacker'] = $_SESSION['player1'];
+            }
+        }
+        if (isset($_SESSION['player1']) && isset($_SESSION['player2'])) {
+            header('Location: /fight');
+        }
+        return $this->twig->render('Fight/pickFighter.html.twig', ['fighters' => $fighters]);
+    }
     public function statusFight()
     {
         // choose fighters
         if (!isset($_SESSION['player1']) || !isset($_SESSION['player2'])) {
-            $fightersController = new FightersController();
-            return $fightersController->pick();
+            return $this->pick();
         }
         // initiateFight
         $player1 = $_SESSION['player1'];
