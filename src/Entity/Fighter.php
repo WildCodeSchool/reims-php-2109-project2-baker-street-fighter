@@ -107,7 +107,8 @@ class Fighter
     public function fightPunch(Fighter $adversary): void
     {
         $minAttack = intval($this->getAttack() / 2);
-        $damage = rand($minAttack, $this->getAttack()) - rand(1, $adversary->getDefense());
+        $maxAttack = intval($this->getAttack() / 1.4);
+        $damage = rand($minAttack, $maxAttack) - rand(1, $adversary->getDefense());
         if ($damage < 0) {
             $damage = 0;
         }
@@ -118,7 +119,7 @@ class Fighter
 
     public function fightKick(Fighter $adversary): void
     {
-        $maxAttack = intval($this->getAttack() * 1.5);
+        $maxAttack = intval($this->getAttack() * 1.2);
         $damage = rand(0, $maxAttack) - rand(1, $adversary->getDefense());
         if ($damage < 0) {
             $damage = 0;
@@ -134,7 +135,7 @@ class Fighter
         $maxAttack = intval($this->getAttack() * 1.5);
         $attackPower = rand($minAttack, $maxAttack);
         $damage =  $attackPower - rand(1, $adversary->getDefense());
-        $recoil = intval($damage / 2);
+        $recoil = intval($damage / 2.5);
         if ($damage < 0) {
             $damage = 0;
         }
@@ -150,7 +151,7 @@ class Fighter
 
     public function fightTeatime(): void
     {
-        $heal = 15;
+        $heal = rand(5, 15);
         $this->setLife($this->getLife() + $heal);
         if ($this->getLife() > 100) {
             $this->setLife(100);
