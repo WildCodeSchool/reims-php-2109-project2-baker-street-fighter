@@ -12,10 +12,5 @@ return [
     'fighters' => ['FightersController', 'index',],
     'history' => ['FightController', 'index',],
     'credits' => ['ItemController', 'credit',],
-    'fight/damage' => ['FightController', 'attack',],
-    'fight/punch' => ['FightController', 'punch',],
-    'fight/kick' => ['FightController', 'kick',],
-    'fight/headbutt' => ['FightController', 'headbutt',],
-    'fight/teatime' => ['FightController', 'teatime',],
     'fight/add' => ['FightController', 'add',],
 ];
