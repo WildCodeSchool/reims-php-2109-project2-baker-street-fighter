@@ -34,6 +34,9 @@ class FightController extends AbstractController
         if (!isset($_SESSION['currentRecoil'])) {
             $_SESSION['currentRecoil'] = 0;
         }
+        if (!isset($_SESSION['currentHeal'])) {
+            $_SESSION['currentHeal'] = 'default';
+        }
     }
     public function pick()
     {
@@ -84,7 +87,8 @@ class FightController extends AbstractController
                     'currentAttacker' => $currentAttacker,
                     'damage' => $_SESSION['currentDamage'],
                     'currentAttack' => $_SESSION['currentAttack'],
-                    'recoil' => $_SESSION['currentRecoil']]
+                    'recoil' => $_SESSION['currentRecoil'],
+                    'heal' => $_SESSION['currentHeal']]
                 );
             } elseif ($currentAttacker === $_SESSION['player2']) {
                 $_SESSION['nbRound']++;
@@ -97,7 +101,8 @@ class FightController extends AbstractController
                     'currentAttacker' => $currentAttacker,
                     'currentAttack' => $_SESSION['currentAttack'],
                     'damage' => $_SESSION['currentDamage'],
-                    'recoil' => $_SESSION['currentRecoil']]
+                    'recoil' => $_SESSION['currentRecoil'],
+                    'heal' => $_SESSION['currentHeal']]
                 );
             } else {
                 throw new Exception();
