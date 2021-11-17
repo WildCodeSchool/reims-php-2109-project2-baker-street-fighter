@@ -331,19 +331,22 @@ progress {
 .fightsTable {
     display: flex;
     justify-content: space-around;
+    margin: 0;
+    padding: 0;
     
 }
 
 .fightHistory {
+    color: var(--white);
     border-collapse: collapse;
     border: var(--primaryBorder);
-    background-color: var(--primaryColor);
+    background-image: url(../images/wall.svg);
     margin-top: 3rem;
     box-shadow: var(--primaryBoxShadow);
 }
 
 tr, td {
-    font-size: 22px;
+    font-size: 1.5rem;
     padding: 1rem;
     border: var(--primaryBorder);
 }
@@ -486,7 +489,9 @@ tfoot {
 
 /* END WIN */
 /* PICK FIGHT|HISTORY*/
-
+tr, td {
+  font-size: 3rem;
+}
 /* END FIGHT|HISTORY */
 /* PICK LIST|FIGHTER*/
 .card-deck, .pick {
@@ -546,7 +551,9 @@ tfoot {
 
 /* END WIN */
 /* PICK FIGHT|HISTORY*/
-
+tr, td {
+  font-size: 1.8rem;
+}
 /* END FIGHT|HISTORY */
 /* PICK LIST|FIGHTER*/
 
