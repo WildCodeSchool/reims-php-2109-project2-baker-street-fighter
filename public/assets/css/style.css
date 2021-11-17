@@ -164,7 +164,7 @@ body {
     background-color: var(--primaryColor);
     box-shadow: var(--primaryBoxShadow);
     border: 2px solid var(--black);
-    margin: 2rem;
+    margin: 1rem;
     padding: 0rem;
 }
 .players {
@@ -175,7 +175,6 @@ body {
     justify-content: space-between;
     width: auto;
     align-items: center;
-    margin-bottom: 1rem;
 }
 
 .statsPlayer {
@@ -195,6 +194,12 @@ progress {
 ::-webkit-progress-bar
 {
   background-color:var(--white);
+}
+
+.playerHeader {
+  background-color: #00000077;
+  border-radius: 10%;
+  padding: 0.5rem;
 }
 
   .namePlayer {
@@ -217,13 +222,17 @@ progress {
 
   .display {
     justify-content: center;
-    align-items: center;
-    width: auto;
+    align-self: center;
+    width: 100%;
     background-color:rgba(255, 255, 255);
-    box-shadow: var(--primaryBoxShadow);
-    margin: 0 3rem 1rem 3rem; 
+    box-shadow: var(--primaryBoxShadow); 
     padding: 0.2rem;
+    margin-bottom: 1.2rem;
     line-height: 1rem;
+  }
+  .display p {
+    margin: 0;
+    padding: 0.5rem;
   }
 
   #grid {
@@ -236,12 +245,17 @@ progress {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:var(--primaryColor);
+    background-color:var(--secondaryColor);
     box-shadow: var(--primaryBoxShadow);
-    margin: 0 1rem;
+    padding: 0.8rem;
+    margin: 0 0.5rem;
     font-size: 2.5rem;
     color:#fefee2;
     text-decoration: none;
+  }
+
+  .attackButton:hover {
+    background-color: var(--primaryColor);
   }
   
 /* END FIGHT|ARENA */
