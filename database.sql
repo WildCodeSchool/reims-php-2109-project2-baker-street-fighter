@@ -39,19 +39,19 @@ CREATE TABLE participation (
 );
 
 INSERT INTO fighter (name, attack, defense, image)
-VALUES ('Sherlock', 30, 10, "");
+VALUES ('Sherlock', 30, 30, "");
 
 INSERT INTO fighter (name, attack, defense, image)
-VALUES ('Moriarty', 30, 10, "");
+VALUES ('Moriarty', 35, 15, "");
 
 INSERT INTO fighter (name, attack, defense, image)
-VALUES ('Enola', 30, 10, "");
+VALUES ('Enola', 45, 5, "");
 
 INSERT INTO fighter (name, attack, defense, image)
-VALUES ('Hudson', 30, 10, "");
+VALUES ('Hudson', 22, 44, "");
 
 INSERT INTO fighter (name, attack, defense, image)
-VALUES ('Romain', 30, 10, "");
+VALUES ('Romain', 25, 40, "");
 
 INSERT INTO fighter (name, attack, defense, image)
-VALUES ('Marjorie', 30, 10, "");
+VALUES ('Marjorie', 40, 10, "");
