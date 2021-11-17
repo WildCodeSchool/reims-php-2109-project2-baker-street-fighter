@@ -2,58 +2,66 @@
 {% block title %}{{player1.name|upper}} VS {{player2.name|upper}}{% endblock %}
 {% block content %}
 <main class='attackPage'>
-    <p class='roundTitle'>Round {{round}} | {{adversary.name}} turn</p>
-<section class='players'>
-    <div class='player'>
-        <div class="playerHeader">
-            <p class='statsPlayer'> {{player1.name}}</p>
-            <progress class='lifeBar' max="100" value="{{player1.life}}"></progress>
-        </div>
+
+    <h1 class='roundTitle'>Round {{round}} | {{adversary.name}} turn</h1>
+
+    <div class='players'>
+
+        <figure class='player'>
+            <figcaption class="playerHeader">
+                <p class='statsPlayer'> {{player1.name}}</p>
+                <progress class='lifeBar' max="100" value="{{player1.life}}"></progress>
+            </figcaption>
             <img src="/assets/images/{{player1.name|lower}}.png" class ="playerImage">
-    </div>
-    <div class='player'>
-        <div class="playerHeader">
-            <p class='statsPlayer'> {{player2.name}}</p>
-            <progress class='lifeBar' max="100" value="{{player2.life}}"></progress>
-        </div>
+        </figure>
+
+        <figure class='player'>
+            <figcaption class="playerHeader">
+                <p class='statsPlayer'> {{player2.name}}</p>
+                <progress class='lifeBar' max="100" value="{{player2.life}}"></progress>
+            </figcaption>
             <img src="/assets/images/{{player2.name|lower}}.png" class ="playerImage">
+        </figure>
+
     </div>
-</section>
-<div class="display">
-    {% if currentAttack == 'teatime' %}
-        <p>{{currentAttacker.name}} drinks a cup of tea</p>
-        <p>{{currentAttacker.name}} heals for 15 HP</p>
-    {% elseif currentAttack == 'headbutt' %}
-        <p>{{currentAttacker.name}} headbutts {{adversary.name}}</p>
-        <p>{{currentAttacker.name}} deals {{damage}} damage but receives {{recoil}} damage as recoil</p>
-    {% else %}
-        <p>{{currentAttacker.name}} attacks {{adversary.name}}</p>
-        <p>{{currentAttacker.name}} deals {{damage}} damage</p>
-    {% endif %}
-    {% if currentAttack == 'teatime' %}
-        <p>{{ random(['Perfect !', 'Delicious !', 'English tea at its finest !', 'Quite soothing !'])}}</p>
-    {% elseif currentAttack == 'headbutt' %}
-        <p>{{ random(['Skull Breaker !', 'WHAT A BASH', 'Didn\'t see that one coming !', 'Just a nosebleed !'])}}</p>
-    {% elseif damage == 20 %}
-        <p>{{ random(['Perfect !', 'It\'s a 10/10', 'It\'s amazing !', 'Discombobulated !'])}}</p>
-    {% elseif damage > 10 %}
-        <p>{{ random(['A real punch in the face !', 'Now that\'s a lot of damage !', 'Wow ! You\'ve improved a lot, fighter !', 'AH! Didn\'t see that one coming huh ?'])}}</p>
-    {% elseif damage > 0 %}
-        <p>{{ random(['You could have tried harder !', 'You can do better !', 'Are you wearing paper gloves or something ?', "Come on !",'Pss, nothing but a light bruise !'])}}</p>
-    {% else %}
-        <p>{{ random(['You would never hurt anyone with this punch !', 'Great defense !', 'Strike faster if you want to hit me !', 'Wake up, you look like a child !', 'Nice dodge !', 'Can you really call this a punch ?', 'My grandma punches harder !', 'Just like the wind, nothing can hit you !']) }}</p>
-    {% endif %}
-    {% if currentAttack == 'teatime' %}
-        <p>{{currentAttacker.name}} has {{currentAttacker.life}} HP left</p>
-    {% else %}
-        <p>{{adversary.name}} has {{adversary.life}} HP left</p>
-    {% endif %}
-</div>
-<div id="grid">
-    <a class='attackButton' href='/fight/punch'>PUNCH !</a>
-    <a class='attackButton' href='/fight/kick'>KICK !</a>
-    <a class='attackButton' href='/fight/headbutt'>HEADBUTT!</a>
-    <a class='attackButton' href='/fight/teatime'>TEATIME !</a>
-</div>
+
+    <div class="display">
+        {% if currentAttack == 'teatime' %}
+            <p>{{currentAttacker.name}} drinks a cup of tea</p>
+            <p>{{currentAttacker.name}} heals for 15 HP</p>
+        {% elseif currentAttack == 'headbutt' %}
+            <p>{{currentAttacker.name}} headbutts {{adversary.name}}</p>
+            <p>{{currentAttacker.name}} deals {{damage}} damage but receives {{recoil}} damage as recoil</p>
+        {% else %}
+            <p>{{currentAttacker.name}} attacks {{adversary.name}}</p>
+            <p>{{currentAttacker.name}} deals {{damage}} damage</p>
+        {% endif %}
+        {% if currentAttack == 'teatime' %}
+            <p>{{ random(['Perfect !', 'Delicious !', 'English tea at its finest !', 'Quite soothing !'])}}</p>
+        {% elseif currentAttack == 'headbutt' %}
+            <p>{{ random(['Skull Breaker !', 'WHAT A BASH', 'Didn\'t see that one coming !', 'Just a nosebleed !'])}}</p>
+        {% elseif damage == 20 %}
+            <p>{{ random(['Perfect !', 'It\'s a 10/10', 'It\'s amazing !', 'Discombobulated !'])}}</p>
+        {% elseif damage > 10 %}
+            <p>{{ random(['A real punch in the face !', 'Now that\'s a lot of damage !', 'Wow ! You\'ve improved a lot, fighter !', 'AH! Didn\'t see that one coming huh ?'])}}</p>
+        {% elseif damage > 0 %}
+            <p>{{ random(['You could have tried harder !', 'You can do better !', 'Are you wearing paper gloves or something ?', "Come on !",'Pss, nothing but a light bruise !'])}}</p>
+        {% else %}
+            <p>{{ random(['You would never hurt anyone with this punch !', 'Great defense !', 'Strike faster if you want to hit me !', 'Wake up, you look like a child !', 'Nice dodge !', 'Can you really call this a punch ?', 'My grandma punches harder !', 'Just like the wind, nothing can hit you !']) }}</p>
+        {% endif %}
+        {% if currentAttack == 'teatime' %}
+            <p>{{currentAttacker.name}} has {{currentAttacker.life}} HP left</p>
+        {% else %}
+            <p>{{adversary.name}} has {{adversary.life}} HP left</p>
+        {% endif %}
+    </div>
+
+    <div id="grid">
+        <a class='attackButton' href='/fight/punch'>PUNCH !</a>
+        <a class='attackButton' href='/fight/kick'>KICK !</a>
+        <a class='attackButton' href='/fight/headbutt'>HEADBUTT!</a>
+        <a class='attackButton' href='/fight/teatime'>TEATIME !</a>
+    </div>
+
 </main>
 {% endblock %}
