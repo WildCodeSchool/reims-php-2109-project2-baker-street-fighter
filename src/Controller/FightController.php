@@ -49,7 +49,8 @@ class FightController extends AbstractController
             }
         }
         if (isset($_SESSION['player1']) && isset($_SESSION['player2'])) {
-            header('Location: /fight');
+            new FightController();
+            return $this->statusFight();
         }
         return $this->twig->render('Fight/pickFighter.html.twig', ['fighters' => $fighters]);
     }
@@ -128,56 +129,60 @@ class FightController extends AbstractController
     }
     public function punch()
     {
+        new FightController();
         if ($_SESSION['currentAttacker'] === $_SESSION['player1']) {
             $adversary = $_SESSION['player2'];
             $_SESSION['currentAttacker']->fightPunch($adversary);
             $_SESSION['currentAttacker'] = $_SESSION['player2'];
-            header('Location: /fight');
+            return $this->statusFight();
         } elseif ($_SESSION['currentAttacker'] === $_SESSION['player2']) {
             $adversary = $_SESSION['player1'];
             $_SESSION['currentAttacker']->fightPunch($adversary);
             $_SESSION['currentAttacker'] = $_SESSION['player1'];
-            header('Location: /fight');
+            return $this->statusFight();
         }
     }
     public function kick()
     {
+        new FightController();
         if ($_SESSION['currentAttacker'] === $_SESSION['player1']) {
             $adversary = $_SESSION['player2'];
             $_SESSION['currentAttacker']->fightKick($adversary);
             $_SESSION['currentAttacker'] = $_SESSION['player2'];
-            header('Location: /fight');
+            return $this->statusFight();
         } elseif ($_SESSION['currentAttacker'] === $_SESSION['player2']) {
             $adversary = $_SESSION['player1'];
             $_SESSION['currentAttacker']->fightKick($adversary);
             $_SESSION['currentAttacker'] = $_SESSION['player1'];
-            header('Location: /fight');
+            return $this->statusFight();
         }
     }
     public function headbutt()
     {
+        new FightController();
         if ($_SESSION['currentAttacker'] === $_SESSION['player1']) {
             $adversary = $_SESSION['player2'];
             $_SESSION['currentAttacker']->fightHeadbutt($adversary);
             $_SESSION['currentAttacker'] = $_SESSION['player2'];
-            header('Location: /fight');
+            return $this->statusFight();
         } elseif ($_SESSION['currentAttacker'] === $_SESSION['player2']) {
             $adversary = $_SESSION['player1'];
             $_SESSION['currentAttacker']->fightHeadbutt($adversary);
             $_SESSION['currentAttacker'] = $_SESSION['player1'];
-            header('Location: /fight');
+            return $this->statusFight();
         }
     }
     public function teatime()
     {
+        new FightController();
         if ($_SESSION['currentAttacker'] === $_SESSION['player1']) {
             $_SESSION['currentAttacker']->fightTeatime();
             $_SESSION['currentAttacker'] = $_SESSION['player2'];
-            header('Location: /fight');
+            return $this->statusFight();
         } elseif ($_SESSION['currentAttacker'] === $_SESSION['player2']) {
             $_SESSION['currentAttacker']->fightTeatime();
             $_SESSION['currentAttacker'] = $_SESSION['player1'];
-            header('Location: /fight');
+            return $this->statusFight();
         }
     }
 }
