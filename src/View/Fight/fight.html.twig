@@ -3,28 +3,29 @@
 {% block content %}
 
 {% include '/Item/returnHome.html.twig'%}
-<h1 class='resultTitle'> RESULT </h1>
-<section class='result'>
-    <div class='winner'>
-        <img src="/assets/images/{{winner.name|lower}}.png" class ="winnerImage">
-        <p>WINNER 🏆{{winner.name}} <br>❤ {{winner.life}}  
-        </p>
-    </div>
 
-    <div class='loser'>
-        <img src="/assets/images/{{loser.name|lower}}.png" class ="loserImage">
-        <p> LOSER 💀{{loser.name}} <br>❤ {{loser.life}} 
-        </p>
-    </div>
+<section class='result'>
+    <h1 class='resultTitle'> RESULT </h1>
+        <div class='winner'>
+            <img src="/assets/images/{{winner.name|lower}}.png" class ="winnerImage">
+            <p>WINNER 🏆{{winner.name}} <br>❤ {{winner.life}}  
+            </p>
+        </div>
+
+        <div class='loser'>
+            <img src="/assets/images/{{loser.name|lower}}.png" class ="loserImage">
+            <p> LOSER 💀{{loser.name}} <br>❤ {{loser.life}} 
+            </p>
+        </div>
 </section>
-<section class='fightDetails'>
+
+<aside class='fightDetails'>
     <div class='announce'>
-    <p>K.O in {{round}} rounds !! Elementary my dear ! 🧐</p>
-    </pre>
+        <p>K.O in {{round}} rounds !! Elementary my dear ! 🧐</p>
     </div>
     <div class='fightReview'>
-    <p></p>
+        <p></p>
     </div>
-</section>
+</aside>
 
 {% endblock %}
