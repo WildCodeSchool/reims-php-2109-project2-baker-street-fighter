@@ -49,7 +49,6 @@ class FightController extends AbstractController
             }
         }
         if (isset($_SESSION['player1']) && isset($_SESSION['player2'])) {
-            new FightController();
             return $this->statusFight();
         }
         return $this->twig->render('Fight/pickFighter.html.twig', ['fighters' => $fighters]);
