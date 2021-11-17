@@ -6,12 +6,12 @@
 
         <h1 class="fighterChoiceTitle">CHOOSE YOUR FIGHTERS</h1>
 
-            <form class="pick" action="" method="POST">
+            <form class="pick" method="POST">
 
                 {% for fighter in fighters %}
                     <label for="{{fighter.id}}">
                         <input type="radio" value="{{fighter.id}}" name="selected_fighter" id="{{fighter.id}}" class="selectFighterInput" hidden>
-
+                        
                         <figure class="card-fighter">
                             <h2 class="card-fighter-name">{{fighter.name}}</h2>
                             <img
