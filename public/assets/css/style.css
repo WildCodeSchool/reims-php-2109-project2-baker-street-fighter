@@ -162,7 +162,7 @@ body {
 }
 .players {
     height: 425px;
-    background-image: url("../images/background_fight.png");
+    background-image: url("../images/background_fight.svg");
     display: flex;
     flex-direction: row;
     justify-content: space-between;
