@@ -377,6 +377,11 @@ progress {
   text-align: center;
 }
 
+.announce p{
+  margin :0;
+  padding:0;
+}
+
 /* END WIN */
 /* PICK FIGHT|HISTORY*/
 .fightsHistoryTitle {
@@ -415,6 +420,7 @@ tr, td {
     font-size: 1.5rem;
     padding: 1rem;
     border: var(--primaryBorder);
+    text-align: center;
 }
 
 thead,
@@ -477,7 +483,6 @@ tfoot {
     padding-top: 2rem;
     display: block;
     font-size: 2rem;
-    max-width: 30ch;
     margin: auto;
     text-align: center;
     text-decoration: none;
@@ -580,6 +585,10 @@ tfoot {
   height: 24vh;
   padding-bottom: 4rem;
 }
+
+.announce {
+  font-size: 4rem;
+}
 /* END WIN */
 /* PICK FIGHT|HISTORY*/
 
@@ -641,8 +650,7 @@ tfoot {
 }
 
 /* X-Large devices (large desktops, 1200px and up) */
-
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px){
 /* NAVBAR */
 
 /* END NAVBAR */
