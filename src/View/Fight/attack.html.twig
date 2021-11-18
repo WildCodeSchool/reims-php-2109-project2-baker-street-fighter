@@ -56,7 +56,7 @@
         {% endif %}
     </div>
 
-    <form id="grid" action="/fight" method="GET">
+    <form class="grid" action="/fight" method="GET">
         {% if adversary.life == 0 %}
             <button class='resultButton attackButton' type='submit' name='winner' value='{{currentAttacker.name}}'>RESULT !</button>
         {% else %}
