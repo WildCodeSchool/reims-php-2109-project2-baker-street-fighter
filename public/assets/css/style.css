@@ -346,7 +346,7 @@ progress {
 .winnerImage{
   height: 20vh;
   margin-top: 2rem;
-  padding-bottom: 2rem;
+  padding-bottom: 40%;
 }
 
 .loser {
@@ -361,7 +361,7 @@ progress {
 .loserImage {
   height: 20vh;
   margin-top: 2rem;
-  padding-bottom: 2.3rem;
+  padding-bottom: 45%;
 }
 
 .fightDetails {
@@ -574,7 +574,7 @@ tfoot {
 
 .loserImage {
   height: 24vh;
-  padding-bottom: 4rem;
+  padding-bottom: 15%;
 }
 
 .winner {
@@ -583,7 +583,7 @@ tfoot {
 
 .winnerImage {
   height: 24vh;
-  padding-bottom: 4rem;
+  padding-bottom: 15%;
 }
 
 .announce {
@@ -628,7 +628,7 @@ tfoot {
 }
 
 .loserImage {
-  padding-bottom: 8.5rem;
+  padding-bottom: 15%;
   height: 30vh;
 }
 
@@ -637,7 +637,7 @@ tfoot {
 }
 
 .winnerImage {
-  padding-bottom: 7rem;
+  padding-bottom: 15%;
   height: 30vh;
 }
 /* END WIN */
@@ -672,6 +672,14 @@ tfoot {
 /* WIN */
 .result {
   height: 55vh;
+}
+
+.loserImage {
+  padding-bottom: 20%;
+}
+
+.winnerImage {
+  padding-bottom: 20%;
 }
 /* END WIN */
 /* PICK FIGHT|HISTORY*/
