@@ -1,433 +1,436 @@
 *, *:after, *:before {
-    box-sizing: border-box;
+  box-sizing: border-box;
 
 }
 
 body {
-    margin: 0;
-    min-height: 96vh;
+  margin: 0;
+  min-height: 96vh;
 }
 
 :root {
-    font-family: 'VT323', monospace;
-    --backgroundColor: #FFD93B;
-    --primaryColor: #FE3535;
-    --primaryColorAlter: #FF5757;
-    --secondaryColor:#0056AF;
-    --white: #fefee2;
-    --black: #010101;
-    --primaryBoxShadow: 5px 5px var(--black);
-    --primaryBorder: 2px solid var(--black);
+  font-family: 'VT323', monospace;
+  --backgroundColor: #FFD93B;
+  --primaryColor: #FE3535;
+  --primaryColorAlter: #FF5757;
+  --secondaryColor:#0056AF;
+  --white: #fefee2;
+  --black: #010101;
+  --primaryBoxShadow: 5px 5px var(--black);
+  --primaryBorder: 2px solid var(--black);
 
-    background-color: var(--backgroundColor);
-    
+  background-color: var(--backgroundColor);
+  
 }
 
 .returnButton {
-    position: fixed;
-    background-color:var(--white);
-    width: 4rem;
-    height: 4rem;
-    bottom: 1.5rem;
-    left: 1rem;
-    border: var(--primaryBorder);
-    box-shadow: 3px 3px var(--black);
+  position: fixed;
+  background-color:var(--white);
+  width: 4rem;
+  height: 4rem;
+  bottom: 1.5rem;
+  left: 1rem;
+  border: var(--primaryBorder);
+  box-shadow: 3px 3px var(--black);
 }
 
 /* NAVBAR */
-  
+
 .menu {
-    height: 115%;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    list-style-type: none;
-    text-align: center;
-    min-width: 50vw;
-    font-size: 1.7rem;
-    line-height: 2rem;
+  height: 115%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  list-style-type: none;
+  text-align: center;
+  min-width: 50vw;
+  font-size: 1.7rem;
+  line-height: 2rem;
 }
 
 .menu-links {
-    padding: 0.4rem;
-    background-color:var(--secondaryColor);
-    box-shadow: var(--primaryBoxShadow);
-    text-decoration: none;
-    color: var(--white);
+  padding: 0.4rem;
+  background-color:var(--secondaryColor);
+  box-shadow: var(--primaryBoxShadow);
+  text-decoration: none;
+  color: var(--white);
 }
 
 @keyframes blinker {
+from {opacity: 1.0;}
+to {opacity: 0.0;}
+}
+
+@-webkit-keyframes blinker {
   from {opacity: 1.0;}
   to {opacity: 0.0;}
 }
 
-@-webkit-keyframes blinker {
-    from {opacity: 1.0;}
-    to {opacity: 0.0;}
-}
-
 .menu-links:hover,
 .menu-links:focus {
-	text-decoration: blink;
-	-webkit-animation-name: blinker;
-	-webkit-animation-duration: 0.6s;
-	-webkit-animation-iteration-count:infinite;
-	-webkit-animation-timing-function:ease-in-out;
-	-webkit-animation-direction: alternate;
+text-decoration: blink;
+-webkit-animation-name: blinker;
+-webkit-animation-duration: 0.6s;
+-webkit-animation-iteration-count:infinite;
+-webkit-animation-timing-function:ease-in-out;
+-webkit-animation-direction: alternate;
 }
 
 /* END NAVBAR */
 /* HOME */
 .home {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 .home-title {
-    display: flex;
-    justify-content: center;
-    text-transform: uppercase;
-    font-size: 6rem;
-    color: var(--white);
-    background-color: var(--primaryColor);
-    padding: 1rem 2rem;
-    box-shadow: var(--primaryBoxShadow);
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 6rem;
+  color: var(--white);
+  background-color: var(--primaryColor);
+  padding: 1rem 2rem;
+  box-shadow: var(--primaryBoxShadow);
 }
 .navbarfighter {
-    display: flex;
-    justify-content: center;
-    background-image: url(../images/wall.svg);
-    padding: 3rem;
+  display: flex;
+  justify-content: center;
+  background-image: url(../images/wall.svg);
+  padding: 3rem;
 }
 .img-home {
-  display: flex;
-  margin: 0rem;
+display: flex;
+margin: 0rem;
 }
 #marjorie, #hudson, #romain, #enola {
-  display: none;
+display: none;
 }
 
 /* END HOME */
 /* PICK FIGHTER */
 
-    /* Kept the same style as fighter list */
+  /* Kept the same style as fighter list */
 
 .fighterChoiceTitle {
-    align-self: center;
-    width: 90vw;
-    padding: 1.5rem;
-    margin: 2rem;
-    background-color: var(--primaryColor);
-    box-shadow: var(--primaryBoxShadow);  
-    color: var(--white);
-    font-size: 3rem;
-    text-transform: uppercase;
-    border: 3px solid var(--black);
+  align-self: center;
+  width: 90vw;
+  padding: 1.5rem;
+  margin: 2rem;
+  background-color: var(--primaryColor);
+  box-shadow: var(--primaryBoxShadow);  
+  color: var(--white);
+  font-size: 3rem;
+  text-transform: uppercase;
+  border: 3px solid var(--black);
 }
 
 .selectFighterInput:checked+.card-fighter { 
-    border-color:rgb(255, 0, 0);
-    text-decoration: blink;
-	-webkit-animation-name: blinker;
-	-webkit-animation-duration: 1s;
-	-webkit-animation-iteration-count:infinite;
-	-webkit-animation-timing-function:ease-in-out;
-	-webkit-animation-direction: alternate;
+  border-color:rgb(255, 0, 0);
+  text-decoration: blink;
+-webkit-animation-name: blinker;
+-webkit-animation-duration: 1s;
+-webkit-animation-iteration-count:infinite;
+-webkit-animation-timing-function:ease-in-out;
+-webkit-animation-direction: alternate;
 }
 
 .submitSelectedCharacter {
-    position: fixed;
-    bottom: 0.7rem;
-    left: 50%;
-    transform: translate(-50%);
-    padding: 1rem 2rem 1rem 2rem;
-    background:var(--secondaryColor);
-    box-shadow: 3px 3px var(--black);
-    font-family: 'VT323', monospace;
-    font-size: 1.5rem;
-    color: var(--white);
-    text-decoration: none;
-    margin-bottom: 1rem;
+  position: fixed;
+  bottom: 0.7rem;
+  left: 50%;
+  transform: translate(-50%);
+  padding: 1rem 2rem 1rem 2rem;
+  background:var(--secondaryColor);
+  box-shadow: 3px 3px var(--black);
+  font-family: 'VT323', monospace;
+  font-size: 1.5rem;
+  color: var(--white);
+  text-decoration: none;
+  margin-bottom: 1rem;
 }
 
 .submitSelectedCharacter:hover {
-    background-color: var(--primaryColor);
+  background-color: var(--primaryColor);
 }
 .marge {
-  height: 5rem;
+height: 5rem;
 }
 /* END PICK FIGHTER */
 /* FIGHT|ARENA */
 .attackPage {
-    font-size: 1.4rem;
-    text-align: center;
+  font-size: 1.4rem;
+  text-align: center;
 }
 
 .actionDone {
-  display: none;
+display: none;
 }
 
 .arena {
-  background-image: url("../images/background_fight.svg");
-  background-repeat: repeat-x;
-  height: 425px;
+background-image: url("../images/background_fight.svg");
+background-repeat: repeat-x;
+height: 425px;
 }
 
 .turnIndication {
-  position: relative;
-  bottom: 4rem;
-  font-size: 1.7rem;
-    color: var(--white);
-    background-color: var(--primaryColor);
-    box-shadow: 2px 2px var(--black);
-    border: 1.5px solid var(--black);
-    margin: 1rem;
-    padding: 0rem;
+position: relative;
+bottom: 4rem;
+font-size: 1.7rem;
+  color: var(--white);
+  background-color: var(--primaryColor);
+  box-shadow: 2px 2px var(--black);
+  border: 1.5px solid var(--black);
+  margin: 1rem;
+  padding: 0rem;
 }
 
 .players {
-    height: 425px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: auto;
-    align-items: center;
+  height: 425px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: auto;
+  align-items: center;
 }
 
 .statsPlayer {
-  margin: 0;
-  color: var(--white);
+margin: 0;
+color: var(--white);
 }
 
 progress {
-  -webkit-appearance: none;
-  border: 1px solid black;
-  height: 0.9rem;
+-webkit-appearance: none;
+border: 1px solid black;
+height: 0.9rem;
 }
 ::-webkit-progress-value{
-  background-color:green;
+background-color:green;
 
 }
 ::-webkit-progress-bar
 {
-  background-color:var(--white);
+background-color:var(--white);
 }
 
 .playerHeader {
-  background-color: #00000077;
-  border-radius: 10%;
+background-color: #00000077;
+border-radius: 10%;
+padding: 0.5rem;
+}
+
+.namePlayer {
+  color: var(--primaryColor);
+}
+.lifeBar {
+  width: 100%
+}
+.player {
+  padding: 1rem;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-bottom: 5rem;
+}
+.playerImage{
+  height: 20vh;
+}
+
+.display {
+  justify-content: center;
+  align-self: center;
+  width: 100%;
+  background-color:rgba(255, 255, 255);
+  box-shadow: var(--primaryBoxShadow); 
+  padding: 0.2rem;
+  margin-bottom: 1.2 rem;
+  line-height: 1rem;
+}
+.display p {
+  margin: 0;
   padding: 0.5rem;
 }
 
-  .namePlayer {
-    color: var(--primaryColor);
-  }
-  .lifeBar {
-    width: 100%
-  }
-  .player {
-    padding: 1rem;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    padding-bottom: 5rem;
-  }
-  .playerImage{
-    height: 20vh;
-  }
+.grid {
+  display: grid;
+  grid-template-columns: 50% auto;
+  grid-row-gap: 1rem;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .display {
-    justify-content: center;
-    align-self: center;
-    width: 100%;
-    background-color:rgba(255, 255, 255);
-    box-shadow: var(--primaryBoxShadow); 
-    padding: 0.2rem;
-    margin-bottom: 1.2 rem;
-    line-height: 1rem;
-  }
-  .display p {
-    margin: 0;
-    padding: 0.5rem;
-  }
+.attackButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:var(--secondaryColor);
+  box-shadow: var(--primaryBoxShadow);
+  padding: 0.8rem;
+  margin: 0 0.5rem;
+  font-family: 'VT323', monospace;
+  font-size: 2rem;
+  color:#fefee2;
+  text-decoration: none;
+}
 
-  .grid {
-    display: grid;
-    grid-template-columns: 50% auto;
-    grid-row-gap: 1rem;
-  }
-  .flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.healButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:green;
+  box-shadow: var(--primaryBoxShadow);
+  padding: 0.8rem;
+  margin: 0 0.5rem;
+  font-family: 'VT323', monospace;
+  font-size: 2rem;
+  color:#fefee2;
+  text-decoration: none;
+}
+.attackButton:hover {
+  background-color: var(--primaryColor);
+}
 
-  .attackButton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color:var(--secondaryColor);
-    box-shadow: var(--primaryBoxShadow);
-    padding: 0.8rem;
-    margin: 0 0.5rem;
-    font-family: 'VT323', monospace;
-    font-size: 2rem;
-    color:#fefee2;
-    text-decoration: none;
-  }
+.healButton:hover {
+  background-color: var(--primaryColor);
+}
 
-  .healButton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color:green;
-    box-shadow: var(--primaryBoxShadow);
-    padding: 0.8rem;
-    margin: 0 0.5rem;
-    font-family: 'VT323', monospace;
-    font-size: 2rem;
-    color:#fefee2;
-    text-decoration: none;
-  }
-  .attackButton:hover {
-    background-color: var(--primaryColor);
-  }
-
-  .healButton:hover {
-    background-color: var(--primaryColor);
-  }
-  
 /* END FIGHT|ARENA */
 /* WIN */
 .result {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  background-image: url("../images/background_fight.svg");
-  background-position: center center;
-  background-size: contain;
-  background-repeat: repeat-x ;
-  width: auto;
-  height: 50vh;
-  padding: 0.5rem;
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+background-image: url("../images/background_fight.svg");
+background-position: center center;
+background-size: contain;
+background-repeat: repeat-x ;
+width: auto;
+height: 50vh;
+padding: 0.5rem;
 }
 
 .resultTitle {
-    color: var(--white);
-    font-size: 3rem;
-    text-align: center;
-    background-color:var(--primaryColor);
-    border: 3px solid var(--black);
-    box-shadow: var(--primaryBoxShadow);
-    text-transform: uppercase;
-    padding: 1.5rem;
-    margin: 2rem;
+  color: var(--white);
+  font-size: 3rem;
+  text-align: center;
+  background-color:var(--primaryColor);
+  border: 3px solid var(--black);
+  box-shadow: var(--primaryBoxShadow);
+  text-transform: uppercase;
+  padding: 1.5rem;
+  margin: 2rem;
 }
 
 .winner {
-  display: flex;
-  flex-direction: column;
-  align-self: flex-end;
-  margin-top: auto;
-  padding: 0.5rem;
-  font-size: 1.3rem;
+display: flex;
+flex-direction: column;
+align-self: flex-end;
+margin-top: auto;
+padding: 0.5rem;
+font-size: 1.3rem;
 }
 
 .result figcaption{
-  padding: 0.5rem;
-  background-color : rgb(255, 255, 255);
-  box-shadow: var(--primaryBoxShadow);
-  text-align: center;
+padding: 0.5rem;
+background-color : rgb(255, 255, 255);
+box-shadow: var(--primaryBoxShadow);
+text-align: center;
 }
 
 
 .winnerImage{
-  height: 20vh;
-  margin-top: 2rem;
-  padding-bottom: 2rem;
+height: 20vh;
+margin-top: 2rem;
+padding-bottom: 2rem;
 }
 
 .loser {
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  margin-top: auto;
-  padding: 0.5rem;
-  font-size: 1rem;
+display: flex;
+flex-direction: column;
+align-self: center;
+margin-top: auto;
+padding: 0.5rem;
+font-size: 1rem;
 }
 
 .loserImage {
-  height: 20vh;
-  margin-top: 2rem;
-  padding-bottom: 2.3rem;
+height: 20vh;
+margin-top: 2rem;
+padding-bottom: 2.3rem;
 }
 
 .fightDetails {
-  padding: 1rem;
+padding: 1rem;
 }
 
 .announce {
-  font-size: 2rem;
-  color: var(--white);
-  padding: 0.8rem;
-  background-color:var(--primaryColor);
-  box-shadow: var(--primaryBoxShadow);
-  text-align: center;
+font-size: 2rem;
+color: var(--white);
+padding: 0.8rem;
+background-color:var(--primaryColor);
+box-shadow: var(--primaryBoxShadow);
+text-align: center;
 }
 
 .announce p{
-  margin :0;
-  padding:0;
+margin :0;
+padding:0;
 }
 
 /* END WIN */
 /* PICK FIGHT|HISTORY*/
+.history {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
 .fightsHistoryTitle {
-    color: white;
-    display: block;
-    justify-content: center;
-    font-size: 3rem;
-    text-align: center;
-    margin-top: 15vh;
-    background-color:var(--primaryColor);
-    border: 3px solid var(--black);
-    box-shadow: var(--primaryBoxShadow);
-    text-transform: uppercase;
-    padding: 1.5rem;
-    margin: 2rem;
+  color: white;
+  display: block;
+  justify-content: center;
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 15vh;
+  background-color:var(--primaryColor);
+  border: 3px solid var(--black);
+  box-shadow: var(--primaryBoxShadow);
+  text-transform: uppercase;
+  padding: 1.5rem;
+  margin: 2rem;
 }
 
 .fightsTable {
-    display: flex;
-    justify-content: space-around;
-    margin: 0;
-    padding: 0;
-    
+  margin: 0;
+  padding: 0;
+  
 }
 
 .fightHistory {
-    color: var(--white);
-    border-collapse: collapse;
-    border: var(--primaryBorder);
-    background-image: url(../images/wall.svg);
-    margin-top: 3rem;
-    box-shadow: var(--primaryBoxShadow);
+  color: var(--white);
+  border-collapse: collapse;
+  border: var(--primaryBorder);
+  background-image: url(../images/wall.svg);
+  margin-top: 3rem;
+  box-shadow: var(--primaryBoxShadow);
 }
 
 tr, td {
-    font-size: 1.5rem;
-    padding: 1rem;
-    border: var(--primaryBorder);
-    text-align: center;
+  font-size: 1.5rem;
+  padding: 1rem;
+  border: var(--primaryBorder);
+  text-align: center;
 }
 
 thead,
 tfoot {
-    background-color: var(--secondaryColor);
-    color:var(--white);
-    font-size: 22px;
+  background-color: var(--secondaryColor);
+  color:var(--white);
+  font-size: 22px;
 
 }
 
@@ -437,38 +440,38 @@ tfoot {
 /* END FIGHT|HISTORY */
 /* PICK LIST|FIGHTER*/
 .fighterListTitle {
-    text-align: center;
-    margin: 2rem;
-    padding: 1.5rem;
-    background-color: var(--primaryColor);
-    box-shadow: var(--primaryBoxShadow);  
-    color: var(--white);
-    font-size: 3rem;
-    text-transform: uppercase;
-    border: 3px solid var(--black);
+  text-align: center;
+  margin: 2rem;
+  padding: 1.5rem;
+  background-color: var(--primaryColor);
+  box-shadow: var(--primaryBoxShadow);  
+  color: var(--white);
+  font-size: 3rem;
+  text-transform: uppercase;
+  border: 3px solid var(--black);
 }
 .card-deck {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 .card-fighter {
-    background-color: var(--white);
-    border: 2px solid var(--black);
-    padding: 1rem;
+  background-color: var(--white);
+  border: 2px solid var(--black);
+  padding: 1rem;
 }
 .card-img {
-    background-color:var(--primaryColorAlter);
-    border: 3px solid var(--black);
-    padding: 3rem;
+  background-color:var(--primaryColorAlter);
+  border: 3px solid var(--black);
+  padding: 3rem;
 }
 .card-fighter-skills {
-  font-size: 1.5rem;
-  padding: 0 2rem 0 2rem;
-  list-style-type: none;
-  display: flex;
-  justify-content: space-around;
-  color: var(--black);
+font-size: 1.5rem;
+padding: 0 2rem 0 2rem;
+list-style-type: none;
+display: flex;
+justify-content: space-around;
+color: var(--black);
 }
 
 /* END LIST|FIGHTER */
@@ -476,36 +479,36 @@ tfoot {
 /*CREDIT*/
 
 .creditList {
-    list-style: none;
-    line-height: 1.5em;
-    margin-left: 0;
-    padding-left: 0;
-    padding-top: 2rem;
-    display: block;
-    font-size: 2rem;
-    margin: auto;
-    text-align: center;
-    text-decoration: none;
+  list-style: none;
+  line-height: 1.5em;
+  margin-left: 0;
+  padding-left: 0;
+  padding-top: 2rem;
+  display: block;
+  font-size: 2rem;
+  margin: auto;
+  text-align: center;
+  text-decoration: none;
 }
 
 .creditTitle {
-    color: var(--white);
-    display: block;
-    justify-content: center;
-    font-size: 3rem;
-    text-align: center;
-    margin-top: 15vh;
-    background-color:var(--primaryColor);
-    border: 3px solid var(--black);
-    box-shadow: var(--primaryBoxShadow);
-    text-transform: uppercase;
-    padding: 1.5rem;
-    margin: 2rem;
+  color: var(--white);
+  display: block;
+  justify-content: center;
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 15vh;
+  background-color:var(--primaryColor);
+  border: 3px solid var(--black);
+  box-shadow: var(--primaryBoxShadow);
+  text-transform: uppercase;
+  padding: 1.5rem;
+  margin: 2rem;
 }
 /*END CREDIT*/
 
 .fighterImage{
-  display : none;
+display : none;
 }
 @media (min-width: 576px) {
 /* NAVBAR */
@@ -520,7 +523,7 @@ tfoot {
 /* PICK FIGHT|ARENA */
 
 .actionDone {
-  display: block;
+display: block;
 }
 /* END FIGHT|ARENA */
 /* WIN */
@@ -540,21 +543,21 @@ tfoot {
 @media screen and (min-width: 768px) {
 /* NAVBAR */
 .menu {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 .fighterImage{
-  display : flex;
+display : flex;
 }
 /* END NAVBAR */
 /* HOME */
 #hudson, #enola {
-  display: initial;
+display: initial;
 }
 .img-home {
-  display: flex;
-  margin: 1rem;
+display: flex;
+margin: 1rem;
 }
 /* END HOME */
 /* PICK FIGHTER */
@@ -565,29 +568,29 @@ tfoot {
 /* END FIGHT|ARENA */
 /* WIN */
 .result {
-  height: 55vh;
+height: 55vh;
 }
 
 .loser {
-  font-size: 2rem;
+font-size: 2rem;
 }
 
 .loserImage {
-  height: 24vh;
-  padding-bottom: 4rem;
+height: 24vh;
+padding-bottom: 4rem;
 }
 
 .winner {
-  font-size: 2.5rem;
+font-size: 2.5rem;
 }
 
 .winnerImage {
-  height: 24vh;
-  padding-bottom: 4rem;
+height: 24vh;
+padding-bottom: 4rem;
 }
 
 .announce {
-  font-size: 4rem;
+font-size: 4rem;
 }
 /* END WIN */
 /* PICK FIGHT|HISTORY*/
@@ -595,10 +598,10 @@ tfoot {
 /* END FIGHT|HISTORY */
 /* PICK LIST|FIGHTER*/
 .card-deck, .pick {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
+display: flex;
+justify-content: center;
+flex-direction: row;
+flex-wrap: wrap;
 }
 /* END IST|FIGHTER */
 }
@@ -620,25 +623,25 @@ tfoot {
 /* END FIGHT|ARENA */
 /* WIN */
 .result {
-  height: 65vh;
+height: 65vh;
 }
 
 .loser {
-  font-size: 2.5rem;
+font-size: 2.5rem;
 }
 
 .loserImage {
-  padding-bottom: 8.5rem;
-  height: 30vh;
+padding-bottom: 8.5rem;
+height: 30vh;
 }
 
 .winner {
-  font-size: 3rem;
+font-size: 3rem;
 }
 
 .winnerImage {
-  padding-bottom: 7rem;
-  height: 30vh;
+padding-bottom: 7rem;
+height: 30vh;
 }
 /* END WIN */
 /* PICK FIGHT|HISTORY*/
@@ -656,10 +659,10 @@ tfoot {
 /* END NAVBAR */
 /* HOME */
 .home {
-  height: 475px;
+height: 475px;
 }
 #marjorie, #romain {
-  display: initial;
+display: initial;
 }
 /* END HOME */
 
@@ -671,7 +674,7 @@ tfoot {
 /* END FIGHT|ARENA */
 /* WIN */
 .result {
-  height: 55vh;
+height: 55vh;
 }
 /* END WIN */
 /* PICK FIGHT|HISTORY*/
@@ -711,16 +714,16 @@ tfoot {
 
 /*MEDIAQUERY FOR RESPECT USER RADIUS FOR ANIMATIONS*/
 @media (prefers-reduced-motion: reduce) {
-    *,
-    ::before,
-    ::after {
-      animation-delay: -1ms !important;
-      animation-duration: 1ms !important;
-      animation-iteration-count: 1 !important;
-      background-attachment: initial !important;
-      scroll-behavior: auto !important;
-      transition-duration: 0s !important;
-      transition-delay: 0s !important;
-    }
+  *,
+  ::before,
+  ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
   }
+}
 }
