@@ -369,12 +369,12 @@ padding: 1rem;
 }
 
 .announce {
-font-size: 2rem;
-color: var(--white);
-padding: 0.8rem;
-background-color:var(--primaryColor);
-box-shadow: var(--primaryBoxShadow);
-text-align: center;
+  font-size: 2rem;
+  color: var(--white);
+  padding: 0.8rem;
+  background-color:var(--secondaryColor);
+  box-shadow: var(--primaryBoxShadow);
+  text-align: center;
 }
 
 .announce p{
