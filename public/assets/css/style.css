@@ -642,7 +642,7 @@ tfoot {
 
 /* X-Large devices (large desktops, 1200px and up) */
 
-@media screen (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
 /* NAVBAR */
 
 /* END NAVBAR */
@@ -672,7 +672,7 @@ tfoot {
 /* PICK LIST|FIGHTER*/
 
 /* END IST|FIGHTER */
-}
+
 /* XX-Large devices (larger desktops, 1400px and up) */
 
 @media (min-width: 1400px) {
@@ -715,3 +715,4 @@ tfoot {
       transition-delay: 0s !important;
     }
   }
+}
