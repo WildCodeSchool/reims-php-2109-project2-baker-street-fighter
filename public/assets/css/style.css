@@ -289,8 +289,9 @@ progress {
   display: flex;
   flex-direction: column;
   align-self: flex-end;
+  margin-top: auto;
   padding: 0.5rem;
-  font-size: 1.7rem;
+  font-size: 1.3rem;
 }
 
 .result figcaption{
@@ -304,21 +305,22 @@ progress {
 .winnerImage{
   height: 20vh;
   margin-top: 2rem;
-  padding-bottom: 0.5rem;
+  padding-bottom: 2rem;
 }
 
 .loser {
   display: flex;
   flex-direction: column;
-  align-self: flex-end;
+  align-self: center;
+  margin-top: auto;
   padding: 0.5rem;
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 
 .loserImage {
   height: 20vh;
   margin-top: 2rem;
-  padding-bottom: 1rem;
+  padding-bottom: 2.3rem;
 }
 
 .fightDetails {
@@ -512,6 +514,24 @@ tfoot {
 .result {
   height: 55vh;
 }
+
+.loser {
+  font-size: 2rem;
+}
+
+.loserImage {
+  height: 24vh;
+  padding-bottom: 4rem;
+}
+
+.winner {
+  font-size: 2.5rem;
+}
+
+.winnerImage {
+  height: 24vh;
+  padding-bottom: 4rem;
+}
 /* END WIN */
 /* PICK FIGHT|HISTORY*/
 tr, td {
@@ -530,7 +550,7 @@ tr, td {
 
 /* Large devices (desktops, 992px and up) */
 
-@media screen (min-width: 992px) {
+@media screen and (min-width: 992px) and (min-height: 1000px){
 /* NAVBAR */
 
 /* END NAVBAR */
@@ -545,7 +565,25 @@ tr, td {
 /* END FIGHT|ARENA */
 /* WIN */
 .result {
-  height: 70vh;
+  height: 65vh;
+}
+
+.loser {
+  font-size: 2.5rem;
+}
+
+.loserImage {
+  padding-bottom: 8.5rem;
+  height: 30vh;
+}
+
+.winner {
+  font-size: 3rem;
+}
+
+.winnerImage {
+  padding-bottom: 7rem;
+  height: 30vh;
 }
 /* END WIN */
 /* PICK FIGHT|HISTORY*/
