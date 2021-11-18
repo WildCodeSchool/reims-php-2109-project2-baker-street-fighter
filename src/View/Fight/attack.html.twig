@@ -57,10 +57,14 @@
     </div>
 
     <form id="grid" action="/fight" method="GET">
-        <button class='attackButton' type="submit" name="attack" value="punch" >PUNCH !</button>
-        <button class='attackButton' type="submit" name="attack" value="kick" >KICK !</button>
-        <button class='attackButton' type="submit" name="attack" value="headbutt" >HEADBUTT!</button>
-        <button class='attackButton' type="submit" name="attack" value="teatime" >TEATIME !</button>
+        {% if adversary.life == 0 %}
+            <button class='resultButton attackButton' type='submit' name='winner' value='{{currentAttacker.name}}'>RESULT !</button>
+        {% else %}
+            <button class='attackButton' type="submit" name="attack" value="punch" >PUNCH !</button>
+            <button class='attackButton' type="submit" name="attack" value="kick" >KICK !</button>
+            <button class='attackButton' type="submit" name="attack" value="headbutt" >HEADBUTT!</button>
+            <button class='attackButton' type="submit" name="attack" value="teatime" >TEATIME !</button>
+        {% endif %}
     </form>
     
 </main>
