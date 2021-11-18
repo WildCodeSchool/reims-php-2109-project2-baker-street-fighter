@@ -618,7 +618,7 @@ tfoot {
 
 /* X-Large devices (large desktops, 1200px and up) */
 
-@media screen (min-width: 1200px) {
+@media screen and (min-width: 1200px){
 /* NAVBAR */
 
 /* END NAVBAR */
