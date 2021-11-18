@@ -159,9 +159,9 @@ body {
   font-size: 1.7rem;
     color: var(--white);
     background-color: var(--primaryColor);
-    box-shadow: var(--primaryBoxShadow);
-    border: 2px solid var(--black);
-    margin: 2rem;
+    box-shadow: 2px 2px var(--black);
+    border: 1.5px solid var(--black);
+    margin: 1rem;
     padding: 0rem;
 }
 .players {
