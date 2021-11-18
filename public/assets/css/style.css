@@ -503,9 +503,7 @@ tfoot {
 
 /* END WIN */
 /* PICK FIGHT|HISTORY*/
-tr, td {
-  font-size: 3rem;
-}
+
 /* END FIGHT|HISTORY */
 /* PICK LIST|FIGHTER*/
 .card-deck, .pick {
@@ -565,9 +563,7 @@ tr, td {
 
 /* END WIN */
 /* PICK FIGHT|HISTORY*/
-tr, td {
-  font-size: 1.8rem;
-}
+
 /* END FIGHT|HISTORY */
 /* PICK LIST|FIGHTER*/
 
