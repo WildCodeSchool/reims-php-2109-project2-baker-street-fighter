@@ -456,6 +456,25 @@ tfoot {
 .fighterImage{
   display : none;
 }
+@media (max-width: 370px) {
+  /* HOMEPAGE */
+  #moriarty, #sherlock {
+    display: none;
+  }
+  .home-title {
+    font-size: 4rem;
+    margin: 1.5rem;
+  }
+  .navbarfighter {
+    width: 100%;
+    padding: 2rem;
+  }
+  .menu {
+    margin: 0rem;
+    line-height: 3rem;
+  }
+  /* END HOMEPAGE */
+}
 @media (min-width: 576px) {
 /* NAVBAR */
 
