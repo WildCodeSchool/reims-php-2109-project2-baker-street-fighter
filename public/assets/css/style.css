@@ -158,7 +158,19 @@ body {
     text-align: center;
 }
 
-.roundTitle {
+.actionDone {
+  display: none;
+}
+
+.arena {
+  background-image: url("../images/background_fight.svg");
+  background-repeat: repeat-x;
+  height: 425px;
+}
+
+.turnIndication {
+  position: relative;
+  bottom: 4rem;
   font-size: 1.7rem;
     color: var(--white);
     background-color: var(--primaryColor);
@@ -167,9 +179,9 @@ body {
     margin: 1rem;
     padding: 0rem;
 }
+
 .players {
     height: 425px;
-    background-image: url("../images/background_fight.svg");
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -249,12 +261,30 @@ progress {
     box-shadow: var(--primaryBoxShadow);
     padding: 0.8rem;
     margin: 0 0.5rem;
-    font-size: 2.5rem;
+    font-family: 'VT323', monospace;
+    font-size: 2rem;
     color:#fefee2;
     text-decoration: none;
   }
 
+  .healButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:green;
+    box-shadow: var(--primaryBoxShadow);
+    padding: 0.8rem;
+    margin: 0 0.5rem;
+    font-family: 'VT323', monospace;
+    font-size: 2rem;
+    color:#fefee2;
+    text-decoration: none;
+  }
   .attackButton:hover {
+    background-color: var(--primaryColor);
+  }
+
+  .healButton:hover {
     background-color: var(--primaryColor);
   }
   
@@ -462,6 +492,9 @@ tfoot {
 /* END PICK FIGHTER */
 /* PICK FIGHT|ARENA */
 
+.actionDone {
+  display: block;
+}
 /* END FIGHT|ARENA */
 /* WIN */
 
