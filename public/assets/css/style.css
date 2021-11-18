@@ -227,7 +227,7 @@ progress {
     background-color:rgba(255, 255, 255);
     box-shadow: var(--primaryBoxShadow); 
     padding: 0.2rem;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.2 rem;
     line-height: 1rem;
   }
   .display p {
@@ -263,8 +263,13 @@ progress {
 .result {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
+  background-image: url("../images/background_fight.svg");
+  background-position: center center;
+  background-size: contain;
+  background-repeat: repeat-x ;
   width: auto;
+  height: 50vh;
   padding: 0.5rem;
 }
 
@@ -278,13 +283,12 @@ progress {
     text-transform: uppercase;
     padding: 1.5rem;
     margin: 2rem;
-
 }
 
 .winner {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-self: flex-end;
   padding: 0.5rem;
   font-size: 1.7rem;
 }
@@ -298,19 +302,23 @@ progress {
 
 
 .winnerImage{
-  height: 30vh;
+  height: 20vh;
+  margin-top: 2rem;
+  padding-bottom: 0.5rem;
 }
 
 .loser {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-self: flex-end;
   padding: 0.5rem;
   font-size: 1.3rem;
 }
 
 .loserImage {
   height: 20vh;
+  margin-top: 2rem;
+  padding-bottom: 1rem;
 }
 
 .fightDetails {
@@ -323,6 +331,7 @@ progress {
   padding: 0.8rem;
   background-color:var(--primaryColor);
   box-shadow: var(--primaryBoxShadow);
+  text-align: center;
 }
 
 /* END WIN */
@@ -477,7 +486,7 @@ tfoot {
 
 /* Medium devices (tablets, 768px and up) */
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) and (min-height: 1000px) {
 /* NAVBAR */
 .menu {
     display: flex;
@@ -500,7 +509,9 @@ tfoot {
 
 /* END FIGHT|ARENA */
 /* WIN */
-
+.result {
+  height: 55vh;
+}
 /* END WIN */
 /* PICK FIGHT|HISTORY*/
 tr, td {
@@ -519,7 +530,7 @@ tr, td {
 
 /* Large devices (desktops, 992px and up) */
 
-@media (min-width: 992px) {
+@media screen (min-width: 992px) {
 /* NAVBAR */
 
 /* END NAVBAR */
@@ -533,7 +544,9 @@ tr, td {
 
 /* END FIGHT|ARENA */
 /* WIN */
-
+.result {
+  height: 70vh;
+}
 /* END WIN */
 /* PICK FIGHT|HISTORY*/
 
@@ -545,7 +558,7 @@ tr, td {
 
 /* X-Large devices (large desktops, 1200px and up) */
 
-@media (min-width: 1200px) {
+@media screen (min-width: 1200px) {
 /* NAVBAR */
 
 /* END NAVBAR */
@@ -562,7 +575,9 @@ tr, td {
 
 /* END FIGHT|ARENA */
 /* WIN */
-
+.result {
+  height: 55vh;
+}
 /* END WIN */
 /* PICK FIGHT|HISTORY*/
 tr, td {
