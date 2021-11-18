@@ -99,9 +99,14 @@ body {
     background-image: url(../images/wall.svg);
     padding: 3rem;
 }
+.img-home {
+  display: flex;
+  margin: 1rem;
+}
 #marjorie, #hudson, #romain, #enola {
   display: none;
 }
+
 /* END HOME */
 /* PICK FIGHTER */
 
