@@ -25,10 +25,11 @@ body {
 
 .returnButton {
     position: fixed;
-    width: 3rem;
-    height: 3rem;
-    bottom: 2rem;
-    right: 1rem;
+    background-color:var(--white);
+    width: 4rem;
+    height: 4rem;
+    bottom: 1.5rem;
+    left: 1rem;
     border: var(--primaryBorder);
     box-shadow: 3px 3px var(--black);
 }
@@ -36,7 +37,7 @@ body {
 /* NAVBAR */
   
 .menu {
-    height: 100%;
+    height: 115%;
     padding: 0;
     margin: 0;
     display: flex;
@@ -44,8 +45,8 @@ body {
     flex-direction: column;
     list-style-type: none;
     text-align: center;
-    min-width: 40vw;
-    font-size: 1.5rem;
+    min-width: 50vw;
+    font-size: 1.7rem;
     line-height: 2rem;
 }
 
@@ -99,9 +100,14 @@ body {
     background-image: url(../images/wall.svg);
     padding: 3rem;
 }
+.img-home {
+  display: flex;
+  margin: 0rem;
+}
 #marjorie, #hudson, #romain, #enola {
   display: none;
 }
+
 /* END HOME */
 /* PICK FIGHTER */
 
@@ -174,8 +180,8 @@ body {
   font-size: 1.7rem;
     color: var(--white);
     background-color: var(--primaryColor);
-    box-shadow: var(--primaryBoxShadow);
-    border: 2px solid var(--black);
+    box-shadow: 2px 2px var(--black);
+    border: 1.5px solid var(--black);
     margin: 1rem;
     padding: 0rem;
 }
@@ -184,7 +190,7 @@ body {
     height: 425px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     width: auto;
     align-items: center;
 }
@@ -239,7 +245,7 @@ progress {
     background-color:rgba(255, 255, 255);
     box-shadow: var(--primaryBoxShadow); 
     padding: 0.2rem;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.2 rem;
     line-height: 1rem;
   }
   .display p {
@@ -247,10 +253,15 @@ progress {
     padding: 0.5rem;
   }
 
-  #grid {
+  .grid {
     display: grid;
     grid-template-columns: 50% auto;
     grid-row-gap: 1rem;
+  }
+  .flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .attackButton {
@@ -293,8 +304,13 @@ progress {
 .result {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
+  background-image: url("../images/background_fight.svg");
+  background-position: center center;
+  background-size: contain;
+  background-repeat: repeat-x ;
   width: auto;
+  height: 50vh;
   padding: 0.5rem;
 }
 
@@ -308,15 +324,15 @@ progress {
     text-transform: uppercase;
     padding: 1.5rem;
     margin: 2rem;
-
 }
 
 .winner {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-self: flex-end;
+  margin-top: auto;
   padding: 0.5rem;
-  font-size: 1.7rem;
+  font-size: 1.3rem;
 }
 
 .result figcaption{
@@ -328,19 +344,24 @@ progress {
 
 
 .winnerImage{
-  height: 30vh;
+  height: 20vh;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .loser {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-self: center;
+  margin-top: auto;
   padding: 0.5rem;
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 
 .loserImage {
   height: 20vh;
+  margin-top: 2rem;
+  padding-bottom: 2.3rem;
 }
 
 .fightDetails {
@@ -353,6 +374,7 @@ progress {
   padding: 0.8rem;
   background-color:var(--primaryColor);
   box-shadow: var(--primaryBoxShadow);
+  text-align: center;
 }
 
 /* END WIN */
@@ -510,7 +532,7 @@ tfoot {
 
 /* Medium devices (tablets, 768px and up) */
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) and (min-height: 1000px) {
 /* NAVBAR */
 .menu {
     display: flex;
@@ -525,6 +547,10 @@ tfoot {
 #hudson, #enola {
   display: initial;
 }
+.img-home {
+  display: flex;
+  margin: 1rem;
+}
 /* END HOME */
 /* PICK FIGHTER */
 
@@ -533,12 +559,30 @@ tfoot {
 
 /* END FIGHT|ARENA */
 /* WIN */
+.result {
+  height: 55vh;
+}
 
+.loser {
+  font-size: 2rem;
+}
+
+.loserImage {
+  height: 24vh;
+  padding-bottom: 4rem;
+}
+
+.winner {
+  font-size: 2.5rem;
+}
+
+.winnerImage {
+  height: 24vh;
+  padding-bottom: 4rem;
+}
 /* END WIN */
 /* PICK FIGHT|HISTORY*/
-tr, td {
-  font-size: 3rem;
-}
+
 /* END FIGHT|HISTORY */
 /* PICK LIST|FIGHTER*/
 .card-deck, .pick {
@@ -552,7 +596,7 @@ tr, td {
 
 /* Large devices (desktops, 992px and up) */
 
-@media (min-width: 992px) {
+@media screen and (min-width: 992px) and (min-height: 1000px){
 /* NAVBAR */
 
 /* END NAVBAR */
@@ -566,7 +610,27 @@ tr, td {
 
 /* END FIGHT|ARENA */
 /* WIN */
+.result {
+  height: 65vh;
+}
 
+.loser {
+  font-size: 2.5rem;
+}
+
+.loserImage {
+  padding-bottom: 8.5rem;
+  height: 30vh;
+}
+
+.winner {
+  font-size: 3rem;
+}
+
+.winnerImage {
+  padding-bottom: 7rem;
+  height: 30vh;
+}
 /* END WIN */
 /* PICK FIGHT|HISTORY*/
 
@@ -578,11 +642,14 @@ tr, td {
 
 /* X-Large devices (large desktops, 1200px and up) */
 
-@media (min-width: 1200px) {
+@media screen (min-width: 1200px) {
 /* NAVBAR */
 
 /* END NAVBAR */
 /* HOME */
+.home {
+  height: 475px;
+}
 #marjorie, #romain {
   display: initial;
 }
@@ -595,12 +662,12 @@ tr, td {
 
 /* END FIGHT|ARENA */
 /* WIN */
-
+.result {
+  height: 55vh;
+}
 /* END WIN */
 /* PICK FIGHT|HISTORY*/
-tr, td {
-  font-size: 1.8rem;
-}
+
 /* END FIGHT|HISTORY */
 /* PICK LIST|FIGHTER*/
 
