@@ -1,5 +1,6 @@
 *, *:after, *:before {
     box-sizing: border-box;
+
 }
 
 body {
@@ -95,9 +96,11 @@ body {
 .navbarfighter {
     display: flex;
     justify-content: center;
+    background-image: url(../images/wall.svg);
+    padding: 3rem;
 }
-.img-home {
-  z-index: -1;
+#marjorie, #hudson, #romain, #enola {
+  display: none;
 }
 /* END HOME */
 /* PICK FIGHTER */
@@ -166,13 +169,12 @@ body {
 }
 .players {
     height: 425px;
-    background-image: url("../images/background_fight.png");
+    background-image: url("../images/background_fight.svg");
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: auto;
     align-items: center;
-    margin-bottom: 1rem;
 }
 
 .statsPlayer {
@@ -192,6 +194,12 @@ progress {
 ::-webkit-progress-bar
 {
   background-color:var(--white);
+}
+
+.playerHeader {
+  background-color: #00000077;
+  border-radius: 10%;
+  padding: 0.5rem;
 }
 
   .namePlayer {
@@ -214,13 +222,17 @@ progress {
 
   .display {
     justify-content: center;
-    align-items: center;
-    width: auto;
+    align-self: center;
+    width: 100%;
     background-color:rgba(255, 255, 255);
-    box-shadow: var(--primaryBoxShadow);
-    margin: 0 3rem 1rem 3rem; 
+    box-shadow: var(--primaryBoxShadow); 
     padding: 0.2rem;
+    margin-bottom: 1.2rem;
     line-height: 1rem;
+  }
+  .display p {
+    margin: 0;
+    padding: 0.5rem;
   }
 
   #grid {
@@ -233,12 +245,17 @@ progress {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:var(--primaryColor);
+    background-color:var(--secondaryColor);
     box-shadow: var(--primaryBoxShadow);
-    margin: 0 1rem;
+    padding: 0.8rem;
+    margin: 0 0.5rem;
     font-size: 2.5rem;
     color:#fefee2;
     text-decoration: none;
+  }
+
+  .attackButton:hover {
+    background-color: var(--primaryColor);
   }
   
 /* END FIGHT|ARENA */
@@ -272,7 +289,7 @@ progress {
   font-size: 1.7rem;
 }
 
-.result p{
+.result figcaption{
   padding: 0.5rem;
   background-color : rgb(255, 255, 255);
   box-shadow: var(--primaryBoxShadow);
@@ -328,19 +345,22 @@ progress {
 .fightsTable {
     display: flex;
     justify-content: space-around;
+    margin: 0;
+    padding: 0;
     
 }
 
 .fightHistory {
+    color: var(--white);
     border-collapse: collapse;
     border: var(--primaryBorder);
-    background-color: var(--primaryColor);
+    background-image: url(../images/wall.svg);
     margin-top: 3rem;
     box-shadow: var(--primaryBoxShadow);
 }
 
 tr, td {
-    font-size: 22px;
+    font-size: 1.5rem;
     padding: 1rem;
     border: var(--primaryBorder);
 }
@@ -469,7 +489,9 @@ tfoot {
 }
 /* END NAVBAR */
 /* HOME */
-
+#hudson, #enola {
+  display: initial;
+}
 /* END HOME */
 /* PICK FIGHTER */
 
@@ -481,7 +503,9 @@ tfoot {
 
 /* END WIN */
 /* PICK FIGHT|HISTORY*/
-
+tr, td {
+  font-size: 3rem;
+}
 /* END FIGHT|HISTORY */
 /* PICK LIST|FIGHTER*/
 .card-deck, .pick {
@@ -526,7 +550,9 @@ tfoot {
 
 /* END NAVBAR */
 /* HOME */
-
+#marjorie, #romain {
+  display: initial;
+}
 /* END HOME */
 
 /* PICK FIGHTER */
@@ -539,7 +565,9 @@ tfoot {
 
 /* END WIN */
 /* PICK FIGHT|HISTORY*/
-
+tr, td {
+  font-size: 1.8rem;
+}
 /* END FIGHT|HISTORY */
 /* PICK LIST|FIGHTER*/
 

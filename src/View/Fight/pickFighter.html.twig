@@ -3,16 +3,20 @@
 
 {% block content %}
     <section class="card-deck">
+
         <h1 class="fighterChoiceTitle">CHOOSE YOUR FIGHTERS</h1>
-            <form class="pick" action="" method="POST">
+
+            <form class="pick" method="POST">
+
                 {% for fighter in fighters %}
                     <label for="{{fighter.id}}">
                         <input type="radio" value="{{fighter.id}}" name="selected_fighter" id="{{fighter.id}}" class="selectFighterInput" hidden>
+                        
                         <figure class="card-fighter">
                             <h2 class="card-fighter-name">{{fighter.name}}</h2>
                             <img
                             class="card-img"
-                            src="/assets/images/{{fighter.name|lower}}.png"
+                            src="/assets/images/{{fighter.name|lower}}.svg"
                             alt="{{fighter.name}} photo"
                             />
                             <figcaption class="card-caption">
@@ -23,11 +27,16 @@
                                 </ul>
                             </figcaption>
                         </figure>
+
                     </label>
                 {% endfor %}
+
                 <button class="submitSelectedCharacter" type='submit'> NEXT </button>
+
             </form>
+
             <div class="marge"></div>
+
     </section>
-    {% include '/Item/return.html.twig'%}
+{% include '/Item/return.html.twig'%}
 {% endblock %}
