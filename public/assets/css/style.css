@@ -37,7 +37,7 @@ body {
 /* NAVBAR */
   
 .menu {
-    height: 115%;
+    height: 100%;
     padding: 0;
     margin: 0;
     display: flex;
@@ -98,7 +98,8 @@ body {
     display: flex;
     justify-content: center;
     background-image: url(../images/wall.svg);
-    padding: 1rem 3rem 3rem 3rem;
+    padding: 1rem 3rem 1rem 3rem;
+    height: 40vh;
 }
 .img-home {
   display: flex;
@@ -542,6 +543,7 @@ tfoot {
 .menu {
     display: flex;
     justify-content: space-around;
+    min-width: 30vw;
 }
 
 .fighterImage{
@@ -607,7 +609,9 @@ tfoot {
 
 @media screen and (min-width: 992px) {
 /* NAVBAR */
-
+.menu {
+  font-size: 3rem;
+}
 /* END NAVBAR */
 /* HOME */
 
