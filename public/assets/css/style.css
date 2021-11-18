@@ -347,6 +347,11 @@ progress {
   text-align: center;
 }
 
+.announce p{
+  margin :0;
+  padding:0;
+}
+
 /* END WIN */
 /* PICK FIGHT|HISTORY*/
 .fightsHistoryTitle {
@@ -546,6 +551,10 @@ tfoot {
 .winnerImage {
   height: 24vh;
   padding-bottom: 4rem;
+}
+
+.announce {
+  font-size: 4rem;
 }
 /* END WIN */
 /* PICK FIGHT|HISTORY*/
