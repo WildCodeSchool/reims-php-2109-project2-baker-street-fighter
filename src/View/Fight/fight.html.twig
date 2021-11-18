@@ -9,13 +9,13 @@
 <main class='result'>
 
     <figure class='winner'>
+        <figcaption>WINNER 🏆: {{winner.name}} <br>❤ {{winner.life}}</figcaption>
         <img src="/assets/images/{{winner.name|lower}}.svg" class ="winnerImage">
-        <figcaption>WINNER 🏆{{winner.name}} <br>❤ {{winner.life}}</figcaption>
     </figure>
 
     <figure class='loser'>
+        <figcaption>LOSER 💀: {{loser.name}} <br>❤ {{loser.life}}</figcaption>
         <img src="/assets/images/{{loser.name|lower}}.svg" class ="loserImage">
-        <figcaption>LOSER 💀{{loser.name}} <br>❤ {{loser.life}}</figcaption>
     </figure>
 
 </main>
