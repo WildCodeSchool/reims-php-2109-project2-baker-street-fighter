@@ -236,10 +236,15 @@ progress {
     padding: 0.5rem;
   }
 
-  #grid {
+  .grid {
     display: grid;
     grid-template-columns: 50% auto;
     grid-row-gap: 1rem;
+  }
+  .flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .attackButton {
