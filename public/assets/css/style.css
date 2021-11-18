@@ -98,7 +98,7 @@ body {
     display: flex;
     justify-content: center;
     background-image: url(../images/wall.svg);
-    padding: 3rem;
+    padding: 1rem 3rem 3rem 3rem;
 }
 .img-home {
   display: flex;
