@@ -37,7 +37,7 @@ body {
 /* NAVBAR */
   
 .menu {
-    height: 100%;
+    height: 115%;
     padding: 0;
     margin: 0;
     display: flex;
@@ -45,8 +45,8 @@ body {
     flex-direction: column;
     list-style-type: none;
     text-align: center;
-    min-width: 40vw;
-    font-size: 1.5rem;
+    min-width: 50vw;
+    font-size: 1.7rem;
     line-height: 2rem;
 }
 
@@ -100,9 +100,14 @@ body {
     background-image: url(../images/wall.svg);
     padding: 3rem;
 }
+.img-home {
+  display: flex;
+  margin: 0rem;
+}
 #marjorie, #hudson, #romain, #enola {
   display: none;
 }
+
 /* END HOME */
 /* PICK FIGHTER */
 
@@ -509,6 +514,10 @@ tfoot {
 #hudson, #enola {
   display: initial;
 }
+.img-home {
+  display: flex;
+  margin: 1rem;
+}
 /* END HOME */
 /* PICK FIGHTER */
 
@@ -605,6 +614,9 @@ tfoot {
 
 /* END NAVBAR */
 /* HOME */
+.home {
+  height: 475px;
+}
 #marjorie, #romain {
   display: initial;
 }
