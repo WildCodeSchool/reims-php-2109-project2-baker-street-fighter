@@ -384,6 +384,11 @@ progress {
 
 /* END WIN */
 /* PICK FIGHT|HISTORY*/
+.history {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .fightsHistoryTitle {
     color: white;
     display: block;
@@ -400,8 +405,6 @@ progress {
 }
 
 .fightsTable {
-    display: flex;
-    justify-content: space-around;
     margin: 0;
     padding: 0;
     
