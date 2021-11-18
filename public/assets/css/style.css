@@ -372,7 +372,7 @@ progress {
   font-size: 2rem;
   color: var(--white);
   padding: 0.8rem;
-  background-color:var(--primaryColor);
+  background-color:var(--secondaryColor);
   box-shadow: var(--primaryBoxShadow);
   text-align: center;
 }
@@ -590,7 +590,7 @@ tfoot {
 }
 
 .announce {
-  font-size: 4rem;
+  font-size: 3rem;
 }
 /* END WIN */
 /* PICK FIGHT|HISTORY*/
