@@ -25,10 +25,11 @@ body {
 
 .returnButton {
     position: fixed;
-    width: 3rem;
-    height: 3rem;
-    bottom: 2rem;
-    right: 1rem;
+    background-color:var(--white);
+    width: 4rem;
+    height: 4rem;
+    bottom: 1.5rem;
+    left: 1rem;
     border: var(--primaryBorder);
     box-shadow: 3px 3px var(--black);
 }
@@ -172,7 +173,7 @@ body {
     background-image: url("../images/background_fight.svg");
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     width: auto;
     align-items: center;
 }
