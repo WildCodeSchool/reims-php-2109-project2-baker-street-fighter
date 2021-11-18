@@ -559,6 +559,9 @@ tr, td {
 
 /* END NAVBAR */
 /* HOME */
+.home {
+  height: 475px;
+}
 #marjorie, #romain {
   display: initial;
 }
