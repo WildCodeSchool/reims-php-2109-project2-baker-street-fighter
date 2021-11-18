@@ -172,7 +172,7 @@ body {
     background-image: url("../images/background_fight.svg");
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     width: auto;
     align-items: center;
 }
