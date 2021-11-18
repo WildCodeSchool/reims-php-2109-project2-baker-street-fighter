@@ -390,6 +390,7 @@ tr, td {
     font-size: 1.5rem;
     padding: 1rem;
     border: var(--primaryBorder);
+    text-align: center;
 }
 
 thead,
@@ -452,7 +453,6 @@ tfoot {
     padding-top: 2rem;
     display: block;
     font-size: 2rem;
-    max-width: 30ch;
     margin: auto;
     text-align: center;
     text-decoration: none;
