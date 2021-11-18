@@ -474,6 +474,12 @@ tfoot {
     line-height: 3rem;
   }
   /* END HOMEPAGE */
+  /* HISTORY */
+  tr, td {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+  /* END HISTORY */
 }
 @media (min-width: 576px) {
 /* NAVBAR */
