@@ -305,6 +305,7 @@ progress {
     z-index: 1; /* Sit on top */
     left: 0;
     top: 0;
+    padding: 5rem 10%;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     background-color: rgb(0,0,0); /* Fallback color */
@@ -315,9 +316,9 @@ progress {
   .modal-content {
     background-color: #fefefe;
     margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
+    padding: 20px 20%;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    box-shadow: var(--primaryBoxShadow);
   }
   
   /* The Close Button */
