@@ -3,10 +3,8 @@
 {% block content %}
 <main class='attackPage'>
 
-    <h1 class='roundTitle'>Round {{round}} | {{adversary.name}} turn</h1>
-
+<div class="arena">
     <div class='players'>
-
         <figure class='player'>
             <figcaption class="playerHeader">
                 <p class='statsPlayer'> {{player1.name}}</p>
@@ -14,7 +12,6 @@
             </figcaption>
             <img src="/assets/images/{{player1.name|lower}}.svg" class ="playerImage">
         </figure>
-
         <figure class='player'>
             <figcaption class="playerHeader">
                 <p class='statsPlayer'> {{player2.name}}</p>
@@ -22,18 +19,18 @@
             </figcaption>
             <img src="/assets/images/{{player2.name|lower}}.svg" class ="playerImage">
         </figure>
-
     </div>
-
+        <p class="turnIndication">Round {{round}} | {{adversary.name}} turn</p>
+</div>
     <div class="display">
         {% if currentAttack == 'teatime' %}
-            <p>{{currentAttacker.name}} drinks a cup of tea</p>
+            <p class="actionDone">{{currentAttacker.name}} drinks a cup of tea</p>
             <p>{{currentAttacker.name}} heals for {{heal}} HP</p>
         {% elseif currentAttack == 'headbutt' %}
-            <p>{{currentAttacker.name}} headbutts {{adversary.name}}</p>
+            <p class="actionDone">{{currentAttacker.name}} headbutts {{adversary.name}}</p>
             <p>{{currentAttacker.name}} deals {{damage}} damage but receives {{recoil}} damage as recoil</p>
         {% else %}
-            <p>{{currentAttacker.name}} attacks {{adversary.name}}</p>
+            <p class="actionDone">{{currentAttacker.name}} attacks {{adversary.name}}</p>
             <p>{{currentAttacker.name}} deals {{damage}} damage</p>
         {% endif %}
         {% if currentAttack == 'teatime' %}
@@ -64,7 +61,7 @@
             <button class='attackButton' type="submit" name="attack" value="punch" >PUNCH !</button>
             <button class='attackButton' type="submit" name="attack" value="kick" >KICK !</button>
             <button class='attackButton' type="submit" name="attack" value="headbutt" >HEADBUTT!</button>
-            <button class='attackButton' type="submit" name="attack" value="teatime" >TEATIME !</button>
+            <button class='healButton' type="submit" name="attack" value="teatime" >TEATIME !</button>
     {% endif %}
          </form>
 
