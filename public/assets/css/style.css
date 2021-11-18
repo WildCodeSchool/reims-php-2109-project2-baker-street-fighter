@@ -240,6 +240,11 @@ progress {
     grid-template-columns: 50% auto;
     grid-row-gap: 1rem;
   }
+  .flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   .attackButton {
     display: flex;
