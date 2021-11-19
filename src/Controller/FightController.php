@@ -10,9 +10,6 @@ use Exception;
 
 class FightController extends AbstractController
 {
-    /**
-     * Add a new fight
-     */
     public function index(): string
     {
         $fightManager = new FightManager();
