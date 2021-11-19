@@ -683,11 +683,11 @@ tfoot {
 /* END FIGHT|ARENA */
 /* WIN */
 .result {
-  height: 55vh;
+  height: 45vh;
 }
 
 .loser {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
 }
 
 .loserImage {
@@ -696,7 +696,7 @@ tfoot {
 }
 
 .winner {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .winnerImage {
