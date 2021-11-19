@@ -239,7 +239,10 @@ progress {
   .playerImage{
     height: 20vh;
   }
-
+  .vsLogo {
+    height: 10vh;
+    padding: 0.2rem;
+  }
   .display {
     justify-content: center;
     align-self: center;
@@ -617,7 +620,9 @@ tfoot {
 
 /* END PICK FIGHTER */
 /* PICK FIGHT|ARENA */
-
+.vsLogo {
+  height: 15vh;
+}
 /* END FIGHT|ARENA */
 /* WIN */
 .result {
@@ -725,6 +730,9 @@ tfoot {
 
 /* END PICK FIGHTER */
 /* PICK FIGHT|ARENA */
+.vsLogo {
+  height: 20vh;
+  }
 .playerHeader {
   width: 40vw;
 }
