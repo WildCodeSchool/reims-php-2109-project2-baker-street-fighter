@@ -238,7 +238,9 @@ progress {
   .playerImage{
     height: 20vh;
   }
-
+  .vsLogo {
+    height: 5vh;
+  }
   .display {
     justify-content: center;
     align-self: center;
