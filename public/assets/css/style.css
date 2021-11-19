@@ -219,6 +219,7 @@ progress {
   background-color: #00000077;
   border-radius: 10%;
   padding: 0.5rem;
+  width: 30vw;
 }
 
   .namePlayer {
@@ -316,7 +317,7 @@ progress {
   .modal-content {
     background-color: #fefefe;
     margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px 20%;
+    padding: 5% 5%;
     border: 1px solid #888;
     box-shadow: var(--primaryBoxShadow);
   }
@@ -724,7 +725,9 @@ tfoot {
 
 /* END PICK FIGHTER */
 /* PICK FIGHT|ARENA */
-
+.playerHeader {
+  width: 40vw;
+}
 /* END FIGHT|ARENA */
 /* WIN */
 .result {
