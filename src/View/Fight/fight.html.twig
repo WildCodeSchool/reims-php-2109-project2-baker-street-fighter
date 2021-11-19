@@ -25,6 +25,9 @@
     <div class='announce'>
         <p>K.O in {{round}} rounds !! </p>
         <p>Elementary my dear ! 🧐</p>
+        {% if winner.life == 0 %}
+        <p>{{ random(['What a turn of event ! A draw !', 'Oh wow ! You fought to a draw !', 'Both fight are down ! We have a draw !', 'It\'s a double knock-out !'])}}</p>
+        {% endif %}
     </div>
 
 </div>
