@@ -46,6 +46,7 @@ class FightController extends AbstractController
         if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['selected_fighter'])) {
             if (!isset($_SESSION['player1'])) {
                 $_SESSION['player1'] = $fighterManager->selectOneById($_POST['selected_fighter']);
+                $isSetPlayer1 = true;
             } elseif (!isset($_SESSION['player2'])) {
                 $_SESSION['player2'] = $fighterManager->selectOneById($_POST['selected_fighter']);
                 $_SESSION['currentAttacker'] = $_SESSION['player1'];
@@ -54,7 +55,15 @@ class FightController extends AbstractController
         if (isset($_SESSION['player1']) && isset($_SESSION['player2'])) {
             return $this->statusFight();
         }
-        return $this->twig->render('Fight/pickFighter.html.twig', ['fighters' => $fighters]);
+        if (!isset($isSetPlayer1)) {
+            return $this->twig->render('Fight/pickFighter.html.twig', ['fighters' => $fighters]);
+        } else {
+            return $this->twig->render(
+                'Fight/pickFighter.html.twig',
+                ['fighters' => $fighters,
+                'issetplayer1' => $isSetPlayer1]
+            );
+        }
     }
     public function statusFight()
     {
