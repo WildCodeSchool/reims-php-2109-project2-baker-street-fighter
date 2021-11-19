@@ -239,7 +239,8 @@ progress {
     height: 20vh;
   }
   .vsLogo {
-    height: 5vh;
+    height: 10vh;
+    padding: 0.2rem;
   }
   .display {
     justify-content: center;
@@ -618,7 +619,9 @@ tfoot {
 
 /* END PICK FIGHTER */
 /* PICK FIGHT|ARENA */
-
+.vsLogo {
+  height: 15vh;
+}
 /* END FIGHT|ARENA */
 /* WIN */
 .result {
@@ -726,7 +729,9 @@ tfoot {
 
 /* END PICK FIGHTER */
 /* PICK FIGHT|ARENA */
-
+.vsLogo {
+  height: 20vh;
+}
 /* END FIGHT|ARENA */
 /* WIN */
 .result {
