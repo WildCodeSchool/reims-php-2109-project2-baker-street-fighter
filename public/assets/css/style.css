@@ -219,6 +219,7 @@ progress {
   background-color: #00000077;
   border-radius: 10%;
   padding: 0.5rem;
+  width: 30vw;
 }
 
   .namePlayer {
