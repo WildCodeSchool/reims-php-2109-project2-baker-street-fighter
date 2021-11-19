@@ -725,7 +725,9 @@ tfoot {
 
 /* END PICK FIGHTER */
 /* PICK FIGHT|ARENA */
-
+.playerHeader {
+  width: 40vw;
+}
 /* END FIGHT|ARENA */
 /* WIN */
 .result {
