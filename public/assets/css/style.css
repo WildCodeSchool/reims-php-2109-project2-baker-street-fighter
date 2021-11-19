@@ -37,7 +37,7 @@ body {
 /* NAVBAR */
   
 .menu {
-    height: 115%;
+    height: 100%;
     padding: 0;
     margin: 0;
     display: flex;
@@ -98,7 +98,8 @@ body {
     display: flex;
     justify-content: center;
     background-image: url(../images/wall.svg);
-    padding: 3rem;
+    padding: 1rem 3rem 1rem 3rem;
+    height: 40vh;
 }
 .img-home {
   display: flex;
@@ -218,6 +219,7 @@ progress {
   background-color: #00000077;
   border-radius: 10%;
   padding: 0.5rem;
+  width: 30vw;
 }
 
   .namePlayer {
@@ -237,15 +239,17 @@ progress {
   .playerImage{
     height: 20vh;
   }
-
+  .vsLogo {
+    height: 10vh;
+    padding: 0.2rem;
+  }
   .display {
     justify-content: center;
     align-self: center;
     width: 100%;
     background-color:rgba(255, 255, 255);
     box-shadow: var(--primaryBoxShadow); 
-    padding: 0.2rem;
-    margin-bottom: 1.2 rem;
+    margin-bottom: 1.5rem;
     line-height: 1rem;
   }
   .display p {
@@ -299,6 +303,57 @@ progress {
     background-color: var(--primaryColor);
   }
   
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    padding: 5rem 10%;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 5% 5%;
+    border: 1px solid #888;
+    box-shadow: var(--primaryBoxShadow);
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .listDescription {
+    padding: 0;
+    list-style-type: none;
+    text-align: left;
+  }
+  .descriptionTitle {
+    background-color: var(--primaryColor);
+    box-shadow: var(--primaryBoxShadow);
+    font-size: 1.5rem;
+  }
+  .description {
+    margin: 1rem;
+    padding-left: 0.3rem;
+  }
 /* END FIGHT|ARENA */
 /* WIN */
 .result {
@@ -346,7 +401,7 @@ progress {
 .winnerImage{
   height: 20vh;
   margin-top: 2rem;
-  padding-bottom: 2rem;
+  padding-bottom: 40%;
 }
 
 .loser {
@@ -361,7 +416,7 @@ progress {
 .loserImage {
   height: 20vh;
   margin-top: 2rem;
-  padding-bottom: 2.3rem;
+  padding-bottom: 45%;
 }
 
 .fightDetails {
@@ -372,7 +427,7 @@ progress {
   font-size: 2rem;
   color: var(--white);
   padding: 0.8rem;
-  background-color:var(--primaryColor);
+  background-color:var(--secondaryColor);
   box-shadow: var(--primaryBoxShadow);
   text-align: center;
 }
@@ -384,6 +439,11 @@ progress {
 
 /* END WIN */
 /* PICK FIGHT|HISTORY*/
+.history {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .fightsHistoryTitle {
     color: white;
     display: block;
@@ -400,8 +460,6 @@ progress {
 }
 
 .fightsTable {
-    display: flex;
-    justify-content: space-around;
     margin: 0;
     padding: 0;
     
@@ -567,6 +625,7 @@ tfoot {
 .menu {
     display: flex;
     justify-content: space-around;
+    min-width: 30vw;
 }
 
 .fighterImage{
@@ -586,7 +645,9 @@ tfoot {
 
 /* END PICK FIGHTER */
 /* PICK FIGHT|ARENA */
-
+.vsLogo {
+  height: 15vh;
+}
 /* END FIGHT|ARENA */
 /* WIN */
 .result {
@@ -599,7 +660,7 @@ tfoot {
 
 .loserImage {
   height: 24vh;
-  padding-bottom: 4rem;
+  padding-bottom: 15%;
 }
 
 .winner {
@@ -608,7 +669,7 @@ tfoot {
 
 .winnerImage {
   height: 24vh;
-  padding-bottom: 4rem;
+  padding-bottom: 15%;
 }
 
 .announce {
@@ -632,7 +693,9 @@ tfoot {
 
 @media screen and (min-width: 992px) {
 /* NAVBAR */
-
+.menu {
+  font-size: 3rem;
+}
 /* END NAVBAR */
 /* HOME */
 
@@ -645,24 +708,24 @@ tfoot {
 /* END FIGHT|ARENA */
 /* WIN */
 .result {
-  height: 65vh;
+  height: 45vh;
 }
 
 .loser {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
 }
 
 .loserImage {
-  padding-bottom: 8.5rem;
+  padding-bottom: 15%;
   height: 30vh;
 }
 
 .winner {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .winnerImage {
-  padding-bottom: 7rem;
+  padding-bottom: 15%;
   height: 30vh;
 }
 /* END WIN */
@@ -692,11 +755,24 @@ tfoot {
 
 /* END PICK FIGHTER */
 /* PICK FIGHT|ARENA */
-
+.vsLogo {
+  height: 20vh;
+  }
+.playerHeader {
+  width: 40vw;
+}
 /* END FIGHT|ARENA */
 /* WIN */
 .result {
   height: 55vh;
+}
+
+.loserImage {
+  padding-bottom: 20%;
+}
+
+.winnerImage {
+  padding-bottom: 20%;
 }
 /* END WIN */
 /* PICK FIGHT|HISTORY*/

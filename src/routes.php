@@ -12,5 +12,4 @@ return [
     'fighters' => ['FightersController', 'index',],
     'history' => ['FightController', 'index',],
     'credits' => ['ItemController', 'credit',],
-    'fight/add' => ['FightController', 'add',],
 ];
