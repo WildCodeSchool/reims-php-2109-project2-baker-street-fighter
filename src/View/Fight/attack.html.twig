@@ -21,10 +21,17 @@
             <img src="/assets/images/{{player2.name|lower}}.svg" class ="playerImage">
         </figure>
     </div>
-        <p class="turnIndication">Round {{round}} | {{adversary.name}} turn</p>
+        {% if currentAttack == 'default' %}
+        <p class="turnIndication">Round {{round}} | {{player1.name}}'s turn</p>
+        {% else %}
+        <p class="turnIndication">Round {{round}} | {{adversary.name}}'s turn</p>
+        {% endif %}
 </div>
     <div class="display">
-        {% if currentAttack == 'teatime' %}
+        {% if currentAttack == 'default' %}
+            <p class="actionDone">{{currentAttacker.name}} It's time to fight !</p>
+            <p> Choose your attack below !</p>
+        {% elseif currentAttack == 'teatime' %}
             <p class="actionDone">{{currentAttacker.name}} drinks a cup of tea</p>
             <p>{{currentAttacker.name}} heals for {{heal}} HP</p>
         {% elseif currentAttack == 'headbutt' %}
@@ -34,7 +41,9 @@
             <p class="actionDone">{{currentAttacker.name}} attacks {{adversary.name}}</p>
             <p>{{currentAttacker.name}} deals {{damage}} damage</p>
         {% endif %}
-        {% if currentAttack == 'teatime' %}
+        {% if (round == 1) and (currentAttacker == player1) %}
+            <p>If you have trouble choosing, click on the help icon</p>
+        {% elseif currentAttack == 'teatime' %}
             <p>{{ random(['Perfect !', 'Delicious !', 'English tea at its finest !', 'Quite soothing !'])}}</p>
         {% elseif currentAttack == 'headbutt' %}
             <p>{{ random(['Skull Breaker !', 'WHAT A BASH', 'Didn\'t see that one coming !', 'Just a nosebleed !'])}}</p>
