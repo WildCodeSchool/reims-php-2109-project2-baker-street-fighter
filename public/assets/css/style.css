@@ -240,7 +240,7 @@ progress {
     height: 20vh;
   }
   .vsLogo {
-    height: 10vh;
+    display: none;
     padding: 0.2rem;
   }
   .display {
@@ -621,6 +621,7 @@ tfoot {
 /* END PICK FIGHTER */
 /* PICK FIGHT|ARENA */
 .vsLogo {
+  display: initial;
   height: 15vh;
 }
 /* END FIGHT|ARENA */
@@ -731,7 +732,7 @@ tfoot {
 /* END PICK FIGHTER */
 /* PICK FIGHT|ARENA */
 .vsLogo {
-  height: 20vh;
+  height: 18vh;
   }
 .playerHeader {
   width: 40vw;
