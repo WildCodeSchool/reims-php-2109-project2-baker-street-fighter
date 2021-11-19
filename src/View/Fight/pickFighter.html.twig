@@ -4,8 +4,15 @@
 {% block content %}
     <section class="card-deck">
 
-        <h1 class="fighterChoiceTitle">CHOOSE YOUR FIGHTERS</h1>
-
+        <h1 class="fighterChoiceTitle">
+            {% if issetplayer1 == true %}
+            PLAYER TWO
+            {% else %}
+            PLAYER ONE
+            {% endif %}
+            <br>
+            CHOOSE YOUR FIGHTER
+        </h1>
             <form class="pick" method="POST">
 
                 {% for fighter in fighters %}
